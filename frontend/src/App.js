@@ -1,11 +1,9 @@
 import './App.css';
-import ProductSlider from "../src/Components/ProductSlider";
+import FeaturedProducts from './Components/FeaturedProducts';
 function App() {
   return (
     <div className="App">
-      <ProductSlider/>
-      <ProductSlider/>
-      <ProductSlider/>
+      <FeaturedProducts/>
     </div>
   );
 }
