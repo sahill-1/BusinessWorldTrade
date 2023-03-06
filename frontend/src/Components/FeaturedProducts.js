@@ -3,13 +3,13 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import FeatureProduct from './FeatureProduct';
 
-
 const FeaturedProducts = () => {
     const responsive = {
         superLargeDesktop: {
             // the naming can be any, depends on you.
             breakpoint: { max: 4000, min: 1024 },
-            items: 4
+            items: 4,
+            
         },
         desktop: {
             breakpoint: { max: 1024, min: 800 },
@@ -87,8 +87,8 @@ const FeaturedProducts = () => {
     const product = productData.map((item) => <FeatureProduct name={item.name} url={item.imageurl} desc={item.description} /> )
     return (
         <div>
-            <h1 style={{ textDecoration: "underline" }}>Featured Products</h1>
-            <Carousel responsive={responsive}>
+            <h1 style={{ color:"#666"}}>Featured Products</h1>
+            <Carousel showDots={true} responsive={responsive}>
                 {product}
             </Carousel>;
         </div>
