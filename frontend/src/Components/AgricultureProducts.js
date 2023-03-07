@@ -35,7 +35,6 @@ const AgricultureProducts = () => {
         {
             id: 2,
             imageurl:"https://images.unsplash.com/photo-1647181506810-50da75f538ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y2hpbGxpZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-
             name: "Product Two",
             sold: "Sold by - XYZ",
             description: "Add the description about the product..."
@@ -43,7 +42,6 @@ const AgricultureProducts = () => {
         {
             id: 3,
             imageurl:"https://images.unsplash.com/photo-1647181506810-50da75f538ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y2hpbGxpZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-
             name: "Product Three",
             sold: "Sold by - XYZ",
             description: "Add the description about the product..."
@@ -51,7 +49,6 @@ const AgricultureProducts = () => {
         {
             id: 4,
             imageurl:"https://images.unsplash.com/photo-1647181506810-50da75f538ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y2hpbGxpZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-
             name: "Product Four",
             sold: "Sold by - XYZ",
             description: "Add the description about the product..."
@@ -59,7 +56,6 @@ const AgricultureProducts = () => {
         {
             id: 5,
             imageurl:"https://images.unsplash.com/photo-1647181506810-50da75f538ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y2hpbGxpZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-
             name: "Product FIve",
             sold: "Sold by - XYZ",
             description: "Add the description about the product..."
@@ -67,7 +63,6 @@ const AgricultureProducts = () => {
         {
             id: 6,
             imageurl:"https://images.unsplash.com/photo-1647181506810-50da75f538ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y2hpbGxpZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-
             name: "Product Six",
             sold: "Sold by - XYZ",
             description: "Add the description about the product..."
@@ -75,7 +70,6 @@ const AgricultureProducts = () => {
         {
             id: 7,
             imageurl:"https://images.unsplash.com/photo-1647181506810-50da75f538ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y2hpbGxpZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-            
             name: "Product Seven",
             sold: "Sold by - XYZ",
             description: "Add the description about the product..."
@@ -83,7 +77,6 @@ const AgricultureProducts = () => {
         {
             id: 8,
             imageurl:"https://images.unsplash.com/photo-1647181506810-50da75f538ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y2hpbGxpZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-            
             name: "Product Eight",
             sold: "Sold by - XYZ",
             description: "Add the description about the product..."

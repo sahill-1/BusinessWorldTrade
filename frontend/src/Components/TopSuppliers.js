@@ -2,11 +2,11 @@ import React from 'react'
 import {useState, useEffect} from "react";
 import axios from 'axios';
 import "bootstrap";
-import Xml from './Xml';
+import TopSupplier from './TopSupplier';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
-const Javascript = () => {
+const TopSuppliers = () => {
 
     const responsive = {
         superLargeDesktop: {
@@ -42,7 +42,7 @@ const Javascript = () => {
         })
     }, []);
 
-    const productList = data.map((item) => <Xml key={item.id} name={item.title} url={item.image}/> )
+    const productList = data.map((item) => <TopSupplier key={item.id} name={item.title} url={item.image}/> )
   return (
     <div>
         <h1 style={{color:"#444444", fontWeight:"700"}}>Top Supplier</h1>
@@ -53,4 +53,4 @@ const Javascript = () => {
   )
 }
 
-export default Javascript
+export default TopSuppliers
