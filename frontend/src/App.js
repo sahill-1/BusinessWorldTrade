@@ -1,11 +1,14 @@
 import './App.css';
-import FeaturedProducts from './Components/FeaturedProducts';
-import TopSupplies from './Components/TopSupplies';
+import Javascript from './Components/Javascript';
+import AgricultureProducts from './Components/AgricultureProducts';
+// import FeaturedProducts from './Components/FeaturedProducts';
+// import TopSupplies from './Components/TopSupplies';
 function App() {
   return (
     <div className="App">
-      <FeaturedProducts/>
-      <TopSupplies/>  
+      {/* <FeaturedProducts/> */}
+      <Javascript/>
+      <AgricultureProducts/>
     </div>
   );
 }

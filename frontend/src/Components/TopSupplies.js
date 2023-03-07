@@ -1,7 +1,7 @@
 import React from 'react'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import FeatureProduct from './FeatureProduct';
+import TopSupply from './TopSupply';
 
 const TopSupplies = () => {
     const responsive = {
@@ -25,10 +25,12 @@ const TopSupplies = () => {
         }
     };
 
-
   return (
     <div>
       <h1 style={{ color:"#444"}}>Top Supplies</h1>
+      <Carousel responsive={responsive}>
+        <TopSupply/>
+      </Carousel>
       
     </div>
   )
