@@ -2,6 +2,7 @@ import React from 'react'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import AgricultureProduct from './AgricultureProduct';
+import "bootstrap"
 
 const AgricultureProducts = () => {
     const responsive = {
@@ -82,11 +83,11 @@ const AgricultureProducts = () => {
             description: "Add the description about the product..."
         }
     ]
-    const product = productData.map((item) => <AgricultureProduct name={item.name} url={item.imageurl} desc={item.description} /> )
+    const product = productData.map((item) => <AgricultureProduct key={item.id} name={item.name} url={item.imageurl} desc={item.description} /> )
     return (
         <div>
-            <h1 style={{color:"#444444", fontWeight:"700"}}>Agriculture Products</h1>
-            <Carousel showDots={true} responsive={responsive}>
+            <h1 className='my-3' style={{color:"#444444", fontWeight:"700"}}>Agriculture Products</h1>
+            <Carousel responsive={responsive}>
                 {product}
             </Carousel>;
         </div>

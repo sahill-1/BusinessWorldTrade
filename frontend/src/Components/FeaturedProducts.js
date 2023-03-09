@@ -84,11 +84,11 @@ const FeaturedProducts = () => {
         }
     ]
 
-    const product = productData.map((item) => <FeatureProduct name={item.name} url={item.imageurl} desc={item.description} /> )
+    const product = productData.map((item) => <FeatureProduct key={item.id} name={item.name} url={item.imageurl} desc={item.description} /> )
     return (
         <div>
             <h1 style={{ color:"#666"}}>Featured Products</h1>
-            <Carousel showDots={true} responsive={responsive}>
+            <Carousel  responsive={responsive}>
                 {product}
             </Carousel>;
         </div>

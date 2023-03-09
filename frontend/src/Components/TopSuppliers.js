@@ -45,7 +45,7 @@ const TopSuppliers = () => {
     const productList = data.map((item) => <TopSupplier key={item.id} name={item.title} url={item.image}/> )
   return (
     <div>
-        <h1 style={{color:"#444444", fontWeight:"700"}}>Top Supplier</h1>
+        <h1 className='my-2' style={{color:"#444444", fontWeight:"700"}}>Top Supplier</h1>
         <Carousel responsive={responsive}>
             {productList}
         </Carousel>
