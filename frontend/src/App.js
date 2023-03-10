@@ -5,10 +5,12 @@ import FoodBeverage from './Components/FoodBeverage';
 import ApparelsFashions from './Components/ApparelsFashions';
 import Pharmaceuticals from './Components/Pharmaceuticals';
 import FeaturedProducts from './Components/FeaturedProducts';
+import ShopWithUs from './Components/ShopWithUs';
 
 function App() {
   return (
     <div className="App">
+      <ShopWithUs/>
       <FeaturedProducts/>
       <TopSuppliers/>
       <AgricultureProducts/>
