@@ -1,11 +1,11 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
+import {useState, useEffect} from "react";
 import axios from "axios";
 import "bootstrap";
-import Carousel from 'react-multi-carousel';
+import Carousel from 'react-multi-carousel'; 
 import 'react-multi-carousel/lib/styles.css';
-import FeaturedProduct from './FeaturedProduct';
-const FeaturedProducts = () => {
+import Pharmaceutical from './Pharmaceutical';
+const Pharmaceuticals = () => {
 
     const responsive = {
         superLargeDesktop: {
@@ -40,10 +40,10 @@ const FeaturedProducts = () => {
         })
     }, [])
 
-    const productList = data.map((item) => <FeaturedProduct key={item.id} name={item.title} url={item.image} desc={item.description} />)
+    const productList = data.map((item) => <Pharmaceutical key={item.id} name={item.title} url={item.image} desc={item.description}/> )
   return (
     <div>
-        <h1 className='my-3'style={{color:"#444444", fontSize:"40px", fontWeight:"700"}}>Featured Products</h1>
+        <h1 className='"my-3' style={{color:"#444444", fontWeight:"700"}}>Pharmaceutical</h1>
         <Carousel responsive={responsive}>
             {productList}
         </Carousel>
@@ -51,4 +51,4 @@ const FeaturedProducts = () => {
   )
 }
 
-export default FeaturedProducts
+export default Pharmaceuticals

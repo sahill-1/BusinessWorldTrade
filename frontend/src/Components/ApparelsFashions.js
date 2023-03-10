@@ -4,7 +4,7 @@ import axios from "axios";
 import "bootstrap";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import ApparelFashion from './Components/ApparelFashion';
+import ApparelFashion from './ApparelFashion';
 const ApparelsFashions = () => {
 
   const responsive = {
@@ -43,7 +43,7 @@ const ApparelsFashions = () => {
   const productList = data.map((item) => <ApparelFashion key={item.id} name={item.title} url={item.image} desc={item.description}/> )
   return (
     <div>
-        <h1 className='my-2' style={{color:"#444444", fontWeight:"700"}}>Apparel & Fashion</h1>
+        <h1 className='my-3' style={{color:"#444444", fontWeight:"700"}}>Apparel & Fashion</h1>
         <Carousel responsive={responsive}>
             {productList}
         </Carousel>

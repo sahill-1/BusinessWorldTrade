@@ -41,10 +41,11 @@ const FoodBeverage = () => {
     })
   }, []);
 
+  
   const productList = data.map((item) => <FoodBeverages key={item.id} name={item.title} url={item.image} desc={item.description}/> )
   return (
     <div>
-        <h1 className='my-2' style={{color:"#444444", fontWeight:"700"}}>Food & Beverages</h1>
+        <h1 className='my-3' style={{color:"#444444", fontWeight:"700"}}>Food & Beverages</h1>
         <Carousel responsive={responsive}>
             {productList}
         </Carousel>
