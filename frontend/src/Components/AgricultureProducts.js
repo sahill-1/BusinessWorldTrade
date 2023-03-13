@@ -89,7 +89,7 @@ const AgricultureProducts = () => {
             <h1 className='my-3' style={{color:"#444444", fontWeight:"700"}}>Agriculture Products</h1>
             <Carousel responsive={responsive}>
                 {product}
-            </Carousel>;
+            </Carousel>
         </div>
     )
 }
