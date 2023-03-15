@@ -1,8 +1,49 @@
+.footer-top-section{
+    width: 90%;
+    border: 1px solid transparent;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+.newsletter-section{
+    background-color: #5a5a5a,
+}
+.newsletter-section h5{
+    text-align: left;
+    font-weight: 600;
+    color:#2b5c77; 
+    padding-top:5px; 
+    font-size:23px;
+} 
+.newsletter-section-div{
+    display: flex;
+}
+.newsletter-section-div input{
+    width: 300px;
+    background-color: #bebcbc;
+    color: black;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+}
+.newsletter-section-div input::placeholder{
+    color: white;
+}
+.newsletter-section-div button{
+    background-color: transparent;
+    border-radius: 0px 6px 6px 0px;
+    border: none;
+    outline: none;
+}
 .section__padding{
     padding: 4rem 4rem;
 }
 .footer{
     background-color: #f6f8e4;
+    margin-top: 30px;
+    padding-top: 20px;
 }
 .sb__footer{
     display: flex;
@@ -21,12 +62,11 @@
 }
 .sb__footer-links_div{
     width: 150px;
-    margin: 1rem;
+    /* margin: 1rem; */
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
     color: black;
-    
 }
 
 a{
@@ -38,7 +78,6 @@ a{
 .sb__footer-links_div h4{
     font-size: 16px;
     line-height: 1px;
-    /* margin: 0.5rem; */
     margin-bottom: 2rem;
     font-weight: 700;
     cursor: pointer;
