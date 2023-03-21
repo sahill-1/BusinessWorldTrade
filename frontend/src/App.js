@@ -1,5 +1,6 @@
 import './App.css';
-import NavbarHeader from './Components/Navbar';
+import Country from "./Components/Country";
+// import NavbarHeader from './Components/Navbar';
 // import TopSuppliers from './Components/TopSuppliers';
 // import FoodBeverage from './Components/FoodBeverage';
 // import ApparelsFashions from './Components/ApparelsFashions';
@@ -14,7 +15,8 @@ import NavbarHeader from './Components/Navbar';
 function App() {
   return (
     <div className="App">
-      <NavbarHeader />
+      <Country />
+      {/* <NavbarHeader /> */}
       {/* <TopCategory />
       <FeaturedProducts/>
       <TopSuppliers/>
