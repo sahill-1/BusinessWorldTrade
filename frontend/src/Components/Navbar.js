@@ -6,11 +6,14 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import logo from "../images/bwt-dark.png";
 import { BsFillMicFill } from 'react-icons/bs';
+import ProductMenu from '../Components/ProductMenu';
+
 // import { NavLink } from "react-bootstrap-v5";
-import NavDropdown from 'react-bootstrap/NavDropdown';
+// import NavDropdown from 'react-bootstrap/NavDropdown';
 
 const NavbarHeader = () => {
     return (
+        <>
         <Navbar bg="light" expand="lg">
             <Container fluid>
                 <Navbar.Brand href="/"><img src={logo} alt="error" style={{width:"240px", height:'60px'}} /></Navbar.Brand>
@@ -66,6 +69,13 @@ const NavbarHeader = () => {
                 </Navbar.Collapse>
             </Container>
         </Navbar>
+        
+        <Navbar bg="light" expand="lg" style={{paddingBottom:"20px", border:"1px solid blue"}}>
+      <ProductMenu />  
+        </Navbar>
+        </>
+        
+        
     );
 }
 export default NavbarHeader;

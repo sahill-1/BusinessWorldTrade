@@ -1,6 +1,6 @@
 import './App.css';
-import Country from "./Components/Country";
-// import NavbarHeader from './Components/Navbar';
+import NavbarHeader from './Components/Navbar';
+import TopCategory from './Components/TopCategory';
 // import TopSuppliers from './Components/TopSuppliers';
 // import FoodBeverage from './Components/FoodBeverage';
 // import ApparelsFashions from './Components/ApparelsFashions';
@@ -10,15 +10,14 @@ import Country from "./Components/Country";
 // import Testimonial from './Components/Testimonial';
 // import Footer from "./Components/Footer";
 // import AgricultureProducts from './Components/AgricultureProducts';
-// import TopCategory from './Components/TopCategory';
+
 
 function App() {
   return (
     <div className="App">
-      <Country />
-      {/* <NavbarHeader /> */}
-      {/* <TopCategory />
-      <FeaturedProducts/>
+      <NavbarHeader />
+      <TopCategory />
+      {/* <FeaturedProducts/>
       <TopSuppliers/>
       <AgricultureProducts />
       <FoodBeverage/>

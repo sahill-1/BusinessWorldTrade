@@ -1,0 +1,49 @@
+.product-menu {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .menu-button {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 12px 16px;
+    text-align: left;
+    width: 100%;
+  }
+  
+  .menu-button:focus {
+    outline: none;
+  }
+  
+  .menu-list {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    min-width: 160px;
+    z-index: 1;
+  }
+  
+  .menu-list li {
+    cursor: pointer;
+    font-size: 16px;
+    padding: 12px 16px;
+    text-align: left;
+  }
+  
+  .menu-list li:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .menu-list li:focus {
+    outline: none;
+    background-color: #f5f5f5;
+  }
