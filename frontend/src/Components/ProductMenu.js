@@ -16,7 +16,7 @@ const ProductMenu = () => {
   return (
     <div className="product-menu">
       <button className="menu-button" onClick={toggleMenu}>
-        All Categories <RiArrowDropDownLine/>
+        Browse All Categories <RiArrowDropDownLine/>
       </button>
       {isMenuOpen && (
         <ul className="menu-list">

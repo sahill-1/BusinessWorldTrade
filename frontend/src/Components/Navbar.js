@@ -6,6 +6,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import logo from "../images/bwt-dark.png";
 import { BsFillMicFill } from 'react-icons/bs';
+import {FiHeadphones} from "react-icons/fi";
 import ProductMenu from '../Components/ProductMenu';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
@@ -54,7 +55,7 @@ const NavbarHeader = () => {
 
 
                         <div className="d-flex buyer-seller" style={{ paddingRight: "130px" }}>
-                            <NavDropdown title="Buyer" id="navbarScrollingDropdown" style={{padding:"0px 20px 0px 0px"}}>
+                            <NavDropdown title="Buyer" id="navbarScrollingDropdown" style={{ padding: "0px 20px 0px 0px" }}>
                                 <NavDropdown.Item href="#action3">Post Buy Requirements</NavDropdown.Item>
                                 {/* <NavDropdown.Divider /> */}
                                 <NavDropdown.Item href="#action4">Search Suppliers</NavDropdown.Item>
@@ -62,9 +63,17 @@ const NavbarHeader = () => {
                                 <NavDropdown.Item href="#action5">Request A Callback</NavDropdown.Item>
                             </NavDropdown>
                             <NavDropdown title="Seller" id="navbarScrollingDropdown" >
-                                <NavDropdown.Item href="#action3">Post Buy Requirements</NavDropdown.Item>
-                                <NavDropdown.Item href="#action4">Search Suppliers</NavDropdown.Item>
-                                <NavDropdown.Item href="#action5">Request A Callback</NavDropdown.Item>
+                                <NavDropdown.Item href="#action3">Search Buy Leads</NavDropdown.Item>
+
+                                <NavDropdown.Item href="#action4">Get Freight Quotes</NavDropdown.Item>
+
+                                <NavDropdown.Item href="#action5">Logistics</NavDropdown.Item>
+
+                                <NavDropdown.Item href="#action5">Export Bill Discounting</NavDropdown.Item>
+
+                                <NavDropdown.Item href="#action5">WTC Certificate</NavDropdown.Item>
+
+                                <NavDropdown.Item href="#action5">Export Data</NavDropdown.Item>
                             </NavDropdown>
                         </div>
 
@@ -72,16 +81,21 @@ const NavbarHeader = () => {
                 </Container>
             </Navbar>
 
-            {/* <Navbar bg="light" expand="lg" style={{paddingBottom:"20px", border:"1px solid blue"}}>
-            <ProductMenu />
-            <Nav
+            <Navbar className='d-flex justify-content-between' bg="light" expand="lg" style={{ border: "1px solid blue", marginTop: "-20px", padding: "0px 80px 0px 20px" }}>
+                <div>
+                    <ProductMenu />
+                </div>
+                <div>
+                    <Nav
                         className="me-auto my-2 my-lg-0"
                         style={{ maxHeight: '100px' }}
                     >
+                        <Nav.Link href="/" className="right-section"><FiHeadphones/>  Help Center</Nav.Link>
                         <Nav.Link href="/" className="right-section">Log In</Nav.Link>
                         <Nav.Link href="/" className="right-section">Register Free</Nav.Link>
                     </Nav>
-        </Navbar> */}
+                </div>
+            </Navbar>
         </>
     );
 }

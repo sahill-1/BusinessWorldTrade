@@ -95,6 +95,7 @@
 .dropdown-item{
   padding: 0px 7px;
 }
+
 @media (max-width: 992px) {
   .search-box {
     width: 50%;
@@ -112,7 +113,6 @@
     margin-top: 10px;
   }
   .buyer-seller{
-    /* border: 1px solid red; */
     width: 10%;
     margin: auto;
     padding: 20px 0px;
