@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import './ProductMenu.css';
+import { RiArrowDropDownLine } from 'react-icons/ri';
 
 const ProductMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -15,7 +16,7 @@ const ProductMenu = () => {
   return (
     <div className="product-menu">
       <button className="menu-button" onClick={toggleMenu}>
-        Products
+        All Categories <RiArrowDropDownLine/>
       </button>
       {isMenuOpen && (
         <ul className="menu-list">
