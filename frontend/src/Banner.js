@@ -16,16 +16,16 @@ const Banner = () => {
     };
     return (
         
-        <div className='Banner-Section' style={{width:"58%", height:"360px", padding:"0px 20px"}}>
+        <div className='Banner-Section'>
             <Slider {...settings}>
                 <div>
-                    <img src={banner} className="Banner-Section-Image" style={{width:"100%", height:"360px"}} alt="Slide 1" />
+                    <img src={banner} className="Banner-Section-Image" alt="Slide 1" />
                 </div>
                 <div>
-                    <img src={banner} className="Banner-Section-Image" style={{width:"100%", height:"360px"}} alt="Slide 2" />
+                    <img src={banner} className="Banner-Section-Image" alt="Slide 2" />
                 </div>
                 <div>
-                    <img src={banner} className="Banner-Section-Image" style={{width:"100%", height:"360px"}} alt="Slide 3" />
+                    <img src={banner} className="Banner-Section-Image" alt="Slide 3" />
                 </div>
             </Slider>
         </div>

@@ -128,23 +128,55 @@
     width: 100%;
     margin: auto;
   }
-  .Banner-Section{
-    width: 100%;
-    height: 200px;
-    border: 1px solid red;
-    margin: auto;
-  }
-  .Banner-Section-Image{
-    width: 100%;
-    height: auto;
-    height: 200px;
-  }
+  
+}
+/* HEADER */
+ul.slick-dots {
+    bottom: 10px;
+}
+ul.slick-dots li button::before {
+  font-size: 13px;
+  color: white;
+}
+.Banner-Section{
+  width: 60%;
+  height: 380px;
+  padding:"0px 20px";
+  border:"1px solid blue"
+}
+.Banner-Section-Image{
+  width: 100%;
+  height: 380px;
+}
+.Easy-Ticker{
+  width: 50%;
+  height: 380px;
+  border: 1px solid transparent;
+}
+.Easy-Ticker-Main-Div{
+  height: 315px;
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 992px){
   .Header-1{
     display: flex;
     flex-wrap: wrap ;
   }
-  /* .easy-tickle{
+  .Banner-Section{
+    width: 100%;
     margin: auto;
-  } */
+    border: 1px solid transparent;
+  }
+  .Banner-Section-Image{
+    width: 100%;
+  }
+  .Easy-Ticker{
+    width: 100%;
+    margin: auto;
+  }
+  .Easy-Ticker-Main-Div{
+    width: 70%;
+    margin: auto;
+  }
 }
-
