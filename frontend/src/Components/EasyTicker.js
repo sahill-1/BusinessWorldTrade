@@ -43,6 +43,7 @@ const Carousel = () => {
         }
     }, [isAnimating]);
 
+
     return (
         <>
         <div className='Easy-Ticker'>
@@ -60,8 +61,8 @@ const Carousel = () => {
                     transition: isAnimating ? 'top 0.5s ease-in-out' : 'none',
                 }}>
                 {countries.map((country, index, key) => (
-                    <div style={{borderBottom: "1px solid grey", padding: "0px 10px" }}>
-                        <li key={index} id={key} style={{ display: "flex" }}>
+                    <div style={{borderBottom: "1px solid grey" }}>
+                        <li key={index} id={key} style={{ display: "flex", background: index%2===0 ? "#fafafa" : "none" }}>
                             <h3 style={{ fontSize: "16px", fontWeight: "500", width: "25%", justifyContent: "space-between", textAlign: "center", margin: "auto" }}>{country.name}</h3>
                             <p style={{fontSize:"15px", width: "55%", margin: "auto" }}>Product description is given here</p>
                             <p style={{fontSize:"15px", width: "20%", marginTop: "15px" }}>{country.time}</p>
@@ -72,7 +73,6 @@ const Carousel = () => {
             </div>
         </div>
         </>
-
     );
 };
 

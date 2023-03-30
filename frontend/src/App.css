@@ -180,3 +180,38 @@ ul.slick-dots li button::before {
     margin: auto;
   }
 }
+
+/* FORM */
+.HomePage-Form{
+  width: 100%;
+  padding: 5px 0px;
+  display: flex;
+  justify-content: space-around;
+}
+.HomePage-Form-Left{
+  width: 53%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px 0px;
+}
+.HomePage-Form-Right{
+  width: 43%;
+}
+.HomePage-Form-Left-Div{
+  width: 45%;
+  height: 28vh;
+  background-color: #fafafa;
+  margin: auto;
+  border-radius: 10px;
+  padding: 15px 0px;
+  box-shadow: 6px 6px 8px 0px rgba(0,0,0,0.1);
+}
+.HomePage-Form-Left-Div img {
+ width: 80%;
+ height: 70%;
+}
+.HomePage-Form-Left-Div p {
+  font-size: 16px;
+  padding-top: 12px;
+ }

@@ -2,6 +2,7 @@ import './App.css';
 
 import NavbarHeader from './Components/Navbar';
 import Header from './Header';
+import FormHomepage from './Components/FormHomepage';
 // import TopCategory from './Components/TopCategory';
 // import TopSuppliers from './Components/TopSuppliers';
 // import FoodBeverage from './Components/FoodBeverage';
@@ -19,8 +20,9 @@ function App() {
     <div className="App">
       <NavbarHeader />
       <Header/>
-      {/* <TopCategory /> */}
-      {/* <FeaturedProducts/>
+      <FormHomepage />
+      {/* <TopCategory />
+      <FeaturedProducts/>
       <TopSuppliers/>
       <AgricultureProducts />
       <FoodBeverage/>
