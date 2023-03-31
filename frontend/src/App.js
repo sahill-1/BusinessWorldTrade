@@ -1,8 +1,7 @@
 import './App.css';
-
-import NavbarHeader from './Components/Navbar';
-import Header from './Header';
-import FormHomepage from './Components/FormHomepage';
+// import NavbarHeader from './Components/Navbar';
+// import Header from './Header';
+// import FormHomepage from './Components/FormHomepage';
 // import TopCategory from './Components/TopCategory';
 // import TopSuppliers from './Components/TopSuppliers';
 // import FoodBeverage from './Components/FoodBeverage';
@@ -13,15 +12,15 @@ import FormHomepage from './Components/FormHomepage';
 // import Testimonial from './Components/Testimonial';
 // import Footer from "./Components/Footer";
 // import AgricultureProducts from './Components/AgricultureProducts';
-
-
+import HomePage from "./HomePage"
 function App() {
   return (
     <div className="App">
-      <NavbarHeader />
+      <HomePage />
+      {/* <NavbarHeader />
       <Header/>
       <FormHomepage />
-      {/* <TopCategory />
+      <TopCategory />
       <FeaturedProducts/>
       <TopSuppliers/>
       <AgricultureProducts />

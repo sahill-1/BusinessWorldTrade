@@ -4,12 +4,11 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import logo from "../images/bwt-dark.png";
+import logo from "../images/bwt-dark.png"
 import { BsFillMicFill } from 'react-icons/bs';
 import { FiHeadphones } from "react-icons/fi";
-import ProductMenu from '../Components/ProductMenu';
+import ProductMenu from '../Homepage/ProductMenu';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-
 // import { NavLink } from "react-bootstrap-v5";
 
 const NavbarHeader = () => {
@@ -106,6 +105,5 @@ const NavbarHeader = () => {
         </>
     );
 }
-
 
 export default NavbarHeader;

@@ -1,11 +1,10 @@
 import React from 'react';
 import { useState, useEffect } from "react";
 import "./Testimonial.css";
+import data from "./data"
 
-import data from "../data"
 
 const Testimonial = () => {
-
   const [people] = useState(data);
   const [index, setIndex] = useState(0);
 
@@ -18,7 +17,6 @@ const Testimonial = () => {
       setIndex(0);
     }
   }, [index, people]);
-
 
   useEffect(() => {
     let slider = setInterval(() => {

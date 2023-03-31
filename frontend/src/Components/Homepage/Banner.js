@@ -2,7 +2,7 @@ import React from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import banner from "./images/BWT1.jpeg"
+import banner from "../images/BWT1.jpeg";
 
 const Banner = () => {
     const settings = {

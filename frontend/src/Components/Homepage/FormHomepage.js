@@ -7,20 +7,20 @@ const FormHomepage = () => {
         <div className='HomePage-Form'>
             <div className='HomePage-Form-Left'>
                 <div className='HomePage-Form-Left-Div'>
-                    <img src='https://static.eworldtrade.com/v7/_root_/2K19/images/quote/trade-with-confidence.svg' />
+                    <img src='https://static.eworldtrade.com/v7/_root_/2K19/images/quote/trade-with-confidence.svg' alt="Error"/>
                     <p>Verified <span style={{ color: "red" }}>BUYERS</span></p>
                 </div>
                 <div className='HomePage-Form-Left-Div'>
-                    <img src='https://static.eworldtrade.com/v7/_root_/2K19/images/quote/trade-with-confidence.svg' />
+                    <img src='https://static.eworldtrade.com/v7/_root_/2K19/images/quote/trade-with-confidence.svg' alt="Error" />
                     <p>Free Quotes from <span style={{ color: "red" }}>SELLER</span></p>
 
                 </div>
                 <div className='HomePage-Form-Left-Div'>
-                    <img src='https://static.eworldtrade.com/v7/_root_/2K19/images/quote/trade-with-confidence.svg' />
-                    <p>Free Quotes from <span style={{ color: "red" }}>SELLER</span></p>
+                    <img src='https://static.eworldtrade.com/v7/_root_/2K19/images/quote/trade-with-confidence.svg' alt="Error" />
+                    <p>Trade with <span style={{ color: "red" }}>CONFIDENCE</span></p>
                 </div>
                 <div className='HomePage-Form-Left-Div'>
-                    <img src='https://static.eworldtrade.com/v7/_root_/2K19/images/quote/trade-with-confidence.svg' />
+                    <img src='https://static.eworldtrade.com/v7/_root_/2K19/images/quote/trade-with-confidence.svg' alt="Error" />
                     <p>24/7 <span style={{ color: "red" }}>HELP CENTER</span></p>
                 </div>
             </div>
@@ -49,7 +49,7 @@ const FormHomepage = () => {
                     </div>
 
                     <Form.Select aria-label="Default select example">
-                        <option>I am a </option>
+                        <option value="0">I am a</option>
                         <option value="1">Seller</option>
                         <option value="2">Buyer</option>
                     </Form.Select>
