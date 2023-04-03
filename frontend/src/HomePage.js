@@ -9,6 +9,7 @@ import AgricultureProducts from "./Components/Homepage/AgricultureProducts";
 import FoodBeverage from "./Components/Homepage/FoodBeverage";
 import ApparelsFashions from "./Components/Homepage/ApparelsFashions";
 import Pharmaceuticals from "./Components/Homepage/Pharmaceuticals";
+import AboutMe from './Components/Homepage/AboutMe';
 import ShopWithUs from "./Components/Homepage/ShopWithUs";
 import Testimonial from "./Components/Homepage/Testimonial";
 import Footer from "./Components/Homepage/Footer";
@@ -28,6 +29,7 @@ const HomePage = () => {
     <FoodBeverage/>
     <ApparelsFashions/>
     <Pharmaceuticals/>
+    <AboutMe />
     <ShopWithUs/>
     <Testimonial />
     <Footer />

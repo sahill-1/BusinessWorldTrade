@@ -234,3 +234,45 @@ ul.slick-dots li button::before {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
 } 
+
+/* AboutMeSlider */
+.about-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 10px;
+}
+.paragraph-slider {
+  overflow: hidden;
+  height: 100px;
+  border: 1px solid green;
+}
+.paragraph-slider-div{
+  margin: 0;
+  padding: 10px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: slide 5s infinite;
+  
+}
+
+@keyframes slide {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(-200%);
+  }
+  75% {
+    transform: translateY(-300%);
+  }
+  100% {
+    transform: translateY(-400%);
+  }
+}
