@@ -2,26 +2,19 @@ import React from 'react';
 
 const AboutMe = () => {
   return (
+
     <div className="about-me">
-      <h2>About Me</h2>
+      <h2 style={{fontSize:"28px"}}>About <span style={{color:"red", fontWeight:"700", fontSize:"30px", fontStyle:"oblique"}}>Business World Trade</span></h2>
+      <img src="http://cdn.shopify.com/s/files/1/0086/0795/7054/articles/Cat_s_Mind_x630.jpg?v=1624444348" alt="Error" />
       <div className="paragraph-slider">
-
-        <div className='paragraph-slider-div'>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3VuIcE75WJbQcWFCwxOiISsOcMBjQ8FsydWHr5VtwyoVfA5DKWmURqpFinhfHTinnHJxJbrhvZ3M&usqp=CAU&ec=48665699" alt="Error" />
-          <p>Paragraph 1 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-        </div>
-        <div>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3VuIcE75WJbQcWFCwxOiISsOcMBjQ8FsydWHr5VtwyoVfA5DKWmURqpFinhfHTinnHJxJbrhvZ3M&usqp=CAU&ec=48665699" alt="Error" />
-          <p>Paragraph 1 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-        </div>
-        <div>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3VuIcE75WJbQcWFCwxOiISsOcMBjQ8FsydWHr5VtwyoVfA5DKWmURqpFinhfHTinnHJxJbrhvZ3M&usqp=CAU&ec=48665699" alt="Error" />
-          <p>Paragraph 1 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-        </div>
-
+        
+        <p>Paragraph 1 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+        <p>Paragraph 2 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+        <p>Paragraph 3 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+      
       </div>
     </div>
   );
-};
+}; 
 
-export default AboutMe;
+export default AboutMe; 
