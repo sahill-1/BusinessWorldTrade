@@ -267,7 +267,7 @@ ul.slick-dots li button::before {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: slide 5s infinite;
+  animation: slide 7s infinite;
   /* border: 1px solid red; */
 }
 

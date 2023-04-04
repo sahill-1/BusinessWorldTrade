@@ -94,7 +94,7 @@ const NavbarHeader = () => {
                                 style={{ maxHeight: '100px'}}
                             >
                                 <Nav.Link href="/" className="mx-2 right-section"><FiHeadphones />  Help Center</Nav.Link>
-                                <Nav.Link href="/" className="mx-2 right-section ">Log In</Nav.Link>
+                                <Nav.Link href="" className="mx-2 right-section ">Log In</Nav.Link>
                                 <Nav.Link href="/" className="mx-2 right-section">Register Free</Nav.Link>
                             </Nav>
                         </div>

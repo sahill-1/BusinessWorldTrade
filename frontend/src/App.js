@@ -1,35 +1,12 @@
 import './App.css';
-// import NavbarHeader from './Components/Navbar';
-// import Header from './Header';
-// import FormHomepage from './Components/FormHomepage';
-// import TopCategory from './Components/TopCategory';
-// import TopSuppliers from './Components/TopSuppliers';
-// import FoodBeverage from './Components/FoodBeverage';
-// import ApparelsFashions from './Components/ApparelsFashions';
-// import Pharmaceuticals from './Components/Pharmaceuticals';
-// import FeaturedProducts from './Components/FeaturedProducts';
-// import ShopWithUs from './Components/ShopWithUs';
-// import Testimonial from './Components/Testimonial';
-// import Footer from "./Components/Footer";
-// import AgricultureProducts from './Components/AgricultureProducts';
-import HomePage from "./HomePage"
+import Login from './Components/Login/Login';
+// import HomePage from "./Components/HomePage"
+
 function App() {
   return (
     <div className="App">
-      <HomePage />
-      {/* <NavbarHeader />
-      <Header/>
-      <FormHomepage />
-      <TopCategory />
-      <FeaturedProducts/>
-      <TopSuppliers/>
-      <AgricultureProducts />
-      <FoodBeverage/>
-      <ApparelsFashions/>
-      <Pharmaceuticals/>
-      <ShopWithUs/>
-      <Testimonial />
-      <Footer /> */}
+      {/* <HomePage /> */}
+      <Login/>
     </div>
   );
 };
