@@ -95,6 +95,11 @@
 .dropdown-item{
   padding: 0px 7px;
 }
+a.mx-2.right-section.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 @media (max-width: 992px) {
   .search-box {
@@ -157,6 +162,10 @@ ul.slick-dots li button::before {
   height: 315px;
   position: relative;
   overflow: hidden;
+}
+button.menu-button {
+  display: flex;
+  align-items: center;
 }
 @media (max-width: 992px){
   .Header-1{
