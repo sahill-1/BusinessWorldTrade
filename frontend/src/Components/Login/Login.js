@@ -1,15 +1,15 @@
 import React from 'react'
-import Navbar from "../Homepage/Navbar";
+// import Navbar from "../Homepage/Navbar";
 import RegistrationForm from "./RegistrationForm";
-import Footer from "../Homepage/Footer";
+// import Footer from "../Homepage/Footer";
 
 
 const Login = () => {    
     return (
         <div>
-            <Navbar />
+            {/* <Navbar /> */}
             <RegistrationForm />
-            <Footer />
+            {/* <Footer /> */}
         </div>
     )
 }
