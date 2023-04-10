@@ -1,13 +1,14 @@
 import React from 'react'
 import Navbar from "../Homepage/Navbar";
-import LoginForm from "./LoginForm";
+import RegistrationForm from "./RegistrationForm";
 import Footer from "../Homepage/Footer";
-const Login = () => {
-    
+
+
+const Login = () => {    
     return (
         <div>
             <Navbar />
-            <LoginForm />
+            <RegistrationForm />
             <Footer />
         </div>
     )

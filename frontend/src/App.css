@@ -109,7 +109,7 @@ a.mx-2.right-section.nav-link {
     justify-content: center;
   }
   .me-auto {
-    margin-right: auto !important;
+    margin-right: auto    !important;
     width: 50%;
     margin: auto;
   }
@@ -262,8 +262,7 @@ button.menu-button {
 .paragraph-slider {
   overflow: hidden;
   height: 100px;
-  /* border: 1px solid green; */
-  
+
 }
 
 .paragraph-slider p {
@@ -297,3 +296,4 @@ button.menu-button {
     transform: translateY(-400%);
   }
 }
+
