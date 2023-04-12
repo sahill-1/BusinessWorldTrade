@@ -1,70 +1,65 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import styled from "styled-components";
-// import { createGlobalStyle } from "styled-components";
 import { useFormik } from "formik";
 import { signupSchema } from './signupSchema';
 import BackGround from "../images/download.jpg"
-
-// const GlobalStyle = createGlobalStyle`
-// *{
-//   padding:0;
-//   margin: 0;
-//   box-sizing: border-box;
-//   font-family: 'Nunito', sans-serif;
- 
-// }
-// html{
-//   font-size: 62.5%;
-// }
-// body{
-//   background-color: #EFEDEE; 
-   
-// }
-// h1{
-//   font-size:2.6rem;
-// }
-// p{
-//   font-size: 1.6rem;
-// }
-// ` ;
+// import { createGlobalStyle } from "styled-components";
 
 const initialValues = {
   name: "",
-  email:"",
-  password:"",
-  confirm_password:""
+  email: "",
+  password: "",
+  confirm_password: ""
 }
 
 const RegistrationForm = () => {
+  
+  // For Country List
+  const [countries, setCountries] = useState([]);
+  useEffect(() => {
+    fetch("https://restcountries.com/v2/all")
+    .then(res => res.json())
+    .then(data => setCountries(data))
+    
+  }, [])
+  console.log(countries)
+
+  // For State List
+  const [states, setStates] = useState([]);
+  useEffect(() => {
+    fetch("https://cdn-api.co-vin.in/api/v2/admin/location/states")
+    .then(res => res.json())
+    .then(dataRes => setStates(dataRes.states))
+    
+  }, [])
+  console.log(states)
+  
+
   const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
     useFormik({
       initialValues,
       validationSchema: signupSchema,
       onSubmit: (values, action) => {
         console.log(
-          
           values
         );
         action.resetForm();
       },
     });
   console.log(
-    
     errors
   );
-  
+
   return (
     <>
-    {/* <GlobalStyle/> */}
-    
       <Wrapper>
         <div className="container" >
-          <div className="modal" style={{backgroundImage: `url(${BackGround})`, backgroundRepeat: 'no-repeat',backgroundSize:'cover', opacity:"0.8"}}>
+          <div className="modal" style={{ backgroundImage: `url(${BackGround})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', opacity: "0.8" }}>
             <div className="modal-container">
               <div className="modal-left">
                 <h1 className="modal-title">Welcome!</h1>
                 <p className="modal-desc">
-                  To <span style={{fontWeight:"700"}}>Business World Trade</span>
+                  To <span style={{ fontWeight: "700" }}>Business World Trade</span>
                 </p>
                 <form onSubmit={handleSubmit}>
                   <div className="input-block">
@@ -122,21 +117,41 @@ const RegistrationForm = () => {
                     ) : null}
                   </div>
                   <div className="input-block">
-                    <label htmlFor="confirm_password" className="input-label">
-                      Confirm Password
+                    <label htmlFor="country" className="input-label">
+                      Country
                     </label>
-                    <input
-                      type="password"
-                      autoComplete="off"
-                      name="confirm_password"
-                      id="confirm_password"
-                      placeholder="Confirm Password"
-                      value={values.confirm_password}
+                    <select
+                      name="country"
+                      id="country"
+                      value={values.country}
                       onChange={handleChange}
                       onBlur={handleBlur}
-                    />
-                    {errors.confirm_password && touched.confirm_password ? (
-                      <p className="form-error">{errors.confirm_password}</p>
+                    >
+                      {countries.map(country => (
+                        <option key={country.aplha2code} value={country.name}>{country.name}</option>
+                      ))}
+                    </select>
+                    {errors.country && touched.country ? (
+                      <p className="form-error">{errors.country}</p>
+                    ) : null}
+                  </div>
+                  <div className="input-block">
+                    <label htmlFor="states" className="input-label">
+                      State
+                    </label>
+                    <select
+                      name="states"
+                      id="states"
+                      value={values.states}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                    >
+                      {states.map(state => (
+                        <option key={state.state_id} value={state.state_id}>{state.state_name}</option>
+                      ))}
+                    </select>
+                    {errors.state && touched.state ? (
+                      <p className="form-error">{errors.state}</p>
                     ) : null}
                   </div>
                   <div className="modal-buttons">
@@ -168,7 +183,7 @@ const RegistrationForm = () => {
 
 const Wrapper = styled.section`
   .container {
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -180,7 +195,7 @@ const Wrapper = styled.section`
   }
   .modal {
     width: 100%;
-    /* height: 60px; */
+    
     background: rgba(51, 51, 51, 0.5);
     display: flex;
     flex-direction: column;
@@ -190,12 +205,15 @@ const Wrapper = styled.section`
     backgroundImage: url(${BackGround})
   }
   .modal-container {
+    height: 120vh;  
+    // height: auto;
+    border: 1px solid red;
     display: flex;
     max-width: 60vw;
     width: 100%;
     border-radius: 10px;
-    overflow: hidden;
-    // position: absolute;
+    overflow: hidden ;
+    position: absolute;
     transition-duration: 0.3s;
     background: #fff;
   }

@@ -1,16 +1,13 @@
 import React from 'react'
-// import Navbar from "../Homepage/Navbar";
 import RegistrationForm from "./RegistrationForm";
-// import Footer from "../Homepage/Footer";
+// import Country from './Country';
 
-
-const Login = () => {    
+const Login = () => {
     return (
-        <div>
-            {/* <Navbar /> */}
+        <>
             <RegistrationForm />
-            {/* <Footer /> */}
-        </div>
+            {/* <Country /> */}
+        </>
     )
 }
 
