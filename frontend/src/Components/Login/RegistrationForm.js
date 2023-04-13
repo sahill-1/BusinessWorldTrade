@@ -22,7 +22,7 @@ const RegistrationForm = () => {
     .then(data => setCountries(data))
     
   }, [])
-  console.log(countries)
+  // console.log(countries)
 
   // For State List
   const [states, setStates] = useState([]);
@@ -32,8 +32,18 @@ const RegistrationForm = () => {
     .then(dataRes => setStates(dataRes.states))
     
   }, [])
-  console.log(states)
+  // console.log(states)
   
+  // For City List
+  const [cities, setCities] = useState([]);
+  useEffect(() => {
+    fetch("https://indian-cities-api-nocbegfhqg.now.sh/cities")
+    .then(res => res.json())
+    .then(dataRes => setCities(dataRes.cities))
+    
+  }, [])
+  console.log(cities)
+
 
   const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
     useFormik({
@@ -80,6 +90,26 @@ const RegistrationForm = () => {
                       <p className="form-error">{errors.name}</p>
                     ) : null}
                   </div>
+
+                  <div className="input-block">
+                    <label htmlFor="number" className="input-label">
+                      Phone Number
+                    </label>
+                    <input
+                      type="number"
+                      autoComplete="off"
+                      name="number"
+                      id="number"
+                      placeholder="Phone"
+                      value={values.number}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                    />
+                    {errors.number && touched.number ? (
+                      <p className="form-error">{errors.number}</p>
+                    ) : null}
+                  </div>
+
                   <div className="input-block">
                     <label htmlFor="email" className="input-label">
                       Email
@@ -205,9 +235,9 @@ const Wrapper = styled.section`
     backgroundImage: url(${BackGround})
   }
   .modal-container {
-    height: 120vh;  
-    // height: auto;
-    border: 1px solid red;
+    // height: 120vh;  
+    height: auto;
+    // border: 1px solid red;
     display: flex;
     max-width: 60vw;
     width: 100%;
@@ -273,7 +303,10 @@ const Wrapper = styled.section`
     color: #8c7569;
   }
   .input-button {
-    padding: 1.2rem 3.2rem;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 1rem 2rem;
     outline: none;
     text-transform: uppercase;
     border: 0;
