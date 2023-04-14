@@ -2,8 +2,7 @@ import React, {useState, useEffect} from 'react'
 import styled from "styled-components";
 import { useFormik } from "formik";
 import { signupSchema } from './signupSchema';
-import BackGround from "../images/download.jpg"
-// import { createGlobalStyle } from "styled-components";
+import BackGround from "../images/download.jpg";
 
 const initialValues = {
   name: "",
@@ -13,16 +12,26 @@ const initialValues = {
 }
 
 const RegistrationForm = () => {
-  
+
+  // For Country, state, city list
+  // const [allData, setAllData] = useState([]);
+  // useEffect(() => {
+  //   fetch("https://pkgstore.datahub.io/core/world-cities/world-cities_json/data/5b3dd46ad10990bca47b04b4739a02ba/world-cities_json.json")
+  //   .then(response => response.json())
+  //   .then(data => setAllData(data))
+  // }, [])
+  // console.log(allData);
+
   // For Country List
   const [countries, setCountries] = useState([]);
   useEffect(() => {
+    
     fetch("https://restcountries.com/v2/all")
     .then(res => res.json())
     .then(data => setCountries(data))
-    
+
   }, [])
-  // console.log(countries)
+  console.log(countries)
 
   // For State List
   const [states, setStates] = useState([]);
@@ -33,17 +42,6 @@ const RegistrationForm = () => {
     
   }, [])
   // console.log(states)
-  
-  // For City List
-  const [cities, setCities] = useState([]);
-  useEffect(() => {
-    fetch("https://indian-cities-api-nocbegfhqg.now.sh/cities")
-    .then(res => res.json())
-    .then(dataRes => setCities(dataRes.cities))
-    
-  }, [])
-  console.log(cities)
-
 
   const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
     useFormik({
@@ -235,8 +233,7 @@ const Wrapper = styled.section`
     backgroundImage: url(${BackGround})
   }
   .modal-container {
-    // height: 120vh;  
-    height: auto;
+    height: 120vh;
     // border: 1px solid red;
     display: flex;
     max-width: 60vw;
