@@ -13,37 +13,24 @@ const initialValues = {
 
 const RegistrationForm = () => {
 
-  // For Country, state, city list
-  // const [allData, setAllData] = useState([]);
-  // useEffect(() => {
-  //   fetch("https://pkgstore.datahub.io/core/world-cities/world-cities_json/data/5b3dd46ad10990bca47b04b4739a02ba/world-cities_json.json")
-  //   .then(response => response.json())
-  //   .then(data => setAllData(data))
-  // }, [])
-  // console.log(allData);
-
   // For Country List
-  const [countries, setCountries] = useState([]);
-  useEffect(() => {
-    
-    fetch("https://restcountries.com/v2/all")
-    .then(res => res.json())
-    .then(data => setCountries(data))
-
-  }, [])
-  console.log(countries)
-
+  // const [countries, setCountries] = useState([]);
+  // useEffect(() => {
+  //   fetch("http://localhost/devopsdeveloper/country/")
+  //   .then(res => res.json())
+  //   .then(data => setCountries(data))
+  // }, [])
+  // console.log(countries)
   // For State List
-  const [states, setStates] = useState([]);
-  useEffect(() => {
-    fetch("https://cdn-api.co-vin.in/api/v2/admin/location/states")
-    .then(res => res.json())
-    .then(dataRes => setStates(dataRes.states))
-    
-  }, [])
+  // const [states, setStates] = useState([]);
+  // useEffect(() => {
+  //   fetch("https://cdn-api.co-vin.in/api/v2/admin/location/states")
+  //   .then(res => res.json())
+  //   .then(dataRes => setStates(dataRes.states))
+  // }, [])
   // console.log(states)
 
-  const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
+  const { values, errors, touched, handleBlur, handleChange, handleSubmit } = 
     useFormik({
       initialValues,
       validationSchema: signupSchema,
@@ -57,6 +44,7 @@ const RegistrationForm = () => {
   console.log(
     errors
   );
+
 
   return (
     <>
@@ -144,7 +132,8 @@ const RegistrationForm = () => {
                       <p className="form-error">{errors.password}</p>
                     ) : null}
                   </div>
-                  <div className="input-block">
+                  {/* FOR COUNTRY */}
+                  {/* <div className="input-block">
                     <label htmlFor="country" className="input-label">
                       Country
                     </label>
@@ -162,8 +151,10 @@ const RegistrationForm = () => {
                     {errors.country && touched.country ? (
                       <p className="form-error">{errors.country}</p>
                     ) : null}
-                  </div>
-                  <div className="input-block">
+                  </div> */}
+
+                  {/* FO  R STATES */}
+                  {/* <div className="input-block">
                     <label htmlFor="states" className="input-label">
                       State
                     </label>
@@ -181,7 +172,8 @@ const RegistrationForm = () => {
                     {errors.state && touched.state ? (
                       <p className="form-error">{errors.state}</p>
                     ) : null}
-                  </div>
+                  </div> */}
+
                   <div className="modal-buttons">
                     <a href="/" className="">
                       Want to register using Gmail?
