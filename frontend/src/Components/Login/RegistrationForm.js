@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { useFormik } from "formik";
 import { signupSchema } from './signupSchema';
 import BackGround from "../images/download.jpg";
+import country from "./Country.json";
 
 const initialValues = {
   name: "",
@@ -19,8 +20,8 @@ const RegistrationForm = () => {
   //   fetch("http://localhost/devopsdeveloper/country/")
   //   .then(res => res.json())
   //   .then(data => setCountries(data))
-  // }, [])
-  // console.log(countries)
+  // }, []);
+  // console.log(countries);
   // For State List
   // const [states, setStates] = useState([]);
   // useEffect(() => {
@@ -133,7 +134,7 @@ const RegistrationForm = () => {
                     ) : null}
                   </div>
                   {/* FOR COUNTRY */}
-                  {/* <div className="input-block">
+                  <div className="input-block">
                     <label htmlFor="country" className="input-label">
                       Country
                     </label>
@@ -144,16 +145,16 @@ const RegistrationForm = () => {
                       onChange={handleChange}
                       onBlur={handleBlur}
                     >
-                      {countries.map(country => (
-                        <option key={country.aplha2code} value={country.name}>{country.name}</option>
+                      {country.map((getcountry, index) => (
+                        <option key={index} value={getcountry.country_id}>{getcountry.country_name}</option>
                       ))}
                     </select>
                     {errors.country && touched.country ? (
                       <p className="form-error">{errors.country}</p>
                     ) : null}
-                  </div> */}
+                  </div>
 
-                  {/* FO  R STATES */}
+                  {/* FOR STATES */}
                   {/* <div className="input-block">
                     <label htmlFor="states" className="input-label">
                       State
