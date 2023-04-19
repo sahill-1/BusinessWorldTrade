@@ -1,9 +1,11 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import styled from "styled-components";
 import { useFormik } from "formik";
 import { signupSchema } from './signupSchema';
 import BackGround from "../images/download.jpg";
 import country from "./Country.json";
+import state from "./State.json";
+
 
 const initialValues = {
   name: "",
@@ -13,7 +15,14 @@ const initialValues = {
 }
 
 const RegistrationForm = () => {
+  const [countryid, setCountryid] = useState("");
 
+
+  const handleCountry = (event) => {
+    const getcountryid = event.target.value;
+    setCountryid(getcountryid)
+  }
+  console.log(countryid)
   // For Country List
   // const [countries, setCountries] = useState([]);
   // useEffect(() => {
@@ -31,7 +40,8 @@ const RegistrationForm = () => {
   // }, [])
   // console.log(states)
 
-  const { values, errors, touched, handleBlur, handleChange, handleSubmit } = 
+
+  const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
     useFormik({
       initialValues,
       validationSchema: signupSchema,
@@ -40,11 +50,11 @@ const RegistrationForm = () => {
           values
         );
         action.resetForm();
-      },
+      }
     });
-  console.log(
-    errors
-  );
+  // console.log(
+  //   errors
+  // );
 
 
   return (
@@ -77,7 +87,6 @@ const RegistrationForm = () => {
                       <p className="form-error">{errors.name}</p>
                     ) : null}
                   </div>
-
                   <div className="input-block">
                     <label htmlFor="number" className="input-label">
                       Phone Number
@@ -96,7 +105,6 @@ const RegistrationForm = () => {
                       <p className="form-error">{errors.number}</p>
                     ) : null}
                   </div>
-
                   <div className="input-block">
                     <label htmlFor="email" className="input-label">
                       Email
@@ -133,6 +141,7 @@ const RegistrationForm = () => {
                       <p className="form-error">{errors.password}</p>
                     ) : null}
                   </div>
+
                   {/* FOR COUNTRY */}
                   <div className="input-block">
                     <label htmlFor="country" className="input-label">
@@ -142,7 +151,7 @@ const RegistrationForm = () => {
                       name="country"
                       id="country"
                       value={values.country}
-                      onChange={handleChange}
+                      onChange={(e) => handleCountry(e)}
                       onBlur={handleBlur}
                     >
                       {country.map((getcountry, index) => (
@@ -155,7 +164,7 @@ const RegistrationForm = () => {
                   </div>
 
                   {/* FOR STATES */}
-                  {/* <div className="input-block">
+                  <div className="input-block">
                     <label htmlFor="states" className="input-label">
                       State
                     </label>
@@ -163,17 +172,19 @@ const RegistrationForm = () => {
                       name="states"
                       id="states"
                       value={values.states}
-                      onChange={handleChange}
+                      // onChange={handleChange}
                       onBlur={handleBlur}
                     >
-                      {states.map(state => (
-                        <option key={state.state_id} value={state.state_id}>{state.state_name}</option>
+                      {state.map((getstate, index) => (
+                        <option key={index} value={getstate.state_id}>
+                          {getstate.country_id===countryid ? (getstate.state_id, getstate.state_name) :  null }
+                        </option>
                       ))}
                     </select>
                     {errors.state && touched.state ? (
                       <p className="form-error">{errors.state}</p>
                     ) : null}
-                  </div> */}
+                  </div>
 
                   <div className="modal-buttons">
                     <a href="/" className="">
