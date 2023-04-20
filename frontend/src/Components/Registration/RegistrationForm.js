@@ -1,10 +1,11 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
+import axios from "axios";
 import styled from "styled-components";
 import { useFormik } from "formik";
 import { signupSchema } from './signupSchema';
 import BackGround from "../images/download.jpg";
 import country from "./Country.json";
-import state from "./State.json";
+import state from "./State.json";;
 
 
 const initialValues = {
@@ -15,14 +16,26 @@ const initialValues = {
 }
 
 const RegistrationForm = () => {
-  const [countryid, setCountryid] = useState("");
+  const [countries, setCountries] = useState([]);
+  const [states, setStates] = useState([]);
+  const [cities, setCities] = useState([])
+  const [selectedCountry, setselectedCountry] = useState("")
+  const [selectedState, setselectedState] = useState("");
 
-
-  const handleCountry = (event) => {
-    const getcountryid = event.target.value;
-    setCountryid(getcountryid)
+  useEffect(() => {
+      axios.get("https:/your-api-url/countries")
+      .then(response => setCountries(response.data))
+      .catch(error => console.error(error))
+  }, []); 
+  console.log(countries)
+  const handleCountryChange = (event) => {
+    const countryId = event.target.value;
+    setselectedCountry(countryId)
+    axios.get(`https://your-api-url/states?countryId=${countryId}`)
+    .then(response => setCities(response.data))
+    .error(error => console.error(error));
   }
-  console.log(countryid)
+  
   // For Country List
   // const [countries, setCountries] = useState([]);
   // useEffect(() => {
@@ -147,20 +160,13 @@ const RegistrationForm = () => {
                     <label htmlFor="country" className="input-label">
                       Country
                     </label>
-                    <select
-                      name="country"
-                      id="country"
-                      value={values.country}
-                      onChange={(e) => handleCountry(e)}
-                      onBlur={handleBlur}
-                    >
-                      {country.map((getcountry, index) => (
-                        <option key={index} value={getcountry.country_id}>{getcountry.country_name}</option>
-                      ))}
+                    <select name="country" id="country" value={selectedCountry} onChange={handleCountryChange} onBlur={handleBlur} >
+                      <option value="">--Select a country--</option>
+                      {countries.map(country => 
+                        <option key={country.id} value={country.id}>{country.name}</option>
+                        )}
                     </select>
-                    {errors.country && touched.country ? (
-                      <p className="form-error">{errors.country}</p>
-                    ) : null}
+                  
                   </div>
 
                   {/* FOR STATES */}
@@ -177,7 +183,7 @@ const RegistrationForm = () => {
                     >
                       {state.map((getstate, index) => (
                         <option key={index} value={getstate.state_id}>
-                          {getstate.country_id===countryid ? (getstate.state_id, getstate.state_name) :  null }
+                          {getstate.state_name }
                         </option>
                       ))}
                     </select>
@@ -372,7 +378,4 @@ const Wrapper = styled.section`
   }
 `;
 
-export default RegistrationForm
-
-
-
+export default RegistrationForm;
