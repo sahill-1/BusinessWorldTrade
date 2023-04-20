@@ -1,14 +1,12 @@
 import './App.css';
 // import HomePage from "./Components/HomePage";
-// import RegistrationForm from './Components/Registration/RegistrationForm';
-import LocationDropdown from './Components/LocationDropdown';
+import RegistrationForm from './Components/Registration/RegistrationForm';
 
 function App() {
   return (
     <div className="App">
       {/* <HomePage /> */}
-      {/* <RegistrationForm/> */}
-      <LocationDropdown />
+      <RegistrationForm/>
     </div>
   );
 };

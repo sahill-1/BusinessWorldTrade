@@ -1,12 +1,9 @@
-import React, {useState, useEffect} from 'react'
-import axios from "axios";
+import React from 'react'
 import styled from "styled-components";
 import { useFormik } from "formik";
 import { signupSchema } from './signupSchema';
 import BackGround from "../images/download.jpg";
-import country from "./Country.json";
-import state from "./State.json";;
-
+import "bootstrap";
 
 const initialValues = {
   name: "",
@@ -16,43 +13,6 @@ const initialValues = {
 }
 
 const RegistrationForm = () => {
-  const [countries, setCountries] = useState([]);
-  const [states, setStates] = useState([]);
-  const [cities, setCities] = useState([])
-  const [selectedCountry, setselectedCountry] = useState("")
-  const [selectedState, setselectedState] = useState("");
-
-  useEffect(() => {
-      axios.get("https:/your-api-url/countries")
-      .then(response => setCountries(response.data))
-      .catch(error => console.error(error))
-  }, []); 
-  console.log(countries)
-  const handleCountryChange = (event) => {
-    const countryId = event.target.value;
-    setselectedCountry(countryId)
-    axios.get(`https://your-api-url/states?countryId=${countryId}`)
-    .then(response => setCities(response.data))
-    .error(error => console.error(error));
-  }
-  
-  // For Country List
-  // const [countries, setCountries] = useState([]);
-  // useEffect(() => {
-  //   fetch("http://localhost/devopsdeveloper/country/")
-  //   .then(res => res.json())
-  //   .then(data => setCountries(data))
-  // }, []);
-  // console.log(countries);
-  // For State List
-  // const [states, setStates] = useState([]);
-  // useEffect(() => {
-  //   fetch("https://cdn-api.co-vin.in/api/v2/admin/location/states")
-  //   .then(res => res.json())
-  //   .then(dataRes => setStates(dataRes.states))
-  // }, [])
-  // console.log(states)
-
 
   const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
     useFormik({
@@ -73,8 +33,24 @@ const RegistrationForm = () => {
   return (
     <>
       <Wrapper>
+        {/* Animated CSS BackGround */}
+        <div class="area" >
+          <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div >
+        {/* style={{ backgroundImage: `url(${BackGround})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', opacity: "0.8" }} */}
         <div className="container" >
-          <div className="modal" style={{ backgroundImage: `url(${BackGround})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', opacity: "0.8" }}>
+          <div className="modal" >
             <div className="modal-container">
               <div className="modal-left">
                 <h1 className="modal-title">Welcome!</h1>
@@ -83,9 +59,9 @@ const RegistrationForm = () => {
                 </p>
                 <form onSubmit={handleSubmit}>
                   <div className="input-block">
-                    <label htmlFor="name" className="input-label">
+                    {/* <label htmlFor="name" className="input-label">
                       Name
-                    </label>
+                    </label> */}
                     <input
                       type="name"
                       autoComplete="off"
@@ -101,9 +77,9 @@ const RegistrationForm = () => {
                     ) : null}
                   </div>
                   <div className="input-block">
-                    <label htmlFor="number" className="input-label">
+                    {/* <label htmlFor="number" className="input-label">
                       Phone Number
-                    </label>
+                    </label> */}
                     <input
                       type="number"
                       autoComplete="off"
@@ -119,9 +95,9 @@ const RegistrationForm = () => {
                     ) : null}
                   </div>
                   <div className="input-block">
-                    <label htmlFor="email" className="input-label">
+                    {/* <label htmlFor="email" className="input-label">
                       Email
-                    </label>
+                    </label> */}
                     <input
                       type="email"
                       autoComplete="off"
@@ -137,9 +113,9 @@ const RegistrationForm = () => {
                     ) : null}
                   </div>
                   <div className="input-block">
-                    <label htmlFor="password" className="input-label">
+                    {/* <label htmlFor="password" className="input-label">
                       Password
-                    </label>
+                    </label> */}
                     <input
                       type="password"
                       autoComplete="off"
@@ -157,39 +133,55 @@ const RegistrationForm = () => {
 
                   {/* FOR COUNTRY */}
                   <div className="input-block">
-                    <label htmlFor="country" className="input-label">
+                    {/* <label htmlFor="country" className="input-label">
                       Country
-                    </label>
-                    <select name="country" id="country" value={selectedCountry} onChange={handleCountryChange} onBlur={handleBlur} >
-                      <option value="">--Select a country--</option>
-                      {countries.map(country => 
-                        <option key={country.id} value={country.id}>{country.name}</option>
-                        )}
+                    </label> */}
+                    <select name="country" id="country" value="country" onBlur={handleBlur} >
+                      <option value="">Select a country</option>
+                      <option value="">A</option>
+                      <option value="">B</option>
                     </select>
-                  
                   </div>
 
-                  {/* FOR STATES */}
-                  <div className="input-block">
-                    <label htmlFor="states" className="input-label">
-                      State
-                    </label>
-                    <select
-                      name="states"
-                      id="states"
-                      value={values.states}
-                      // onChange={handleChange}
-                      onBlur={handleBlur}
-                    >
-                      {state.map((getstate, index) => (
-                        <option key={index} value={getstate.state_id}>
-                          {getstate.state_name }
-                        </option>
-                      ))}
-                    </select>
-                    {errors.state && touched.state ? (
-                      <p className="form-error">{errors.state}</p>
-                    ) : null}
+                  <div className="input-block" style={{ display: "flex", flexDirection: "row", justifyContent: "space-around" }} >
+                    {/* FOR STATES */}
+                    <div className="input-block">
+                      <label htmlFor="states" className="input-label">
+                        State
+                      </label>
+                      <select
+                        name="states"
+                        id="states"
+                        value={values.states}
+                        onBlur={handleBlur}
+                      >
+                        <option value="">Select a state</option>
+                        <option value="">A</option>
+                        <option value="">B</option>
+                      </select>
+                      {errors.state && touched.state ? (
+                        <p className="form-error">{errors.state}</p>
+                      ) : null}
+                    </div>
+                    {/* FOR CITIES */}
+                    <div className="input-block">
+                      <label htmlFor="cities" className="input-label">
+                        City
+                      </label>
+                      <select
+                        name="cities"
+                        id="citie"
+                        value={values.cities}
+                        onBlur={handleBlur}
+                      >
+                        <option value="">Select a city</option>
+                        <option value="">A</option>
+                        <option value="">B</option>
+                      </select>
+                      {errors.state && touched.city ? (
+                        <p className="form-error">{errors.city}</p>
+                      ) : null}
+                    </div>
                   </div>
 
                   <div className="modal-buttons">
@@ -201,9 +193,9 @@ const RegistrationForm = () => {
                     </button>
                   </div>
                 </form>
-                <p className="sign-up">
+                {/* <p className="sign-up">
                   Already have an account? <a href="/">Sign In now</a>
-                </p>
+                </p> */}
               </div>
               <div className="modal-right">
                 <img
@@ -221,7 +213,7 @@ const RegistrationForm = () => {
 
 const Wrapper = styled.section`
   .container {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
@@ -243,7 +235,7 @@ const Wrapper = styled.section`
     backgroundImage: url(${BackGround})
   }
   .modal-container {
-    height: 120vh;
+    // height: auto;
     // border: 1px solid red;
     display: flex;
     max-width: 60vw;
@@ -260,14 +252,15 @@ const Wrapper = styled.section`
     color: #55311c;
   }
   .form-error {
-    font-size: 1.4rem;
+    font-size: 1rem;
     color: #b22b27;
+    margin-bottom: -1px;
   }
   .modal-desc {
-    margin: 6px 0 30px 0;
+    margin: 6px 0 10px 0;
   }
   .modal-left {
-    padding: 60px 30px 20px;
+    padding: 20px 30px 20px;
     background: #fff;
     flex: 1.5;
     transition-duration: 0.5s;
@@ -302,7 +295,7 @@ const Wrapper = styled.section`
     font-size: 14px;
   }
   .sign-up {
-    margin: 60px 0 0;
+    margin: 20px 0 0;
     font-size: 14px;
     text-align: center;
   }
@@ -341,7 +334,7 @@ const Wrapper = styled.section`
     padding: 10px 10px 8px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     transition: 0.3s;
   }
   .input-block input {
@@ -376,6 +369,150 @@ const Wrapper = styled.section`
       display: none;
     }
   }
+
+
+
+  //Animated CSS background
+//   @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+// *{
+//     margin: 0px;
+//     padding: 0px;
+// }
+
+// body{
+//     font-family: 'Exo', sans-serif;
+// }
+
+
+.context {
+    width: 100%;
+    position: absolute;
+    top:50vh;
+}
+
+.context h1{
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+}
+
+.area{
+    background: #83d1fb !important;  
+    background: -webkit-linear-gradient(to left, #fff, #fff );  
+    width: 100%;
+    height:100vh;
+}
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    background: #fff !important;
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+}
+
+.circles li:nth-child(1){
+    left: 15%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 25px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+@keyframes animate {
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
 `;
 
 export default RegistrationForm;
