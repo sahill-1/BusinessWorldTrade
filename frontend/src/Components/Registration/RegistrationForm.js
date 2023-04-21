@@ -2,7 +2,7 @@ import React from 'react'
 import styled from "styled-components";
 import { useFormik } from "formik";
 import { signupSchema } from './signupSchema';
-import BackGround from "../images/download.jpg";
+// import BackGround from "../images/download.jpg";
 import "bootstrap";
 
 const initialValues = {
@@ -34,8 +34,8 @@ const RegistrationForm = () => {
     <>
       <Wrapper>
         {/* Animated CSS BackGround */}
-        <div class="area" >
-          <ul class="circles">
+        <div className="area" >
+          <ul className="circles">
             <li></li>
             <li></li>
             <li></li>
@@ -117,7 +117,7 @@ const RegistrationForm = () => {
                       Password
                     </label> */}
                     <input
-                      type="password"
+                      type="password"          
                       autoComplete="off"
                       name="password"
                       id="password"
@@ -225,14 +225,14 @@ const Wrapper = styled.section`
   }
   .modal {
     width: 100%;
-    
-    background: rgba(51, 51, 51, 0.5);
+    background-color: transparent;
+    // background: rgba(51, 51, 51, 0.5);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: 0.4s;
-    backgroundImage: url(${BackGround})
+    // backgroundImage: url({BackGround})
   }
   .modal-container {
     // height: auto;
@@ -398,7 +398,7 @@ const Wrapper = styled.section`
 }
 
 .area{
-    background: #83d1fb !important;  
+    background: #4e55c8 !important;  
     background: -webkit-linear-gradient(to left, #fff, #fff );  
     width: 100%;
     height:100vh;
@@ -419,8 +419,8 @@ const Wrapper = styled.section`
     list-style: none;
     width: 20px;
     height: 20px;
-    background: rgba(255, 255, 255, 0.9);
-    background: #fff !important;
+    background: rgba(255, 255, 255, 0.2);
+    background: #fff;
     animation: animate 25s linear infinite;
     bottom: -150px;
 }
@@ -448,7 +448,7 @@ const Wrapper = styled.section`
 }
 
 .circles li:nth-child(4){
-    left: 40%;
+    left: 10%;
     width: 60px;
     height: 60px;
     animation-delay: 0s;
@@ -456,14 +456,14 @@ const Wrapper = styled.section`
 }
 
 .circles li:nth-child(5){
-    left: 65%;
+    left: 25%;
     width: 20px;
     height: 20px;
     animation-delay: 0s;
 }
 
 .circles li:nth-child(6){
-    left: 75%;
+    left: 76%;
     width: 110px;
     height: 110px;
     animation-delay: 3s;
@@ -493,7 +493,7 @@ const Wrapper = styled.section`
 }
 
 .circles li:nth-child(10){
-    left: 85%;
+    left: 90%;
     width: 150px;
     height: 150px;
     animation-delay: 0s;
