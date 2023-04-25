@@ -1,10 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   Button, Checkbox, Flex, FormControl, FormLabel,
   Heading, Input, Link, Stack, Image, ChakraProvider,
 } from '@chakra-ui/react';
 
 export default function LogIn() {
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleEmail = event => {
+    setEmail(event.target.value)
+  }
+  const handlePassword = event => {
+    setPassword(event.target.value)
+  }
+  
+  console.log(email, password)
+
   return (
     <ChakraProvider>
       <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
@@ -13,11 +26,11 @@ export default function LogIn() {
             <Heading fontSize={'2xl'}>Sign in to your account</Heading>
             <FormControl id="email">
               <FormLabel>Email address</FormLabel>
-              <Input type="email" />
+              <Input type="email" onChange={handleEmail} />
             </FormControl>
             <FormControl id="password">
               <FormLabel>Password</FormLabel>
-              <Input type="password" />
+              <Input type="password" onChange={handlePassword} />
             </FormControl>
             <Stack spacing={6}>
               <Stack
