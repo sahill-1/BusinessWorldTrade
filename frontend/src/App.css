@@ -92,7 +92,7 @@
   display: block;
   width: 180px;
 }
-.dropdown-item{
+.dropdown-item {
   padding: 0px 7px;
 }
 a.mx-2.right-section.nav-link {
@@ -109,7 +109,7 @@ a.mx-2.right-section.nav-link {
     justify-content: center;
   }
   .me-auto {
-    margin-right: auto    !important;
+    margin-right: auto !important;
     width: 50%;
     margin: auto;
   }
@@ -120,45 +120,44 @@ a.mx-2.right-section.nav-link {
     font-size: auto;
     margin: auto;
   }
-  .buyer-seller{
+  .buyer-seller {
     width: 10%;
     margin: auto;
     padding: 20px 0px;
   }
-  .product-Menu{
+  .product-Menu {
     width: 0px;
     display: none;
   }
-  .Help-Center{
+  .Help-Center {
     width: 100%;
     margin: auto;
   }
-  
 }
 /* HEADER */
 ul.slick-dots {
-    bottom: 10px;
+  bottom: 10px;
 }
 ul.slick-dots li button::before {
   font-size: 13px;
   color: white;
 }
-.Banner-Section{
+.Banner-Section {
   width: 60%;
   height: 380px;
-  padding:"0px 20px";
-  border:"1px solid blue"
+  padding: "0px 20px";
+  border: "1px solid blue";
 }
-.Banner-Section-Image{
+.Banner-Section-Image {
   width: 100%;
   height: 380px;
 }
-.Easy-Ticker{
+.Easy-Ticker {
   width: 50%;
   height: 380px;
   border: 1px solid transparent;
 }
-.Easy-Ticker-Main-Div{
+.Easy-Ticker-Main-Div {
   height: 315px;
   position: relative;
   overflow: hidden;
@@ -167,82 +166,82 @@ button.menu-button {
   display: flex;
   align-items: center;
 }
-@media (max-width: 992px){
-  .Header-1{
+@media (max-width: 992px) {
+  .Header-1 {
     display: flex;
-    flex-wrap: wrap ;
+    flex-wrap: wrap;
   }
-  .Banner-Section{
+  .Banner-Section {
     width: 100%;
     margin: auto;
     border: 1px solid transparent;
   }
-  .Banner-Section-Image{
+  .Banner-Section-Image {
     width: 100%;
   }
-  .Easy-Ticker{
+  .Easy-Ticker {
     width: 100%;
     margin: auto;
   }
-  .Easy-Ticker-Main-Div{
+  .Easy-Ticker-Main-Div {
     width: 70%;
     margin: auto;
   }
 }
 
 /* FORM */
-.HomePage-Form{
+.HomePage-Form {
   width: 100%;
   padding: 5px 0px;
   display: flex;
   justify-content: space-around;
 }
-.HomePage-Form-Left{
+.HomePage-Form-Left {
   width: 60%;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   padding: 20px 0px;
 }
-.HomePage-Form-Right{
+.HomePage-Form-Right {
   width: 33%;
 }
-.HomePage-Form-Left-Div{
+.HomePage-Form-Left-Div {
   width: 45%;
   height: 28vh;
   background-color: #fafafa;
   margin: auto;
   border-radius: 10px;
   padding: 15px 0px;
-  box-shadow: 6px 6px 8px 0px rgba(0,0,0,0.1);
+  box-shadow: 6px 6px 8px 0px rgba(0, 0, 0, 0.1);
 }
 .HomePage-Form-Left-Div img {
- width: 80%;
- height: 70%;
+  width: 80%;
+  height: 70%;
 }
 .HomePage-Form-Left-Div p {
   font-size: 16px;
   padding-top: 12px;
- }
+}
 
-@media (max-width:768px){
-  .HomePage-Form{
+@media (max-width: 768px) {
+  .HomePage-Form {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
   }
-  .HomePage-Form-Left{
+  .HomePage-Form-Left {
     width: 80%;
     margin: auto;
     /* border: 1px solid red; */
   }
-  .HomePage-Form-Right{
+  .HomePage-Form-Right {
     margin: auto;
     width: 75%;
     padding: 10px 20px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
-} 
+}
 
 /* AboutMeSlider */
 .about-me {
@@ -252,7 +251,7 @@ button.menu-button {
   padding: 10px 160px 40px 160px;
 }
 
-.about-me img{
+.about-me img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -262,7 +261,6 @@ button.menu-button {
 .paragraph-slider {
   overflow: hidden;
   height: 100px;
-
 }
 
 .paragraph-slider p {
@@ -297,3 +295,31 @@ button.menu-button {
   }
 }
 
+/* CtgCategory */
+.ctg-agriculture {
+  width: 90%;
+  background: #d6d6d6;
+  text-align: left;
+  padding: 12px 100px 12px 30px;
+  border-radius: 5px;
+  margin: 10px auto;
+  cursor: pointer;
+}
+.ctg-agriculture-main-div{
+  width: 90%;
+  /* border: 1px solid red; */
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.ctg-agriculture-main-div-card{
+  width: 25%;
+  /* border: 1px solid red; */
+  padding: 20px 0px 10px 0px;
+  margin: auto;
+}
+@media (max-width:768px){
+  .ctg-agriculture-main-div-card{
+    width: 40%;
+  }}
