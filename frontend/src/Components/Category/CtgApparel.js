@@ -1,56 +1,56 @@
 import React from 'react';
 
-const CtgSpices = () => {
+const CtgApparel = () => {
   return (
     <>
     <div className='ctg-agriculture'>
-        Home  /  <span style={{color:"red", cursor:"pointer"}}> SPICES</span>
+        Home  /  <span style={{color:"red", cursor:"pointer"}}>APPARELS & FASHION</span>
     </div>
     <div className='ctg-agriculture-main-div' >
         <div className='ctg-agriculture-main-div-card'>
-            <img style={{width:"80%", borderRadius:"30px"}} src="https://kansaslivingmagazine.com/sites/default/files/styles/maximum/public/gettyimages-1215958963.jpg?itok=EJ8Webc6" alt="error" />
+            <img style={{width:"80%", borderRadius:"30px"}} src="https://content.fortune.com/wp-content/uploads/2014/12/450871616.jpg" alt="error" />
             <p style={{margin: "auto", padding:"15px 0px 0px 0px", fontWeight:"500"}}>
                 TITLE ONE
             </p>
         </div>
         <div className='ctg-agriculture-main-div-card'>
-            <img style={{width:"80%", borderRadius:"30px"}} src="https://kansaslivingmagazine.com/sites/default/files/styles/maximum/public/gettyimages-1215958963.jpg?itok=EJ8Webc6" alt="error" />
+            <img style={{width:"80%", borderRadius:"30px"}} src="https://content.fortune.com/wp-content/uploads/2014/12/450871616.jpg" alt="error" />
             <p style={{margin: "auto", padding:"15px 0px 0px 0px", fontWeight:"500"}}>
                 TITLE ONE
             </p>
         </div>
         <div className='ctg-agriculture-main-div-card'>
-            <img style={{width:"80%", borderRadius:"30px"}} src="https://kansaslivingmagazine.com/sites/default/files/styles/maximum/public/gettyimages-1215958963.jpg?itok=EJ8Webc6" alt="error" />
+            <img style={{width:"80%", borderRadius:"30px"}} src="https://content.fortune.com/wp-content/uploads/2014/12/450871616.jpg" alt="error" />
             <p style={{margin: "auto", padding:"15px 0px 0px 0px", fontWeight:"500"}}>
                 TITLE ONE
             </p>
         </div>
         <div className='ctg-agriculture-main-div-card'>
-            <img style={{width:"80%",borderRadius:"30px"}} src="https://kansaslivingmagazine.com/sites/default/files/styles/maximum/public/gettyimages-1215958963.jpg?itok=EJ8Webc6" alt="error" />
+            <img style={{width:"80%",borderRadius:"30px"}} src="https://content.fortune.com/wp-content/uploads/2014/12/450871616.jpg" alt="error" />
             <p style={{margin: "auto", padding:"15px 0px 0px 0px", fontWeight:"500"}}>
                 TITLE ONE
             </p>
         </div>
         <div className='ctg-agriculture-main-div-card'>
-            <img style={{width:"80%", borderRadius:"30px"}} src="https://kansaslivingmagazine.com/sites/default/files/styles/maximum/public/gettyimages-1215958963.jpg?itok=EJ8Webc6" alt="error" />
+            <img style={{width:"80%", borderRadius:"30px"}} src="https://content.fortune.com/wp-content/uploads/2014/12/450871616.jpg" alt="error" />
             <p style={{margin: "auto", padding:"15px 0px 0px 0px", fontWeight:"500"}}>
                 TITLE ONE
             </p>
         </div>
         <div className='ctg-agriculture-main-div-card'>
-            <img style={{width:"80%", borderRadius:"30px"}} src="https://kansaslivingmagazine.com/sites/default/files/styles/maximum/public/gettyimages-1215958963.jpg?itok=EJ8Webc6" alt="error" />
+            <img style={{width:"80%", borderRadius:"30px"}} src="https://content.fortune.com/wp-content/uploads/2014/12/450871616.jpg" alt="error" />
             <p style={{margin: "auto", padding:"15px 0px 0px 0px", fontWeight:"500"}}>
                 TITLE ONE
             </p>
         </div>
         <div className='ctg-agriculture-main-div-card'>
-            <img style={{width:"80%", borderRadius:"30px"}} src="https://kansaslivingmagazine.com/sites/default/files/styles/maximum/public/gettyimages-1215958963.jpg?itok=EJ8Webc6" alt="error" />
+            <img style={{width:"80%", borderRadius:"30px"}} src="https://content.fortune.com/wp-content/uploads/2014/12/450871616.jpg" alt="error" />
             <p style={{margin: "auto", padding:"15px 0px 0px 0px", fontWeight:"500"}}>
                 TITLE ONE
             </p>
         </div>
         <div className='ctg-agriculture-main-div-card'>
-            <img style={{width:"80%", borderRadius:"30px"}} src="https://kansaslivingmagazine.com/sites/default/files/styles/maximum/public/gettyimages-1215958963.jpg?itok=EJ8Webc6" alt="error" />
+            <img style={{width:"80%", borderRadius:"30px"}} src="https://content.fortune.com/wp-content/uploads/2014/12/450871616.jpg" alt="error" />
             <p style={{margin: "auto", padding:"15px 0px 0px 0px", fontWeight:"500"}}>
                 TITLE ONE
             </p>
@@ -60,4 +60,4 @@ const CtgSpices = () => {
   )
 }
 
-export default CtgSpices;
+export default CtgApparel;

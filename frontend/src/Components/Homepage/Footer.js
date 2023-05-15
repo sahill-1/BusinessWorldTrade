@@ -15,7 +15,7 @@ const Footer = () => {
                     <h5 style={{ textAlign: "left", fontWeight: "600", color: "#2b5c77", paddingTop: "5px", fontSize: "23px" }}>Newsletter</h5>
                     <div className='newsletter-section-div'>
                         <input placeholder='Email Address' />
-                        <button><FaTelegram style={{ fontSize: "40px", color: "#ff6a00" }} /></button>
+                        <button><FaTelegram style={{ fontSize: "40px", color: "#ff6a00" }}/> </button>
                     </div>
                 </div>
             </div>

@@ -3,32 +3,42 @@ import {
   Button, Checkbox, Flex, FormControl, FormLabel,
   Heading, Input, Link, Stack, Image, ChakraProvider,
 } from '@chakra-ui/react';
-
+import loginImage from "../images/login page 4-01.jpg";
+// import { Provider } from 'react-redux';
+// import store from "../app/store";
+import { useDispatch } from 'react-redux';
+import { login } from '../features/userSlice';
 export default function LogIn() {
 
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [password, setPassword] = useState("");  
 
-  const handleEmail = event => {
-    setEmail(event.target.value)
+  const dispatch = useDispatch() 
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    dispatch(login({
+      email: email,
+      password: password,
+      loggedIn: true,
+    }))
   }
-  const handlePassword = event => {
-    setPassword(event.target.value)
-  }
-  console.log(email, password);
+
   return (
+    // <Provider store={store}>
     <ChakraProvider>
       <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
         <Flex p={8} flex={1} align={'center'} justify={'center'}>
           <Stack spacing={4} w={'full'} maxW={'md'}>
             <Heading fontSize={'2xl'}>Sign in to your account</Heading>
-            <FormControl id="email">
+            <FormControl id="email" onSubmit={(e) => handleSubmit(e)}>
               <FormLabel>Email address</FormLabel>
-              <Input type="email" onChange={handleEmail} />
+              <Input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
             </FormControl>
-            <FormControl id="password">
+            <FormControl id="password" onSubmit={(e) => handleSubmit(e)}>
               <FormLabel>Password</FormLabel>
-              <Input type="password" onChange={handlePassword} />
+              <Input type="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
             </FormControl>
             <Stack spacing={6}>
               <Stack
@@ -38,7 +48,7 @@ export default function LogIn() {
                 <Checkbox>Remember me</Checkbox>
                 <Link color={'blue.500'}>Forgot password?</Link>
               </Stack>
-              <Button colorScheme={'blue'} variant={'solid'}>
+              <Button type='submit' colorScheme={'blue'} variant={'solid'}>
                 Sign in
               </Button>
             </Stack>
@@ -49,13 +59,11 @@ export default function LogIn() {
           <Image
             alt={'Login Image'}
             objectFit={'cover'}
-            src={
-              'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80'
-            }
-            
+            src={loginImage}
           />
         </Flex>
       </Stack>
     </ChakraProvider>
+    // </Provider>
   );
 }
