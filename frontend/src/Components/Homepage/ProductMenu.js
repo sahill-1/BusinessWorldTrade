@@ -20,10 +20,16 @@ const ProductMenu = () => {
       </button>
       {isMenuOpen && (
         <ul className="menu-list">
-          <li onClick={handleMenuClick}>Category 1</li>
-          <li onClick={handleMenuClick}>Category 2</li>
-          <li onClick={handleMenuClick}>Category 3</li>
-          <li onClick={handleMenuClick}>Category 4</li>
+          <li onClick={handleMenuClick}>Agriculture</li>
+          <li onClick={handleMenuClick}>Food & Beverages</li>
+          <li onClick={handleMenuClick}>Fashion & Apparel</li>
+          <li onClick={handleMenuClick}>Pharmaceuticals</li>
+          <li onClick={handleMenuClick}>Chemicals</li>
+          <li onClick={handleMenuClick}>Electronics</li>
+          <li onClick={handleMenuClick}>Computer Hardware & Software</li>
+          <li onClick={handleMenuClick}>Furniture</li>
+          <li onClick={handleMenuClick}>Textile & Fabrics</li>
+          <li onClick={handleMenuClick}>All Categories</li>
         </ul>
       )}
     </div>

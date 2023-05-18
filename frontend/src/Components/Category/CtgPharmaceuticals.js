@@ -3,7 +3,7 @@ import "bootstrap";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
-const CtgSpices = () => {
+const CtgPharmaceuticals = () => {
 
     const responsive = {
         superLargeDesktop: {
@@ -27,14 +27,14 @@ const CtgSpices = () => {
     return (
         <>
             <div className='ctg-agriculture'>
-                Home /  <span style={{ color: "red", cursor: "pointer" }}> SPICES</span>
+                Home /  <span style={{ color: "red", cursor: "pointer" }}>PHARMACEUTICALS</span>
             </div>
             
             
             <Carousel responsive={responsive}>
             <div className='ctg-agriculture-main-div' >
                 <div className='ctg-agriculture-main-div-card'>
-                    <img style={{ width: "80%", height:"150px", borderRadius: "30px" }} src="https://c.ndtvimg.com/2023-01/m0dmrm58_spices_625x300_18_January_23.jpg?im=FaceCrop,algorithm=dnn,width=620,height=350" alt="error" />
+                    <img style={{ width: "80%", height:"150px", borderRadius: "30px" }} src="https://blog.ipleaders.in/wp-content/uploads/2020/08/1-14694-1.png" alt="error" />
                     <p style={{ margin: "auto", padding: "15px 0px 0px 0px", fontWeight: "500" }}>
                         TITLE ONE
                     </p>
@@ -42,7 +42,7 @@ const CtgSpices = () => {
             </div>
             <div className='ctg-agriculture-main-div' >
                 <div className='ctg-agriculture-main-div-card'>
-                    <img style={{ width: "80%",height:"150px", borderRadius: "30px" }} src="https://c.ndtvimg.com/2023-01/m0dmrm58_spices_625x300_18_January_23.jpg?im=FaceCrop,algorithm=dnn,width=620,height=350" alt="error" />
+                    <img style={{ width: "80%",height:"150px", borderRadius: "30px" }} src="https://blog.ipleaders.in/wp-content/uploads/2020/08/1-14694-1.png" alt="error" />
                     <p style={{ margin: "auto", padding: "15px 0px 0px 0px", fontWeight: "500" }}>
                         TITLE Two
                     </p>
@@ -50,7 +50,7 @@ const CtgSpices = () => {
             </div>
             <div className='ctg-agriculture-main-div' >
                 <div className='ctg-agriculture-main-div-card'>
-                    <img style={{ width: "80%",height:"150px", borderRadius: "30px" }} src="https://c.ndtvimg.com/2023-01/m0dmrm58_spices_625x300_18_January_23.jpg?im=FaceCrop,algorithm=dnn,width=620,height=350" alt="error" />
+                    <img style={{ width: "80%",height:"150px", borderRadius: "30px" }} src="https://blog.ipleaders.in/wp-content/uploads/2020/08/1-14694-1.png" alt="error" />
                     <p style={{ margin: "auto", padding: "15px 0px 0px 0px", fontWeight: "500" }}>
                         TITLE Three
                     </p>
@@ -58,7 +58,7 @@ const CtgSpices = () => {
             </div>
             <div className='ctg-agriculture-main-div' >
                 <div className='ctg-agriculture-main-div-card'>
-                    <img style={{ width: "80%",height:"150px", borderRadius: "30px" }} src="https://c.ndtvimg.com/2023-01/m0dmrm58_spices_625x300_18_January_23.jpg?im=FaceCrop,algorithm=dnn,width=620,height=350" alt="error" />
+                    <img style={{ width: "80%",height:"150px", borderRadius: "30px" }} src="https://blog.ipleaders.in/wp-content/uploads/2020/08/1-14694-1.png" alt="error" />
                     <p style={{ margin: "auto", padding: "15px 0px 0px 0px", fontWeight: "500" }}>
                         TITLE Four
                     </p>
@@ -66,7 +66,7 @@ const CtgSpices = () => {
             </div>
             <div className='ctg-agriculture-main-div' >
                 <div className='ctg-agriculture-main-div-card'>
-                    <img style={{ width: "80%",height:"150px", borderRadius: "30px" }} src="https://c.ndtvimg.com/2023-01/m0dmrm58_spices_625x300_18_January_23.jpg?im=FaceCrop,algorithm=dnn,width=620,height=350" alt="error" />
+                    <img style={{ width: "80%",height:"150px", borderRadius: "30px" }} src="https://blog.ipleaders.in/wp-content/uploads/2020/08/1-14694-1.png" alt="error" />
                     <p style={{ margin: "auto", padding: "15px 0px 0px 0px", fontWeight: "500" }}>
                         TITLE Five
                     </p>
@@ -74,7 +74,7 @@ const CtgSpices = () => {
             </div>
             <div className='ctg-agriculture-main-div' >
                 <div className='ctg-agriculture-main-div-card'>
-                    <img style={{ width: "80%",height:"150px", borderRadius: "30px" }} src="https://c.ndtvimg.com/2023-01/m0dmrm58_spices_625x300_18_January_23.jpg?im=FaceCrop,algorithm=dnn,width=620,height=350" alt="error" />
+                    <img style={{ width: "80%",height:"150px", borderRadius: "30px" }} src="https://blog.ipleaders.in/wp-content/uploads/2020/08/1-14694-1.png" alt="error" />
                     <p style={{ margin: "auto", padding: "15px 0px 0px 0px", fontWeight: "500" }}>
                         TITLE Six
                     </p>
@@ -85,4 +85,4 @@ const CtgSpices = () => {
     )
 }
 
-export default CtgSpices;
+export default CtgPharmaceuticals;

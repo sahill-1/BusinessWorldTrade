@@ -4,39 +4,24 @@ import {
   Heading, Input, Link, Stack, Image, ChakraProvider,
 } from '@chakra-ui/react';
 import loginImage from "../images/login page 4-01.jpg";
-// import { Provider } from 'react-redux';
-// import store from "../app/store";
-import { useDispatch } from 'react-redux';
-import { login } from '../features/userSlice';
+
 export default function LogIn() {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");  
 
-  const dispatch = useDispatch() 
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-
-    dispatch(login({
-      email: email,
-      password: password,
-      loggedIn: true,
-    }))
-  }
-
   return (
-    // <Provider store={store}>
+    
     <ChakraProvider>
       <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
         <Flex p={8} flex={1} align={'center'} justify={'center'}>
           <Stack spacing={4} w={'full'} maxW={'md'}>
             <Heading fontSize={'2xl'}>Sign in to your account</Heading>
-            <FormControl id="email" onSubmit={(e) => handleSubmit(e)}>
+            <FormControl id="email" >
               <FormLabel>Email address</FormLabel>
               <Input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
             </FormControl>
-            <FormControl id="password" onSubmit={(e) => handleSubmit(e)}>
+            <FormControl id="password" >
               <FormLabel>Password</FormLabel>
               <Input type="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
             </FormControl>
@@ -63,7 +48,6 @@ export default function LogIn() {
           />
         </Flex>
       </Stack>
-    </ChakraProvider>
-    // </Provider>
+    </ChakraProvider> 
   );
 }

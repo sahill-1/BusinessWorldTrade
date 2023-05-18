@@ -7,7 +7,7 @@ const FormHomepage = () => {
         <div className='HomePage-Form'>
             <div className='HomePage-Form-Left'>
                 <div className='HomePage-Form-Left-Div'>
-                    <img src='https://images.unsplash.com/photo-1615789591457-74a63395c990?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZG9tZXN0aWMlMjBjYXR8ZW58MHx8MHx8&w=1000&q=80' alt="Error"/>
+                    <img style={{width:"120px", height:"120px", borderRadius:"20px"}} src='https://images.unsplash.com/photo-1615789591457-74a63395c990?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZG9tZXN0aWMlMjBjYXR8ZW58MHx8MHx8&w=1000&q=80' alt="Error"/>
                     <p>Verified <span style={{ color: "red" }}>BUYERS</span></p>
                 </div>
                 <div className='HomePage-Form-Left-Div'>
@@ -16,11 +16,11 @@ const FormHomepage = () => {
 
                 </div>
                 <div className='HomePage-Form-Left-Div'>
-                    <img src='https://images.unsplash.com/photo-1615789591457-74a63395c990?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZG9tZXN0aWMlMjBjYXR8ZW58MHx8MHx8&w=1000&q=80' alt="Error" />
+                    <img style={{width:"120px", height:"120px", borderRadius:"20px"}} src='https://images.unsplash.com/photo-1615789591457-74a63395c990?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZG9tZXN0aWMlMjBjYXR8ZW58MHx8MHx8&w=1000&q=80' alt="Error" />
                     <p>Trade with <span style={{ color: "red" }}>CONFIDENCE</span></p>
                 </div>
                 <div className='HomePage-Form-Left-Div'>
-                    <img src='https://images.unsplash.com/photo-1615789591457-74a63395c990?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZG9tZXN0aWMlMjBjYXR8ZW58MHx8MHx8&w=1000&q=80' alt="Error" />
+                    <img style={{width:"120px", height:"120px", borderRadius:"20px"}} src='https://images.unsplash.com/photo-1615789591457-74a63395c990?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZG9tZXN0aWMlMjBjYXR8ZW58MHx8MHx8&w=1000&q=80' alt="Error" />
                     <p>24/7 <span style={{ color: "red" }}>HELP CENTER</span></p>
                 </div>
             </div>
