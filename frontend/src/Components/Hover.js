@@ -18,12 +18,13 @@ const Hover = () => {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        Main Category
+        Agriculture
         {isHovered && (
           <div className="subcategory">
-            <p>Subcategory 1</p>
-            <p>Subcategory 2</p>
-            <p>Subcategory 3</p>
+            <p>Rice</p>
+            <p>Cereals</p>
+            <p>Vegetables</p>
+            <p>Fruits</p>
           </div>
         )}
       </div>

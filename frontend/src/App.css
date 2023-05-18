@@ -35,6 +35,7 @@
   }
 }
 
+
 /* HOVER */
 .container {
   display: flex;
@@ -42,27 +43,29 @@
   align-items: center;
   height: 100vh;
 }
-
 .category {
+  width: auto;
   padding: 10px;
   border: 1px solid #ccc;
   cursor: pointer;
+  color: black;
+  border-radius: 4px;
 }
-
 .subcategory {
   position: absolute;
   top: 40%;
   left: 54%;
-  width: 200px;
-  padding: 10px;
+  width: auto;
+  /* border: 1px solid black; */
+  padding: 10px 20px;
   background-color: #f9f9f9;
   border: 1px solid #ccc;
+  border-radius: 5px;
 }
-
 .subcategory p {
-  margin: 5px 0;
+  margin: 2px 0;
+  text-align: left;
 }
-
 .category.active {
   background-color: #f9f9f9;
 }
