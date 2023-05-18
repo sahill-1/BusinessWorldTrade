@@ -35,6 +35,40 @@
   }
 }
 
+/* HOVER */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.category {
+  padding: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.subcategory {
+  position: absolute;
+  top: 40%;
+  left: 54%;
+  width: 200px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+}
+
+.subcategory p {
+  margin: 5px 0;
+}
+
+.category.active {
+  background-color: #f9f9f9;
+}
+/* HOVER */
+
+
 /* HOMEPAGE-TOPCATEGORY */
 .main-div {
   width: 100%;
