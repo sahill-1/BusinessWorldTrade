@@ -39,13 +39,16 @@
 /* HOVER */
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  /* height: 100vh; */
+  /* height: auto; */
 }
 .category {
   width: auto;
-  padding: 10px;
+  padding: 5px 10px;
+  margin:0;
   border: 1px solid #ccc;
   cursor: pointer;
   color: black;
@@ -53,14 +56,16 @@
 }
 .subcategory {
   position: absolute;
-  top: 40%;
-  left: 54%;
+  /* top: 18%; */
+  left: 15%;
   width: auto;
-  /* border: 1px solid black; */
+  margin-top: -30px;
+  border: 1px solid black;
   padding: 10px 20px;
   background-color: #f9f9f9;
   border: 1px solid #ccc;
   border-radius: 5px;
+  z-index: 999;
 }
 .subcategory p {
   margin: 2px 0;
