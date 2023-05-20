@@ -5,7 +5,7 @@ import { RiArrowDropDownLine } from 'react-icons/ri';
 const categories = [
   {
     id: 1,
-    name: 'Category 1',
+    name: 'Category 111111111',
     subcategories: ['Subcategory 1', 'Subcategory 2', 'Subcategory 3']
   },
   {
@@ -44,53 +44,31 @@ const ProductMenu = () => {
         Browse All Categories <RiArrowDropDownLine />
       </button>
 
-      {categories.map((category) => (
-        <ul 
-          key={category.id}
-          className={`category ${hoveredCategoryId === category.id ? "active" : ""}`}
-          onMouseEnter={() => handleMouseEnter(category.id)}
-          onMouseLeave={handleMouseLeave}
-          onClick={handleMenuClick}
-        >
-          {category.name}
-          {hoveredCategoryId === category.id && (
-            <div className='subcategory'>
-              {category.subcategories.map((subcategory, index) => (
-                <li key={index}>{subcategory}</li>
-              ))}
-            </div>
-          )}
-          </ul>
-      ))}
-          {/* <li onClick={handleMenuClick}>Agriculture</li>
-          <li onClick={handleMenuClick}>Food & Beverages</li>
-          <li onClick={handleMenuClick}>Fashion & Apparel</li>
-          <li onClick={handleMenuClick}>Chemicals</li>
-          <li onClick={handleMenuClick}>Electronics</li>
-          <li onClick={handleMenuClick}>Computer Hardware & Software</li>
-          <li onClick={handleMenuClick}>Furniture</li>
-          <li onClick={handleMenuClick}>Textile & Fabrics</li>
-          <li onClick={handleMenuClick}>All Categories</li> */}
-      
+      {isMenuOpen && (
+        <div className="categories-menu">
+          {categories.map((category) => (
+            <ul
+              key={category.id}
+              className={`category ${hoveredCategoryId === category.id ? 'active' : ''} subcategory-hover`}
+              onMouseEnter={() => handleMouseEnter(category.id)}
+              onMouseLeave={handleMouseLeave}
+            >
+              {category.name}
+              {hoveredCategoryId === category.id && (
+                <div className="subcategory">
+                  {category.subcategories.map((subcategory, index) => (
+                    <li key={index}>{subcategory}</li>
+                  ))}
+                </div>
+              )}
+            </ul>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
 export default ProductMenu;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // import React, { useState } from 'react';
 // import './ProductMenu.css';
