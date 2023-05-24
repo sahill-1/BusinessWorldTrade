@@ -33,14 +33,14 @@ const NavbarHeader = () => {
 
 
                         <div className="d-flex buyer-seller" style={{ paddingRight: "130px" }}>
-                            <NavDropdown title="Buyer" id="navbarScrollingDropdown" style={{ padding: "0px 20px 0px 0px" }}>
+                            <NavDropdown title="Buyer" id="navbarScrollingDropdown" style={{ fontSize:"16.5px", fontWeight:"600", color:"#3d3d3d", padding: "0px 20px 0px 0px" }}>
                                 <NavDropdown.Item href="#action3">Post Buy Requirements</NavDropdown.Item>
                                 <NavDropdown.Divider />
                                 <NavDropdown.Item href="#action4">Search Suppliers</NavDropdown.Item>
                                 <NavDropdown.Divider />
                                 <NavDropdown.Item href="#action5">Request A Callback</NavDropdown.Item>
                             </NavDropdown>
-                            <NavDropdown title="Seller" id="navbarScrollingDropdown" >
+                            <NavDropdown title="Seller" id="navbarScrollingDropdown" style={{ fontSize:"16.5px", fontWeight:"600", color:"#3d3d3d", padding: "0px 20px 0px 0px" }} >
                                 <NavDropdown.Item href="#action3">Search Buy Leads</NavDropdown.Item>
                                 <NavDropdown.Divider />
                                 <NavDropdown.Item href="#action4">Get Freight Quotes</NavDropdown.Item>

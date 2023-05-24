@@ -1,23 +1,115 @@
-/* Top category page */
-.top-categories-homepage {
+/* TopCategory */
+.product {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.image-slider {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.image-slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.image-slider img:hover {
+  transform: scale(1.1);
+}
+
+.product-details {
+  margin-left: 20px;
+}
+
+.product-name {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.buyer-seller {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.quantity {
+  font-size: 14px;
+}
+
+/* TopCategory*/
+
+/* Practise Page */
+.category-page {
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+  color: #333;
+}
+
+.category-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
-  justify-items: center;
 }
 
-.category-homepage {
-  width: 200px;
-  height: 150px;
-  background-color: #f0f0f0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  font-weight: bold;
-  color: #333;
+.category-card {
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
 }
-/* Top category page */
+
+.category-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.category-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.category-card:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.category-card h3 {
+  font-size: 18px;
+  margin-bottom: 0;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.category-card:hover h3 {
+  color: #ff5722;
+}
+
+
 .App {
   text-align: center;
 }
@@ -107,40 +199,6 @@
   background-color: #f9f9f9;
 }
 /* HOVER */
-
-
-/* HOMEPAGE-TOPCATEGORY */
-.main-div {
-  width: 100%;
-  border: 1px solid transparent;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  flex: wrap;
-}
-.main-div-product {
-  width: 170px;
-  /* height: 220px; */
-  border: 1px solid transparent;
-  margin-right: 30px;
-  margin-bottom: 20px;
-}
-.main-div-image {
-  width: 170px;
-  height: 170px;
-  border-radius: 50%;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
-.main-div-image img {
-  width: 170px;
-  height: 170px;
-  border-radius: 50%;
-}
-.main-div-product p {
-  font-size: 17px;
-  font-weight: 500;
-  padding: 10px 0px;
-  text-shadow: 0px 0px 1px black;
-}
 
 /* NAVBAR */
 .search-box {
