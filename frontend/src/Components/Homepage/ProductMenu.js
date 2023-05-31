@@ -5,18 +5,18 @@ import { RiArrowDropDownLine } from 'react-icons/ri';
 const categories = [
   {
     id: 1,
-    name: 'Category 111111111',
-    subcategories: ['Subcategory 1', 'Subcategory 2', 'Subcategory 3']
+    name: 'Category 1',
+    subcategories: ['Subcategory1', 'Subcategory2', 'Subcategory3']
   },
   {
     id: 2,
     name: 'Category 2',
-    subcategories: ['Subcategory 4', 'Subcategory 5', 'Subcategory 6']
+    subcategories: ['Subcategory4', 'Subcategory5', 'Subcategory6']
   },
   {
     id: 3,
     name: 'Category 3',
-    subcategories: ['Subcategory 7', 'Subcategory 8', 'Subcategory 9']
+    subcategories: ['Subcategory7', 'Subcategory8', 'Subcategory9']
   }
 ];
 
@@ -57,7 +57,7 @@ const ProductMenu = () => {
               {hoveredCategoryId === category.id && (
                 <div className="subcategory">
                   {category.subcategories.map((subcategory, index) => (
-                    <li key={index}>{subcategory}</li>
+                    <li key={index} style={{height:"30px"}}>{subcategory}</li>
                   ))}
                 </div>
               )}

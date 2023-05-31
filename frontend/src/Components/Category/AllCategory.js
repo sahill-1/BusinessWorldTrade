@@ -4,8 +4,12 @@ import CtgAgriculture from './CtgAgriculture';
 import CtgApparel from './CtgApparel';
 import CtgBeverages from './CtgBeverages';
 import CtgSpices from './CtgSpices';
-import Footer from "../Homepage/Footer";
 import CtgPharmaceuticals from './CtgPharmaceuticals';
+import CtgHardware from './CtgHardware';
+import Footer from "../Homepage/Footer";
+import CtgOilFuel from './CtgOilFuel';
+import CtgChemicals from './CtgChemicals';
+import CtgAutomobile from './CtgAutomobile';
 
 const AllCategory = () => {
   return (
@@ -16,6 +20,10 @@ const AllCategory = () => {
     <CtgBeverages />
     <CtgSpices />
     <CtgPharmaceuticals />
+    <CtgHardware />
+    <CtgOilFuel/>
+    <CtgChemicals/>
+    <CtgAutomobile/>
     <Footer/>
     </>
   )
