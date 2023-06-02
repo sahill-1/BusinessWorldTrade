@@ -8,23 +8,37 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
   }
   
   .modal-content {
-    background-color: #fefefe;
+    /* background-color: #fefefe; */
     padding: 20px;
-    border: 1px solid #888;
-    max-width: 500px;
+    /* border: 1px solid #888; */
+    max-width: 1032px;
+    height: 100vh;
+    /* border: 2px solid red; */
+    background-color: transparent;
+    background-image: url("../images/popup.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .modal-form-style{
+    width:40%;
+    position: relative;
+    left: 58%;
+    top: 25%
   }
   
   .close {
     color: #aaa;
     float: left;
-    font-size: 28px;
+    font-size: 55px;
     font-weight: bold;
     cursor: pointer;
     position: relative;
-    left: 47%;
+    left: 47.5%;
+    top: 9.5%;
   }
   
   .close:hover,

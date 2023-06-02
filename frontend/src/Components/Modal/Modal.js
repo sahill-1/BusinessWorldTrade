@@ -22,7 +22,7 @@ const Modal = () => {
             </span>
             {/* <h2>Modal Title</h2>
             <p>This is a sample modal.</p> */}
-            <div>
+            <div className="modal-form-style">
               <FloatingLabel style={{ outline: "none !important" }} controlId="floatingText" label="First & Last Name" className="mb-2">
                 <Form.Control type="text" placeholder="Full Name" />
               </FloatingLabel>
@@ -47,11 +47,11 @@ const Modal = () => {
 
                 </Dropdown.Menu>
               </Dropdown>
-
-            </div>
-            <Button variant="primary" size="lg">
+              {/* <Button className="my-2" variant="primary" size="md">
               Submit
-            </Button>
+            </Button> */}
+            </div>
+            
           </div>
         </div>
       )}
