@@ -1,4 +1,15 @@
-.modal-overlay {
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  .modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -8,42 +19,69 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
   }
   
-  .modal-content {
-    /* background-color: #fefefe; */
+   /* .modal-content {
     padding: 20px;
-    /* border: 1px solid #888; */
-    max-width: 1032px;
-    height: 100vh;
-    /* border: 2px solid red; */
+    width:80%;
+    height: 90vh; 
     background-color: transparent;
     background-image: url("../images/popup.png");
-    background-size: cover;
+    background-size: 100% 90vh;
     background-repeat: no-repeat;
+  }       */
+
+  .modal-content {
+    padding: 20px;
+    width: 80%;
+    height: 90vh;
+    background-color: transparent;
+    background-image: url("../images/popup.png");
+    background-size: 100% 90vh;
+    background-repeat: no-repeat;
+    animation-name: zoomIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
   }
+  
+  @keyframes zoomIn {
+    from {
+      transform: scale(0.1);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
   .modal-form-style{
     width:40%;
     position: relative;
     left: 58%;
-    top: 25%
+    top: 28%
   }
   
   .close {
-    color: #aaa;
-    float: left;
+    width: 5%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    float: right;
     font-size: 55px;
     font-weight: bold;
     cursor: pointer;
     position: relative;
-    left: 47.5%;
-    top: 9.5%;
+    left: 95%;
+    top: 13%;
+    border: 1px solid transparent;
   }
   
   .close:hover,
   .close:focus {
     color: black;
     text-decoration: none;
-  }
+  }  
+
   
