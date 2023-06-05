@@ -1,87 +1,193 @@
+/* .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-content {
+  padding: 20px;
+  margin-bottom: 2%;
+  width: 80%;
+  height: 90vh;
+  background-color: transparent;
+  background-image: url("../images/popup.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  animation-name: zoomIn;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
 
-
- 
- 
- 
- 
- 
- 
- 
- 
- 
-  .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@keyframes zoomIn {
+  from {
+    transform: scale(0.02);
   }
-  
-   /* .modal-content {
-    padding: 20px;
-    width:80%;
-    height: 90vh; 
-    background-color: transparent;
-    background-image: url("../images/popup.png");
-    background-size: 100% 90vh;
-    background-repeat: no-repeat;
-  }       */
+  to {
+    transform: scale(1);
+  }
+}
 
+.modal-form-style {
+  width: 40%;
+  position: relative;
+  left: 58%;
+  top: 28%;
+}
+
+.close {
+  width: 5%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  float: right;
+  font-size: 55px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  left: 95%;
+  top: 13%;
+  border: 1px solid transparent;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+}
+
+.modal-btn-button {
+  position: relative;
+  left: 30%;
+  background-color: red;
+  border-style: none;
+}
+.modal-btn-button:hover {
+  background-color: rgb(184, 5, 5);
+}
+
+@media screen and (max-width: 1326px) {
+  .form-floating > .form-control,
+  .form-floating > .form-control-plaintext {
+    padding: 1rem 0.75rem;
+    width: 85%;
+    border: 1px solid red;
+    height: auto !important;
+  }
+} */
+
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border:1px solid red; */
+}
+
+.modal-content {
+  padding: 20px;
+  margin-bottom: 2%;
+  width: 80%;
+  height: 90%;
+  background-color: transparent;
+  background-image: url("../images/popup.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  animation-name: zoomIn;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  /* border: 1px solid green; */
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.02);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.modal-form-style {
+  width: 40%;
+  position: absolute;
+  left: 70%;
+  top: 68%;
+  transform: translate(-50%, -50%);
+}
+
+.close {
+  width: 5%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  float: right;
+  font-size: 55px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border: 1px solid transparent;
+}
+
+.close:hover,
+.close:focus {
+  /* color: black; */
+  text-decoration: none;
+}
+
+.modal-btn-button {
+  /* position: relative; */
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
+  background-color: red;
+  border-style: none;
+}
+
+.modal-btn-button:hover {
+  background-color: rgb(184, 5, 5);
+}
+
+@media screen and (max-width: 768px) {
   .modal-content {
-    padding: 20px;
-    width: 80%;
-    height: 90vh;
-    background-color: transparent;
-    background-image: url("../images/popup.png");
-    background-size: 100% 90vh;
-    background-repeat: no-repeat;
-    animation-name: zoomIn;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: both;
-  }
-  
-  @keyframes zoomIn {
-    from {
-      transform: scale(0.1);
-    }
-    to {
-      transform: scale(1);
-    }
+    width: 90%;
+    height: 80vh;
   }
 
-  .modal-form-style{
-    width:40%;
-    position: relative;
-    left: 58%;
-    top: 28%
+  .modal-form-style {
+    width: 43%;
+    height: auto;
   }
-  
+
   .close {
-    width: 5%;
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    float: right;
-    font-size: 55px;
-    font-weight: bold;
-    cursor: pointer;
-    position: relative;
-    left: 95%;
-    top: 13%;
-    border: 1px solid transparent;
+    font-size: 35px;
   }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-  }  
+  .form-floating>.form-control, .form-floating>.form-control-plaintext {
+    height: auto;
+}
+}
 
-  
+@media screen and (max-width: 576px) {
+  .modal-form-style {
+    width: 43%;
+    height: auto;
+  }
+}

@@ -7,11 +7,9 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Dropdown from 'react-bootstrap/Dropdown';
 const Modal = () => {
   const [isOpen, setIsOpen] = useState(true);
-
   const toggleModal = () => {
     setIsOpen(!isOpen);
   };
-
   return (
     <div>
       {isOpen && (
@@ -21,20 +19,25 @@ const Modal = () => {
               &times;
             </span>
             <div className="modal-form-style">
-              <FloatingLabel style={{ outline: "none !important" }} controlId="floatingText" label="First & Last Name" className="mb-2">
+              <FloatingLabel controlId="floatingText" label="First & Last Name" className="mb-2 modal-form-style-responsive">
                 <Form.Control type="text" placeholder="Full Name" />
               </FloatingLabel>
-              <FloatingLabel controlId="floatingInput" label="Email address" className="mb-2">
+              <FloatingLabel controlId="floatingInput" label="Email address" className="mb-2 modal-form-style-responsive">
                 <Form.Control type="email" placeholder="name@example.com" />
               </FloatingLabel>
 
-              <FloatingLabel controlId="floatingNumber" label="Number" className="mb-2">
+              <FloatingLabel controlId="floatingNumber" label="Number" className="mb-2 modal-form-style-responsive">
                 <Form.Control type="number" placeholder="Number" />
               </FloatingLabel>
-              <FloatingLabel controlId="floatingText" label="Type your query" className="mb-2">
-                <Form.Control type="text" placeholder="Text" />
+              <FloatingLabel controlId="floatingText" label="Type your query" className="mb-2 modal-form-style-responsive">
+                <Form.Control  type="text" placeholder="Text" />
               </FloatingLabel>
-              <Dropdown as={ButtonGroup} style={{ position: "relative", right: "30%" }}>
+
+              <div style={{
+                display:"flex",
+                justifyContent:"space-around"
+              }}>
+                <Dropdown as={ButtonGroup} >
                 <Button variant="success">I am</Button>
                 <Dropdown.Toggle split variant="success" id="dropdown-split-basic" />
                 <Dropdown.Menu style={{ width: "auto", padding: "6px" }}>
@@ -43,14 +46,13 @@ const Modal = () => {
                 </Dropdown.Menu>
               </Dropdown>
 
-              <Button style={{position:"relative", left:"30%", backgroundColor:"red", borderStyle:"none"}} className="my-2" variant="primary" size="md">Submit</Button>
+              <Button className="modal-btn-button" variant='primary' size="md">Submit</Button>
+              </div>
             </div>
-
           </div>
         </div>
       )}
     </div>
   );
 };
-
-export default Modal;     
+export default Modal;
