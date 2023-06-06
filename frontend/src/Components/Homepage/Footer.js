@@ -56,13 +56,18 @@ const Footer = () => {
                     </div>
 
                     <div className='sb__footer-links_div'>
-                        <h4>PARTNERS</h4>
-                        <a href='/'><p>partners</p></a>
-                        <a href='/'><p>partners</p></a>
-                        <a href='/'><p>partners</p></a>
-                        <a href='/'><p>partners</p></a>
-                        <a href='/'><p>partners</p></a>
-                        <a href='/'><p>partners</p></a>
+                        <h4>BUYER</h4>
+                        <a href='/'><p>Post By Requirement</p></a>
+                        <a href='/'><p>Search Supplier</p></a>
+                        <a href='/'><p>Request Callback</p></a>
+                        
+                    </div>
+                    <div className='sb__footer-links_div'>
+                        <h4>SELLER</h4>
+                        <a href='/'><p>Search Nuy Leads</p></a>
+                        <a href='/'><p>Get Frieght Quotes</p></a>
+                        <a href='/'><p>Logistics</p></a>
+                        <a href='/'><p>ISO Certification</p></a>
                     </div>
 
                 </div>
