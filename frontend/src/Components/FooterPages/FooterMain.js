@@ -1,6 +1,7 @@
 import React from 'react';
-import "./FooterMain.css"
-import AboutUS from './AboutUS'
+import "./FooterMain.css";
+import AboutUS from './AboutUS';
+
 const FooterMain = () => {
   return (
     <div>
