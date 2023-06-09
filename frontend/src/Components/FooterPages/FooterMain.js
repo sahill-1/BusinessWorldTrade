@@ -1,11 +1,15 @@
 import React from 'react';
 import "./FooterMain.css";
-import AboutUS from './AboutUS';
+// import AboutUS from './AboutUS';
+import PrivacyPolicy from './PrivacyPolicy';
+import Career from './Career';
 
 const FooterMain = () => {
   return (
     <div>
-      <AboutUS/>
+      {/* <AboutUS/> */}
+      <PrivacyPolicy />
+      <Career />
     </div>
   )
 }

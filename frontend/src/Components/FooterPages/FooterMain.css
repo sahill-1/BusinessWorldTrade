@@ -1,3 +1,5 @@
+/* ABOUT US */
+
 /* FIRST_DIV */
 .body{
     overflow-x: hidden;
@@ -239,3 +241,34 @@
     width: 60%;
 }
 }
+
+
+/* PRIVACY POLICY */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+.privacy-policy{
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 1.5px 1px rgb(168, 165, 165);
+}
+.privacy-policy-content{
+  width: 80%;
+  margin: auto;
+  /* text-align: left; */
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 20px 20px;
+}
+.privacy-policy-content p{
+  color: rgb(65, 65, 65);
+}
+
+/* CAREER */
+.footer-career-banner{
+  width: 85%;
+  height: 60vh;
+  margin: auto;
+}
+.footer-career-banner img{
+  width: 100%;
+  height: 100%;
+}
+
