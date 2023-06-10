@@ -11,7 +11,7 @@ const AboutUS = () => {
         <div>
             <Navbar />
             {/* FIRST_DIV */}
-            <div className='about-us-first-div my-5' >
+            <div className='about-us-first-div my-3' >
                 <div className='about-us-first-div-left'>
                     <h2 style={{ color: "#2d5e79" }}>Making Indian MSMEs</h2>
                     <h2><span style={{ color: "red" }}>Digitally </span><span style={{ color: "#2d5e79" }} >Saksham</span></h2>

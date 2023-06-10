@@ -9,10 +9,8 @@ const PrivacyPolicy = () => {
             <h3 className='my-3 privacy-policy'>Privacy Policy</h3>
             <div className='privacy-policy-content'>
                 <p style={{textAlign:"left", color: "grey" }}><span style={{ fontSize: "18px", fontWeight: "500", color: "rgb(65, 65, 65)" }}>At Business World Trade,</span><br></br> we are committed to protecting the privacy and confidentiality of our users' personal information. This Privacy Policy outlines how we collect, use, disclose, and safeguard the information we gather from our users.
-
                     Information Collection and Use
                     We may collect certain personally identifiable information from our users, including but not limited to:
-
                     Name, company name, and contact details (email address, phone number, address).
                     Business information such as industry, products/services, and company size.
                     We collect this information to enhance the user experience, provide personalized services, improve our products and services, and facilitate seamless communication between businesses.</p>

@@ -1,13 +1,13 @@
 import React from 'react'
 import Navbar from "../Homepage/Navbar";
 import Footer from "../Homepage/Footer";
-
+import careerImage from "../images/career bANNER-01-01.jpg";
 const Career = () => {
   return (
     <>
       <Navbar />
       <div className='footer-career-banner my-4'>
-        <img src="https://media.foundit.in/career-advice/wp-content/uploads/2022/03/career-in-physical-education-1068x559.jpg" alt='error' />
+        <img src={careerImage} alt='error' />
       </div>
       <div className='footer-career-content'>
         <div className='privacy-policy-content'>

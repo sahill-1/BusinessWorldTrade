@@ -256,6 +256,7 @@
   /* text-align: left; */
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   padding: 20px 20px;
+  border-radius: 5px;
 }
 .privacy-policy-content p{
   color: rgb(65, 65, 65);
@@ -264,7 +265,7 @@
 /* CAREER */
 .footer-career-banner{
   width: 85%;
-  height: 60vh;
+  height: 70vh;
   margin: auto;
 }
 .footer-career-banner img{
@@ -272,3 +273,50 @@
   height: 100%;
 }
 
+
+/* CONTACT US */
+.contact-us-contact-details{
+  width: 90%;
+  margin: auto;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-around;
+}
+.contact-us-contact-details-div{
+  width: 30%;
+  /* border: 1px solid red; */
+  padding: 10px;
+}
+.contact-us-contact-details-div h6{
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 3rem;
+}
+.contact-us-contact-details-div p{
+  line-height: 0.01rem;
+}
+.privacy-policy-form{
+  width: 80%;
+  /* border: 1px solid red; */
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.privacy-policy-banner{
+  width: 47%;
+  /* border: 1px solid red; */
+}
+.privacy-policy-banner img{
+  width: 100%;
+  height: auto;
+  /* border: 1px solid red; */
+}
+.privacy-policy-form-control{
+  width: 47%;
+}
+.contactus-button-color{
+  background-color: #2b5c77;
+}
+.contactus-button-color:hover{
+  background-color: #1b3c4e;
+}
