@@ -30,7 +30,12 @@ const Testimonial = () => {
 
   return (
     <>
-      <p style={{ color: "#444444", fontWeight: "500", fontSize: "34px", paddingTop:"25px" }}>What Our Client Say About Us</p>
+      <p style={{
+        color: "#444444",
+        fontWeight: "500",
+        fontSize: "34px",
+        paddingTop: "25px"
+      }}>What Our Client Say About Us</p>
       <section className='section my-2'>
         <div className='section-center'>
           {people.map((item, indexPeople) => {
@@ -50,8 +55,8 @@ const Testimonial = () => {
               </article>
             )
           })}
-          <button className='prev' onClick={() => setIndex(index-1)}><i className='fas fa-arrow-left'/></button>
-          <button className='next' onClick={() => setIndex(index+1)}><i className='fas fa-arrow-right'/></button>
+          <button className='prev' onClick={() => setIndex(index - 1)}><i className='fas fa-arrow-left' /></button>
+          <button className='next' onClick={() => setIndex(index + 1)}><i className='fas fa-arrow-right' /></button>
         </div>
       </section>
     </>

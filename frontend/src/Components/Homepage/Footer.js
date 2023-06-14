@@ -2,6 +2,7 @@ import React from 'react'
 import "./Footer.css";
 import logo from '../images/bwt-dark.png';
 import { FaTelegram } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 import "bootstrap"
 
 const Footer = () => {
@@ -28,21 +29,21 @@ const Footer = () => {
 
                     <div className='sb__footer-links_div'>
                         <h4>ABOUT US</h4>
-                        <a href='/'><p>About Us</p></a>
-                        <a href='/'><p>Career</p></a>
-                        <a href='/'><p>FAQ</p></a>
-                        <a href='/'><p>Privacy & Policy</p></a>
-                        <a href='/'><p>Contact Us</p></a>
-                        <a href='/'><p>Blog</p></a>
+                        <Link to='/about-us'><p>About Us</p></Link>
+                        <Link to='/career'><p>Career</p></Link>
+                        <Link to='/faq'><p>FaQ</p></Link>
+                        <Link to='/privacy-policy'><p>Privacy & Policy</p></Link>
+                        <Link to='/contact-us'><p>Contct Us</p></Link>
+                        <Link to='/blog'><p>Blog</p></Link>
                     </div>
 
                     <div className='sb__footer-links_div'>
                         <h4>OUR SERVICES</h4>
-                        <a href='/'><p>Advertise With Us</p></a>
-                        <a href='/'><p>Business Loan</p></a>
-                        <a href='/'><p>Business Insurance</p></a>
-                        <a href='/'><p>ISO Certification</p></a>
-                        <a href='/'><p>E-Filing</p></a>
+                        <Link to='/advertise-with-us'><p>Advertise With Us</p></Link>
+                        <Link to='/loan'><p>Business Loan</p></Link>
+                        <Link to='/insurance'><p>Business Insurance</p></Link>
+                        <Link to='/iso-certification'><p>ISO Certification</p></Link>
+                        <Link to='/e-filling'><p>E-Filing</p></Link>
                     </div>
 
                     <div className='sb__footer-links_div'>
@@ -59,7 +60,7 @@ const Footer = () => {
                         <h4>BUYER</h4>
                         <a href='/'><p>Post By Requirement</p></a>
                         <a href='/'><p>Search Supplier</p></a>
-                        <a href='/'><p>Request Callback</p></a>
+                        <Link to='/request-callback'><p>Request Callback</p></Link>
                         
                     </div>
                     <div className='sb__footer-links_div'>
@@ -67,9 +68,8 @@ const Footer = () => {
                         <a href='/'><p>Search Buy Leads</p></a>
                         <a href='/'><p>Get Frieght Quotes</p></a>
                         <a href='/'><p>Logistics</p></a>
-                        <a href='/'><p>ISO Certification</p></a>
+                        <Link to='/iso-certification'><p>ISO Certification</p></Link>
                     </div>
-
                 </div>
 
             </div>
@@ -85,8 +85,8 @@ const Footer = () => {
                 </div>
 
                 <div className='sb__footer-below-links' style={{marginTop:"14px"}}>
-                    <a href='./'><div><p>Terms & Conditions</p></div></a>
-                    <a href='./'><div><p>Privacy Policy</p></div></a>
+                    <Link to='./'><div><p>Terms & Conditions</p></div></Link>
+                    <Link to='/privacy-policy'><div><p>Privacy Policy</p></div></Link>
                 </div>
             </div>
         </div>
