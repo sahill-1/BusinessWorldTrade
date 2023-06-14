@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../Homepage/Navbar'
 import Footer from '../Homepage/Footer'
 
-const FAQ = () => {
+const Blog = () => {
     return (
         <>
             <Navbar />
@@ -169,4 +169,4 @@ Digital transformation is an ongoing process. Businesses should foster a culture
     )
 }
 
-export default FAQ
+export default Blog

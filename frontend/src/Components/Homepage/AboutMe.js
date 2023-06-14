@@ -4,7 +4,15 @@ const AboutMe = () => {
   return (
 //About Us
     <div className="about-me">
-      <h2 style={{ fontSize: "28px", fontStyle: "oblique" }}>About <span style={{ color: "red", fontWeight: "700", fontSize: "30px", fontStyle: "oblique" }}>Business World Trade</span></h2>
+      <h2 style={{
+        fontSize: "28px",
+        fontStyle: "oblique"
+      }}>About <span style={{
+        color: "red",
+        fontWeight: "700",
+        fontSize: "30px",
+        fontStyle: "oblique"
+      }}>Business World Trade</span></h2>
       <img src="http://cdn.shopify.com/s/files/1/0086/0795/7054/articles/Cat_s_Mind_x630.jpg?v=1624444348" alt="error" />
       <div className="paragraph-slider">
 

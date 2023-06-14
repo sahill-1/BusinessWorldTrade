@@ -16,7 +16,11 @@ const NavbarHeader = () => {
         <>
             <Navbar bg="light" expand="lg">
                 <Container fluid>
-                    <Navbar.Brand href="/"><img src={logo} alt="error" style={{ width: "250px", height: '60px', marginLeft: "20px" }} /></Navbar.Brand>
+                    <Navbar.Brand href="/"><img src={logo} alt="error" style={{
+                        width: "250px",
+                        height: '60px',
+                        marginLeft: "20px"
+                    }} /></Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
 
@@ -26,21 +30,24 @@ const NavbarHeader = () => {
                                 placeholder="Search Products as Buyer/Seller"
                                 className="me-2"
                                 aria-label="Search"
-                                style={{ borderRadius: "30px 0px 0px 30px", boxShadow: "none" }}
+                                style={{
+                                    borderRadius: "30px 0px 0px 30px",
+                                    boxShadow: "none"
+                                }}
                             />
                             <Button className="mic-button" variant="outline-success"><i><BsFillMicFill /></i></Button>
                         </Form>
 
 
                         <div className="d-flex buyer-seller" style={{ paddingRight: "130px" }}>
-                            <NavDropdown title="Buyer" id="navbarScrollingDropdown" style={{ fontSize:"16.5px", fontWeight:"600", color:"#3d3d3d", padding: "0px 20px 0px 0px" }}>
+                            <NavDropdown title="Buyer" id="navbarScrollingDropdown" style={{ fontSize: "16.5px", fontWeight: "600", color: "#3d3d3d", padding: "0px 20px 0px 0px" }}>
                                 <NavDropdown.Item href="#action3">Post Buy Requirements</NavDropdown.Item>
                                 <NavDropdown.Divider />
                                 <NavDropdown.Item href="#action4">Search Suppliers</NavDropdown.Item>
                                 <NavDropdown.Divider />
                                 <NavDropdown.Item href="#action5">Request A Callback</NavDropdown.Item>
                             </NavDropdown>
-                            <NavDropdown title="Seller" id="navbarScrollingDropdown" style={{ fontSize:"16.5px", fontWeight:"600", color:"#3d3d3d", padding: "0px 20px 0px 0px" }} >
+                            <NavDropdown title="Seller" id="navbarScrollingDropdown" style={{ fontSize: "16.5px", fontWeight: "600", color: "#3d3d3d", padding: "0px 20px 0px 0px" }} >
                                 <NavDropdown.Item href="#action3">Search Buy Leads</NavDropdown.Item>
                                 <NavDropdown.Divider />
                                 <NavDropdown.Item href="#action4">Get Freight Quotes</NavDropdown.Item>
@@ -61,7 +68,10 @@ const NavbarHeader = () => {
 
             {/* SECOND NAVBAR HERE */}
 
-            <Navbar className=' navbar-bottom' bg="light" expand="lg" style={{ marginTop: "-20px", padding: "0px 30px 0px 20px" }}>
+            <Navbar className=' navbar-bottom' bg="light" expand="lg" style={{
+                marginTop: "-20px",
+                padding: "0px 30px 0px 20px"
+            }}>
                 <Container fluid>
                     <Navbar.Collapse className="d-flex justify-content-between Navbar-Collapse">
                         <div className="product-Menu">
@@ -73,8 +83,8 @@ const NavbarHeader = () => {
                                 style={{ maxHeight: '100px' }}
                             >
                                 <Nav.Link href="/" className="mx-2 right-section"><FiHeadphones />  Help Center</Nav.Link>
-                                <Nav.Link href="" className="mx-2 right-section ">Log In</Nav.Link>
-                                <Nav.Link href="/" className="mx-2 right-section">Register Free</Nav.Link>
+                                <Nav.Link href="login" className="mx-2 right-section ">Log In</Nav.Link>
+                                <Nav.Link href="register" className="mx-2 right-section">Register Free</Nav.Link>
                             </Nav>
                         </div>
                     </Navbar.Collapse>

@@ -1,22 +1,24 @@
 import React, { useState } from 'react';
 import './ProductMenu.css';
 import { RiArrowDropDownLine } from 'react-icons/ri';
+import { RiArrowDropRightLine } from 'react-icons/ri';
+import { MDBDropdown, MDBDropdownMenu, MDBDropdownToggle, MDBDropdownItem, MDBBtn } from 'mdb-react-ui-kit';
 
 const categories = [
   {
     id: 1,
-    name: 'Category 1',
-    subcategories: ['Subcategory1', 'Subcategory2', 'Subcategory3']
+    name: 'Health & Beauty',
+    subcategories: ['Personal Care Products', 'Common Medicines & Drugs', 'Soap & HandWash','Cosmetics','Ayurvedic Medicines & Products','Pain Relief Drug & Medicines']
   },
   {
     id: 2,
-    name: 'Category 2',
-    subcategories: ['Subcategory4', 'Subcategory5', 'Subcategory6']
+    name: 'Appreal & Fashion',
+    subcategories: ['Human Hair & Accessories', 'T-Shirts', 'Kurtis','Jeans','Sarees','Sporrts Shoes']
   },
   {
     id: 3,
-    name: 'Category 3',
-    subcategories: ['Subcategory7', 'Subcategory8', 'Subcategory9']
+    name: 'Agriculture',
+    subcategories: ['Rice', 'Tea', 'Irrigation Systems','Organic Vegetables','Pulses','Tractor Parts']
   }
 ];
 
@@ -53,11 +55,11 @@ const ProductMenu = () => {
               onMouseEnter={() => handleMouseEnter(category.id)}
               onMouseLeave={handleMouseLeave}
             >
-              {category.name}
+              {category.name}<RiArrowDropRightLine/>
               {hoveredCategoryId === category.id && (
                 <div className="subcategory">
                   {category.subcategories.map((subcategory, index) => (
-                    <li key={index} style={{height:"30px"}}>{subcategory}</li>
+                    <li key={index} style={{height:"40px",listStyle:"none"}}>{subcategory}</li>
                   ))}
                 </div>
               )}

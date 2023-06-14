@@ -10,7 +10,7 @@ import Row from 'react-bootstrap/Row';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Button from 'react-bootstrap/Button';
 
-const FAQ = () => {
+const Contact = () => {
     return (
         <>
             <Navbar />
@@ -98,4 +98,4 @@ const FAQ = () => {
     )
 }
 
-export default FAQ
+export default Contact
