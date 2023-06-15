@@ -9,6 +9,7 @@ import { BsFillMicFill } from 'react-icons/bs';
 import { FiHeadphones } from "react-icons/fi";
 import ProductMenu from '../Homepage/ProductMenu';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Link } from "react-router-dom";
 // import { NavLink } from "react-bootstrap-v5";
 
 const NavbarHeader = () => {
@@ -16,11 +17,11 @@ const NavbarHeader = () => {
         <>
             <Navbar bg="light" expand="lg">
                 <Container fluid>
-                    <Navbar.Brand href="/"><img src={logo} alt="error" style={{
+                    <Navbar.Brand ><Link to='/'><img src={logo} alt="error" style={{
                         width: "250px",
                         height: '60px',
                         marginLeft: "20px"
-                    }} /></Navbar.Brand>
+                    }} /></Link></Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
 
@@ -79,7 +80,7 @@ const NavbarHeader = () => {
                         </div>
                         <div className="Help-Center">
                             <Nav
-                                className="me-auto my-2 my-lg-0 "
+                                className="me-auto my-2 my-lg-0"
                                 style={{ maxHeight: '100px' }}
                             >
                                 <Nav.Link href="/" className="mx-2 right-section"><FiHeadphones />  Help Center</Nav.Link>

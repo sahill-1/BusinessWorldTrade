@@ -1,17 +1,20 @@
 .product-menu {
     position: relative;
-    display: inline-block;
+    display: none;
   }
   
   .menu-button {
     background-color: transparent;
-    border: none;
-    cursor: pointer;
+    border: none; 
     font-size: 17px;
     font-weight: 400;
     padding: 8px 16px;
     text-align: left;
     width: 100%;
+  }
+
+  .menu-button :hover{
+    display: block; 
   }
   
   .menu-button:focus {

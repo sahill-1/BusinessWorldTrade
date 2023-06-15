@@ -17,6 +17,8 @@ import premiumpdf from './PDFfiles/PREMIUM new.pdf'
 import sapphirepdf from './PDFfiles/SAPHIRE.pdf'
 import silverpdf from './PDFfiles/SILVER.pdf'
 import goldpdf from './PDFfiles/GOLD.pdf'
+import { Link } from 'react-router-dom';
+import packages from '../images/packages-01.jpg'
 
 const AdvertiseWithUs = () => {
   const products=[
@@ -32,22 +34,39 @@ const AdvertiseWithUs = () => {
   return (
     <>
   <Navbar/>
-      <h1 className='privacy-policy my-3'>
-        Advertise With Us
-      </h1>
+      {/* about banner start */}
+  <div className="container-fluid contactus-banner gap py-5 mb-4 " style={{
+    backgroundImage: `url(${packages})`,
+    backgroundRepeat:" no-repeat",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    }}>
+    <div className="row py-5">
+      <div className="col-12 text-center text-light pt-3">
+        <h5 style={{fontSize:"30px",fontWeight:"bold"}}>CHOOSE YOUR PACKAGES ACCORDING TO YOUR BUSINESS NEED</h5>
+      </div>
+      <div className="col-12 text-center text-light pb-3 banner-head" >
+        <h1 style={{
+         fontFamily: 'Poppins, sans-serif',
+    fontWeight: '800 ',
+    color:"white"
+    }}> PACKAGES </h1>
+      </div>
+    </div>
+  </div>
+  {/* about banner start */}
       <div className='advertise-with-us'>
         {products.map((product,index,key)=>
         <div className="  wrapper" key={index} id={key}>
         <div className="card front-face">
-          <img src={product.img} />
+          <img src={product.img} alt=''/>
         </div>
         <div className="card back-face">
-          <img src={product.img}/>
+        <a href={product.pdf} target='_blank' rel="noreferrer"><img src={product.img}  alt=''/></a>
           <div className="info">
-            <div className="title">{product.name}</div>
-            <a href={product.pdf} target='_blank' rel="noreferrer">
-            <button>Read More...</button>
-            </a>
+            <div className="title">{product.name}</div>           
+               <button className='me-2'>Read More</button>
+            <Link to='/checkout'><button className='ms-2 me-2' style={{padding:"11px 15px"}}>Buy Now</button></Link>         
           </div>
         </div>
       </div>

@@ -20,10 +20,8 @@ import {BWTISOCertification} from './Components/FooterPages/BWTISOCertification'
 import {EFilling} from './Components/FooterPages/E-Filling'
 import {Callback} from './Components/FooterPages/Callback'
 import {SellerISOCertification} from './Components/FooterPages/SellerISOCertification'
-// import LogIn from './Components/LogIn/LogIn';
-// import AllCategory from './Components/Category/AllCategory';
-import SubCategory from './Components/SubCategory.js/SubCategory';
-// import Modal from './Components/Modal/Modal';
+import { Checkout } from './Components/FooterPages/Checkout';
+
 function App() {
     return (
       <div className="App">
@@ -46,18 +44,10 @@ function App() {
             <Route path='/e-filling' element={<EFilling/>}/>
             <Route path='/request-callback' element={<Callback/>}/>
             <Route path='/iso-certification' element={<SellerISOCertification/>}/>
+            <Route path='/checkout' element={<Checkout/>}/>
           </Routes>
         </Router>
-        {/* <NavbarHeader/> */}
-        {/* <ProductPage /> */}
-        {/* <HomePage /> */}
-        {/* <RegistrationForm/> */}
-        {/* <LogIn/> */}
-        {/* <AllCategory/>  */}
-        {/* <SubCategory/> */}
-        {/* <FooterMain /> */}
-        {/* <Modal /> */}
-        {/* <Footer/> */}
+        
       </div>
   );
 };

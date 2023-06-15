@@ -14,7 +14,7 @@ const FormHomepage = () => {
                     }} src='https://images.unsplash.com/photo-1615789591457-74a63395c990?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZG9tZXN0aWMlMjBjYXR8ZW58MHx8MHx8&w=1000&q=80' alt="Error" />
                     <p>Verified <span style={{
                         color: "red"
-                    }}>BUYERS</span></p>
+                    }}><br></br>BUYERS</span></p>
                 </div>
                 <div className='HomePage-Form-Left-Div'>
                     <img style={{
@@ -39,7 +39,7 @@ const FormHomepage = () => {
                         height: "120px",
                         borderRadius: "20px"
                     }} src='https://images.unsplash.com/photo-1615789591457-74a63395c990?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZG9tZXN0aWMlMjBjYXR8ZW58MHx8MHx8&w=1000&q=80' alt="Error" />
-                    <p>24/7 <span style={{ color: "red" }}>HELP CENTER</span></p>
+                    <p>24/7 <br></br><span style={{ color: "red" }}>HELP CENTER</span></p>
                 </div>
             </div>
             <div className='HomePage-Form-Right my-4'>
@@ -61,25 +61,22 @@ const FormHomepage = () => {
                         <Form.Control type="email" placeholder="Enter Email" />
                     </Form.Group>
 
-                    <div style={{
-                        display: "flex",
-                        justifyContent: "space-between"
-                    }}>
-                        <Form.Group className="mb-3" style={{ width: "51%" }} controlId="formBasicEmail">
+                   
+                        <Form.Group className="mb-3"  controlId="formBasicEmail">
                             <Form.Label style={{
                                 display: "flex",
                                 flexDirection: "left"
                             }}>Company</Form.Label>
                             <Form.Control type="text" placeholder="Enter Company Name" />
                         </Form.Group>
-                        <Form.Group className="mb-3" style={{ width: "43%" }} controlId="formBasicEmail">
+                        <Form.Group className="mb-3"  controlId="formBasicEmail">
                             <Form.Label style={{
                                 display: "flex",
                                 flexDirection: "left"
                             }}>Phone number</Form.Label>
                             <Form.Control type="number" placeholder="Enter Phone Number" />
                         </Form.Group>
-                    </div>
+                    
 
                     <Form.Select aria-label="Default select example">
                         <option value="0">I am a</option>

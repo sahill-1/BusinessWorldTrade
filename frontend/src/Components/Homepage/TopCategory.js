@@ -41,17 +41,23 @@ const categories = [
 
 const TopCategory = () => {
   return (
-    <div className="category-page">
-      <h1>Top Categories</h1>
-      <div className="category-grid">
-        {categories.map((category, index) => (
-          <div key={index} className="category-card">
-            <img src={category.image} alt={category.title} />
-            <h3>{category.title}</h3>
-          </div>
-        ))}
-      </div>
+    <>
+    <h1 className='privacy-policy my-3'>
+    Top Categories
+  </h1>
+  <div className='top-category'>
+    {categories.map((category,index,key)=>
+    <div className="Wrapper" key={index} id={key}>
+    <div className="Card ">
+      <img src={category.image} alt=''/>
+      <h4>{category.title}</h4>
     </div>
+    
+  </div>
+    )}
+  
+  </div>
+  </>
   );
 };
 

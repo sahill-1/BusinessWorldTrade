@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './ProductMenu.css';
 import { RiArrowDropDownLine } from 'react-icons/ri';
 import { RiArrowDropRightLine } from 'react-icons/ri';
-import { MDBDropdown, MDBDropdownMenu, MDBDropdownToggle, MDBDropdownItem, MDBBtn } from 'mdb-react-ui-kit';
 
 const categories = [
   {
@@ -26,11 +25,11 @@ const ProductMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hoveredCategoryId, setHoveredCategoryId] = useState(null);
 
-  const toggleMenu = () => {
+  // const toggleMenu = () => {
+  //   setIsMenuOpen(!isMenuOpen);
+  // };
+  const handleHover = () => {
     setIsMenuOpen(!isMenuOpen);
-  };
-  const handleMenuClick = () => {
-    setIsMenuOpen(false);
   };
 
   const handleMouseEnter = (categoryId) => {
@@ -42,7 +41,7 @@ const ProductMenu = () => {
 
   return (
     <div className="container">
-      <button className="menu-button" onClick={toggleMenu}>
+      <button className="menu-button" onMouseEnter={handleHover} onMouseLeave={handleHover}>
         Browse All Categories <RiArrowDropDownLine />
       </button>
 
@@ -53,8 +52,7 @@ const ProductMenu = () => {
               key={category.id}
               className={`category ${hoveredCategoryId === category.id ? 'active' : ''} subcategory-hover`}
               onMouseEnter={() => handleMouseEnter(category.id)}
-              onMouseLeave={handleMouseLeave}
-            >
+              onMouseLeave={handleMouseLeave}>
               {category.name}<RiArrowDropRightLine/>
               {hoveredCategoryId === category.id && (
                 <div className="subcategory">

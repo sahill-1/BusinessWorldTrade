@@ -7,8 +7,12 @@ h4 {
   line-height: 1.25;
   margin-bottom: 0.75rem;
 }
+
+
 .section {
   width: 90vw;
+ 
+  height: 60vh;
   margin: 5rem auto;
   max-width: 1170px;
   background-color: rgb(243, 243, 243);
@@ -30,13 +34,13 @@ h4 {
   margin: 0 auto;
   margin-top: 4rem;
   width: 80vw;
-  height: 450px;
+  height: 400px;
   max-width: 1050px;
   text-align: center;
   position: relative;
   display: flex;
   overflow: hidden;
-}
+  }
 
 article {
   position: absolute;
@@ -47,6 +51,7 @@ article {
   opacity: 0;
   transition: all 0.3s linear;
   padding-top: 48px;
+  overflow: auto;
 }
 
 article.activeSlide {
@@ -97,15 +102,15 @@ article h4 {
 .text {
   max-width: 35em;
   margin: 0 auto;
-  margin-top: 2rem;
-  line-height: 2;
+  height: fit-content;
+  /* line-height: 2; */
   color: hsl(210, 22%, 49%);
 }
 
 .prev,
 .next {
   position: absolute;
-  top: 250px;
+  top: 230px;
   transform: translateY(-50%);
   background: hsl(210, 22%, 49%);
   color: #fff;
@@ -134,6 +139,7 @@ article h4 {
 @media (min-width: 800px) {
   .text {
     max-width: 45rem;
+    height: auto;
   }
   .prev,
   .next {
@@ -144,11 +150,15 @@ article h4 {
 }
 
 @media (min-width: 340px) {
-  
+  .text{
+    max-width: 45rem;
+    height: auto;
+  }
   .prev,
   .next {
     width: 1.8rem;
     height: 2rem;
     font-size: 1.5 rem;
+    top: 200px;
   }
 }

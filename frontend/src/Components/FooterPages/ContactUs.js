@@ -9,12 +9,34 @@ import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Button from 'react-bootstrap/Button';
+import contact from '../images/contact-banner.jpg'
 
 const Contact = () => {
     return (
         <>
             <Navbar />
-            <h3 className='my-3 privacy-policy'>Contact Us</h3>
+            {/* about banner start */}
+  <div className="container-fluid contactus-banner gap py-5 mb-4 " style={{
+    backgroundImage: `url(${contact})`,
+    backgroundRepeat:" no-repeat",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    }}>
+    <div className="row py-5">
+      <div className="col-12 text-center text-light pt-3">
+        <h5 style={{fontSize:"30px",fontWeight:"bold"}}>FEEL FREE TO CONTACT US</h5>
+      </div>
+      <div className="col-12 text-center text-light pb-3 banner-head" >
+        <h1 style={{
+         fontFamily: 'Poppins, sans-serif',
+    fontWeight: '800 ',
+    color:"white"
+    }}> CONTACT US </h1>
+      </div>
+    </div>
+  </div>
+  {/* about banner start */}
+            {/* <h3 className='my-3 privacy-policy'>Contact Us</h3> */}
             <div className='privacy-policy-content'>
                 <p style={{ fontWeight: "500", fontSize: "18px" }}>We value your feedback, inquiries, and suggestions. Please feel free to reach out to us using the contact information provided below. Our dedicated team is ready to assist you and provide the information you need.</p>
                 <br></br>

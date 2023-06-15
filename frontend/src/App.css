@@ -1,3 +1,5 @@
+
+
 /* Sub Category Page */
 .category-page {
   padding: 20px;
@@ -354,17 +356,14 @@ button.menu-button {
 }
 .HomePage-Form-Left-Div {
   width: 45%;
-  height: 28vh;
+  height: auto;
   background-color: #fafafa;
   margin: auto;
   border-radius: 10px;
   padding: 15px 0px;
   box-shadow: 6px 6px 8px 0px rgba(0, 0, 0, 0.1);
 }
-.HomePage-Form-Left-Div img {
-  width: 80%;
-  height: 70%;
-}
+
 .HomePage-Form-Left-Div p {
   font-size: 16px;
   padding-top: 12px;
@@ -389,12 +388,19 @@ button.menu-button {
   }
 }
 
+@media (max-width:526px) {
+  .HomePage-Form-Left-Div img{
+    height: 80px !important;
+    width: 80px !important;
+  }
+}
+
 /* AboutMeSlider */
 .about-me {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px 160px 40px 160px;
+  padding: 10px 16px 40px 16px;
 }
 
 .about-me img {
@@ -407,6 +413,8 @@ button.menu-button {
 .paragraph-slider {
   overflow: hidden;
   height: 100px;
+ 
+  width: 100%;
 }
 
 .paragraph-slider p {
@@ -415,29 +423,32 @@ button.menu-button {
   font-style: italic;
   margin: 0;
   padding: 10px;
-  height: 100px;
-  display: flex;
+  height: auto;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   animation: slide 7s infinite;
-  /* border: 1px solid red; */
+  width: 80%;
+ 
+  margin: auto;
+  
 }
 
 @keyframes slide {
   0% {
-    transform: translateY(0);
+    transform: translateY(10%);
   }
   25% {
-    transform: translateY(-100%);
+    transform: translateY(-70%);
   }
   50% {
-    transform: translateY(-200%);
+    transform: translateY(-150%);
   }
   75% {
-    transform: translateY(-300%);
+    transform: translateY(-190%);
   }
   100% {
-    transform: translateY(-400%);
+    transform: translateY(-230%);
   }
 }
 

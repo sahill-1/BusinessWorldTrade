@@ -317,6 +317,10 @@
   background-color: #1b3c4e;
 }
 
+@media (screen) {
+  
+}
+
 
 /* ADVERTISE WITH US */
 .advertise-with-us{
@@ -428,6 +432,8 @@
 
 
 
+
+
 .back-face .info .title {
   font-size: 30px;
   font-weight: 400;
@@ -435,3 +441,39 @@
   margin-bottom: 15px;
 
 }
+
+.top-category{
+  width:90%; 
+  margin:auto; 
+  height:auto;  
+  display:flex; 
+  flex-wrap:wrap; 
+  justify-content:space-evenly; 
+  gap:30px;
+}
+
+.Wrapper {
+  height: 250px;
+  width: 300px;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  padding-top: 6px;
+}
+
+.Wrapper .Card {
+  position: absolute;
+  height: auto;
+  width: 100%;  
+  border-radius: 10px;
+  
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+.Wrapper .Card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+

@@ -36,7 +36,7 @@ const Testimonial = () => {
         fontSize: "34px",
         paddingTop: "25px"
       }}>What Our Client Say About Us</p>
-      <section className='section my-2'>
+      <section className='section '>
         <div className='section-center'>
           {people.map((item, indexPeople) => {
             const { id, name, image, quote } = item;

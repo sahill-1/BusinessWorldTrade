@@ -1,7 +1,6 @@
 import React from 'react'
 import NavbarHeader from '../Homepage/Navbar'
 import Footer from '../Homepage/Footer'
-import loan from '../images/business loan-01_artboard.jpg'
 import background from '../images/background.jpg'
 export const BussinessLoan = () => {
   return (
