@@ -48,7 +48,7 @@ const Carousel = () => {
         <>
         <div className='Easy-Ticker'>
             <p style={{fontSize:"20px", fontWeight:"500",paddingTop:"20px"}}>Top Requirements</p>
-            <div className='Easy-Ticker-Main-Div'>
+            <div className='Easy-Ticker-Main-Div' style={{border:"1px solid red"}}>
             <ul
                 ref={listRef}
                 style={{

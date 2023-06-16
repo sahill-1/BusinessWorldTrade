@@ -19,7 +19,7 @@ const HomePage = () => {
   return (
     <>
     <Navbar />
-    {/* <Header /> */}
+    <Header />
     <FormHomepage />
     <TopCategory />
     <FeaturedProducts/>

@@ -42,7 +42,7 @@ const categories = [
 const TopCategory = () => {
   return (
     <>
-    <h1 className='privacy-policy my-3'>
+    <h1 className='my-3'>
     Top Categories
   </h1>
   <div className='top-category'>
