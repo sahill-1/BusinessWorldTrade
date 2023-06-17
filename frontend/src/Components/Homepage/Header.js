@@ -4,11 +4,11 @@ import EasyTicker from "./EasyTicker"
 
 const Header = () => {
     return (
-        <div className='d-flex Header-1' style={{flexDirection:"row", width:"99%", margin:"auto"}}>
-            <Banner />
-            <EasyTicker />
+        <div className="Header-Banner-Ticker" style={{width: "100%", display:"flex", flexDirection:"row", justifyContent:"space-between"}}>
+            <Banner/>
+            <EasyTicker/>
         </div>
     )
 }
 
-export default Header
+export default Header;

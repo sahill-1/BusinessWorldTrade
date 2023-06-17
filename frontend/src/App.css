@@ -1,5 +1,6 @@
-
-
+.body{
+  overflow-x: none;
+}
 /* Sub Category Page */
 .category-page {
   padding: 20px;
@@ -320,6 +321,7 @@ a.mx-2.right-section.nav-link {
   }
 }
 /* HEADER */
+/* first change */
 ul.slick-dots {
   bottom: 10px;
 }
@@ -327,15 +329,16 @@ ul.slick-dots li button::before {
   font-size: 13px;
   color: white;
 }
+
 .Banner-Section {
   width: 60%;
-  height: 380px;
+  /* height: 380px; */
   padding: "0px 20px";
   border: "1px solid blue";
 }
 .Banner-Section-Image {
   width: 100%;
-  height: 380px;
+  /* height: 380px; */
 }
 .Easy-Ticker {
   width: 50%;
@@ -352,28 +355,43 @@ button.menu-button {
   align-items: center;
 }
 @media (max-width: 992px) {
+  .Header-Banner-Ticker{
+    flex-direction: column !important;
+  }
   .Header-1 {
     display: flex;
     flex-wrap: wrap;
   }
   .Banner-Section {
-    width: 100%;
+    width: 90% !important;
     margin: auto;
     border: 1px solid transparent;
   }
-  .Banner-Section-Image {
-    width: 100%;
-  }
   .Easy-Ticker {
-    width: 100%;
+    width: 90% !important ;
     margin: auto;
   }
   .Easy-Ticker-Main-Div {
-    width: 70%;
+    width: 80%;
     margin: auto;
   }
 }
-
+@media (max-width: 440px) {
+  .Banner-Section {
+    width: 85% !important;
+    margin: auto;
+    border: 1px solid transparent;
+  }
+  .Easy-Ticker {
+    width: 80% !important ;
+    margin: auto;
+  }
+  .Easy-Ticker-Main-Div {
+    width: 90%;
+    margin: auto;
+  }
+}
+/* first change */
 /* FORM */
 .HomePage-Form {
   width: 100%;
@@ -461,14 +479,9 @@ button.menu-button {
   margin: 0;
   padding: 10px;
   height: auto;
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
   animation: slide 7s infinite;
   width: 80%;
- 
   margin: auto;
-  
 }
 
 @keyframes slide {

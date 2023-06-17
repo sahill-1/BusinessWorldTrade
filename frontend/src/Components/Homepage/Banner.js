@@ -16,7 +16,7 @@ const Banner = () => {
     };
     return (
         
-        <div className='Banner-Section'>
+        <div className='Banner-Section' style={{ width:"60%"}}>
             <Slider {...settings}>
                 <div>
                     <img src={banner} className="Banner-Section-Image" alt="Slide 1" />

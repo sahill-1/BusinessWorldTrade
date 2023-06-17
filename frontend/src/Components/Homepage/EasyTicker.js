@@ -38,7 +38,6 @@ const Carousel = () => {
             const timer = setTimeout(() => {
                 setIsAnimating(false);
             }, 800);
-
             return () => clearTimeout(timer);
         }
     }, [isAnimating]);
@@ -46,9 +45,9 @@ const Carousel = () => {
 
     return (
         <>
-        <div className='Easy-Ticker'>
-            <p style={{fontSize:"20px", fontWeight:"500",paddingTop:"20px"}}>Top Requirements</p>
-            <div className='Easy-Ticker-Main-Div' style={{border:"1px solid red"}}>
+        <div className='Easy-Ticker' style={{ width:"35%"}}>
+            <p style={{fontSize:"20px", fontWeight:"500", paddingTop:"20px"}} >Top Requirements</p>
+            <div className='Easy-Ticker-Main-Div'>
             <ul
                 ref={listRef}
                 style={{
