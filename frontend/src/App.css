@@ -1,6 +1,4 @@
-.body{
-  overflow-x: none;
-}
+
 /* Sub Category Page */
 .category-page {
   padding: 20px;
@@ -256,7 +254,7 @@ h1 {
 .mic-button {
   margin-left: -10px;
   border: 1px solid #0e5167;
-  border-radius: 0px 30px 30px 0px;
+  border-radius: 0px 30px 30px 0px !important;
   color: white;
   background: #0e5167;
 }

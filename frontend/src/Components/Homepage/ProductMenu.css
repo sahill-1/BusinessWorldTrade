@@ -69,7 +69,7 @@
   align-items: center;
 }
 .category {
-  font-size: 17px;
+  font-size: 16px !important;
   width: auto;
   padding: 5px 10px;
   margin: 1px 0px;
@@ -97,7 +97,24 @@
 .category.active {
   background-color: #f9f9f9;
 }
-.subcategory-li-tag:hover{
+.subcategory-li-tag:hover {
   background-color: #f5f5f5 !important;
   border: none !important;
 }
+.subsubcategory {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  z-index: 999;
+  width: 200px;
+}
+
+.subcategory-li-tag.active {
+  background-color: #f5f5f5 !important;
+  border: none !important;
+}
+

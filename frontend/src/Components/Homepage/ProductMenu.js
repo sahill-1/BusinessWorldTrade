@@ -57,7 +57,7 @@ const ProductMenu = () => {
               {hoveredCategoryId === category.id && (
                 <div className="subcategory" style={{padding:"5px 5px", background:"transparent", border:"none", position:"absolute", left:"98%", top:"-6px"}}>
                   {category.subcategories.map((subcategory, index) => (
-                    <li key={index} className='subcategory-li-tag' style={{listStyle:"none", textAlign:'left', padding:"8px 10px", background:"white", borderRadius:"4px", marginBottom:"1px", border:"1px solid grey"}}>{subcategory}</li>
+                    <li key={index} className='subcategory-li-tag' style={{listStyle:"none", textAlign:'left', padding:"8px 10px", background:"white", borderRadius:"4px", marginBottom:"1px", border:"1px solid grey", fontStyle:"Gill Sans", fontSize:"14px"}}>{subcategory}</li>
                   ))}
                 </div>
               )}
