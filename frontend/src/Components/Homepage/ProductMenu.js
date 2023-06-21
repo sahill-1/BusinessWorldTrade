@@ -25,9 +25,6 @@ const ProductMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hoveredCategoryId, setHoveredCategoryId] = useState(null);
 
-  // const toggleMenu = () => {
-  //   setIsMenuOpen(!isMenuOpen);
-  // };
   const handleHover = () => {
     setIsMenuOpen(!isMenuOpen);
   };
