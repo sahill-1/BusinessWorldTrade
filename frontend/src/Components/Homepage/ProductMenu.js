@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import './ProductMenu.css';
 import { RiArrowDropDownLine } from 'react-icons/ri';
@@ -66,5 +67,3 @@ const ProductMenu = () => {
   );
 };
 export default ProductMenu;
-
-
