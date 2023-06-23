@@ -1,4 +1,8 @@
 import React from "react";
+import { createStore } from "redux";
+import { Provider } from "react-redux";
+import formReducer from "./Homepage/reducers";
+
 import Navbar from "./Homepage/Navbar";
 import Header from "./Homepage/Header";
 import FormHomepage from "./Homepage/FormHomepage";
@@ -14,21 +18,27 @@ import ShopWithUs from "./Homepage/ShopWithUs";
 import Testimonial from "./Homepage/Testimonial";
 import Footer from "./Homepage/Footer";
 
+const store = createStore(formReducer);     
+
 const HomePage = () => {
   return (
     <>
-      <Navbar />
+      <Navbar /> 
       <Header />
-      <FormHomepage />
+
+      <Provider store={store}>
+        <FormHomepage />
+      </Provider>
+      
       <TopCategory />
-      <FeaturedProducts/>
-      <TopSuppliers/>
+      <FeaturedProducts />
+      <TopSuppliers />
       <AgricultureProducts />
-      <FoodBeverage/>
-      <ApparelsFashions/>
-      <Pharmaceuticals/>
+      <FoodBeverage />
+      <ApparelsFashions />
+      <Pharmaceuticals />
       <AboutMe />
-      <ShopWithUs/>
+      <ShopWithUs />
       <Testimonial />
       <Footer />
     </>

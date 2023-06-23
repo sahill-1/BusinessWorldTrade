@@ -1,9 +1,9 @@
 import './App.css';
 import { BrowserRouter as Router ,Route,Routes } from 'react-router-dom';
-import FooterMain from './Components/FooterPages/FooterMain';
-import Footer from './Components/Homepage/Footer';
-import NavbarHeader from './Components/Homepage/Navbar';
-import ProductPage from './Components/ProductPage';
+// import FooterMain from './Components/FooterPages/FooterMain';
+// import Footer from './Components/Homepage/Footer';
+// import NavbarHeader from './Components/Homepage/Navbar';
+// import ProductPage from './Components/ProductPage';
 import LogIn from './Components/LogIn/LogIn'
 import HomePage from "./Components/HomePage";
 import RegistrationForm from './Components/Registration/RegistrationForm';
