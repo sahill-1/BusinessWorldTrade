@@ -29,7 +29,7 @@ const HomePage = () => {
       <Provider store={store}>
         <FormHomepage />
       </Provider>
-      
+    
       <TopCategory />
       <FeaturedProducts />
       <TopSuppliers />
