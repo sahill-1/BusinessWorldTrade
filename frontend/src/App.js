@@ -1,32 +1,32 @@
 import './App.css';
 import { BrowserRouter as Router ,Route,Routes } from 'react-router-dom';
-// import FooterMain from './Components/FooterPages/FooterMain';
+import FooterMain from './Components/FooterPages/FooterMain';
 // import Footer from './Components/Homepage/Footer';
 // import NavbarHeader from './Components/Homepage/Navbar';
 // import ProductPage from './Components/ProductPage';
-import LogIn from './Components/LogIn/LogIn'
-import HomePage from "./Components/HomePage";
-import RegistrationForm from './Components/Registration/RegistrationForm';
-import AboutUS from './Components/FooterPages/AboutUS';
-import Career from './Components/FooterPages/Career';
-import FAQ from './Components/FooterPages/FAQ';
-import PrivacyPolicy from './Components/FooterPages/PrivacyPolicy';
-import Contact from './Components/FooterPages/ContactUs';
-import Blog from './Components/FooterPages/Blog';
-import AdvertiseWithUs from './Components/FooterPages/AdvertiseWithUs';
-import {BussinessLoan}  from './Components/FooterPages/BussinessLoan';
-import {BussinessInsuarance } from './Components/FooterPages/BussinessInsuarance'
-import {BWTISOCertification} from './Components/FooterPages/BWTISOCertification'
-import {EFilling} from './Components/FooterPages/E-Filling'
-import {Callback} from './Components/FooterPages/Callback'
-import {SellerISOCertification} from './Components/FooterPages/SellerISOCertification'
-import { Checkout } from './Components/FooterPages/Checkout';
+// import LogIn from './Components/LogIn/LogIn'
+// import HomePage from "./Components/HomePage";
+// import RegistrationForm from './Components/Registration/RegistrationForm';
+// import AboutUS from './Components/FooterPages/AboutUS';
+// import Career from './Components/FooterPages/Career';
+// import FAQ from './Components/FooterPages/FAQ';
+// import PrivacyPolicy from './Components/FooterPages/PrivacyPolicy';
+// import Contact from './Components/FooterPages/ContactUs';
+// import Blog from './Components/FooterPages/Blog';
+// import AdvertiseWithUs from './Components/FooterPages/AdvertiseWithUs';
+// import {BussinessLoan}  from './Components/FooterPages/BussinessLoan';
+// import {BussinessInsuarance } from './Components/FooterPages/BussinessInsuarance'
+// import {BWTISOCertification} from './Components/FooterPages/BWTISOCertification'
+// import {EFilling} from './Components/FooterPages/E-Filling'
+// import {Callback} from './Components/FooterPages/Callback'
+// import {SellerISOCertification} from './Components/FooterPages/SellerISOCertification'
+// import { Checkout } from './Components/FooterPages/Checkout';
 
 function App() {
     return (
       <div className="App">
          
-        <Router>
+        {/* <Router>
           <Routes>
           <Route path='/' element={<HomePage/>}/>
             <Route path='login' element={<LogIn/>}/>
@@ -46,7 +46,8 @@ function App() {
             <Route path='/iso-certification' element={<SellerISOCertification/>}/>
             <Route path='/checkout' element={<Checkout/>}/>
           </Routes>
-        </Router>
+        </Router> */}
+        <FooterMain/>
         
       </div>
   );

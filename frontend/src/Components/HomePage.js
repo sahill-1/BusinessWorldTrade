@@ -2,7 +2,6 @@ import React from "react";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 import formReducer from "./Homepage/reducers";
-
 import Navbar from "./Homepage/Navbar";
 import Header from "./Homepage/Header";
 import FormHomepage from "./Homepage/FormHomepage";
