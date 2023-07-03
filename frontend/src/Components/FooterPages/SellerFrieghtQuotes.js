@@ -1,7 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Form } from "react-bootstrap";
-import Dropdown from "react-bootstrap/Dropdown";
-import DropdownButton from "react-bootstrap/DropdownButton";
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
 
 const SellerfreightQuotes = () => {
   return (
@@ -33,15 +31,15 @@ const SellerfreightQuotes = () => {
 
         <Container style={{ border: "1px solid transparent" }}>
           <Row
-            className="p-3"
+            className="p-3 seller-freight-quotes-mq"
             style={{
               display: "flex",
               flexWrap: "wrap",
-              border:"1px solid transparent"
+              border:"1px solid transparent",
             }}
           >
             {/* COLUMN 1 */}
-            <Col className="p-3" style={{ border: "1px solid transparent" }}>
+            <Col className="p-3 seller-freight-quotes-mq" style={{ border: "1px solid transparent" }}>
               {/* ROW 1 */}
               <Row className="mb-3" style={{ border: "1px solid transparent" }}>
                 <h4
@@ -60,7 +58,7 @@ const SellerfreightQuotes = () => {
                       key={`inline-${type}`}
                       style={{
                         width: "80%",
-                        // border: "1px solid transparent",
+                        border: "1px solid transparent",
                         display: "flex",
                         flexWrap:"wrap",
                         justifyContent: "space-between",
@@ -99,7 +97,7 @@ const SellerfreightQuotes = () => {
                 >
                   LOCATION DETAILS
                 </h4>
-                <div
+                <div className="freight-quotes-location-details"
                   style={{
                     width: "80%",
                     display: "flex",
@@ -242,6 +240,9 @@ const SellerfreightQuotes = () => {
                   </div>
                 </div>
               </Row>
+
+              {/* ROW 4 */}
+              
             </Col>
 
             {/* COLUMN 2 */}
@@ -264,7 +265,7 @@ const SellerfreightQuotes = () => {
                       key={`inline-${type}`}
                       style={{
                         width: "100%",
-                        // border: "1px solid transparent",
+                        border: "1px solid transparent",
                         display: "flex",
                         flexWrap:"wrap",
                         justifyContent: "space-between",
@@ -303,7 +304,7 @@ const SellerfreightQuotes = () => {
                 >
                   OTHER DETAILS
                 </h4>
-                <div
+                <div className="freight-quotes-other-details"
                   style={{
                     width: "80%",
                     display: "flex",
@@ -424,28 +425,28 @@ const SellerfreightQuotes = () => {
                         justifyContent: "space-between",
                       }}
                     >
-                      <Form.Check
+                      <Form.Check className="a-b-c" style={{width:"100%",textAlign:"left"}}
                         inline
                         label="Freight on Board"
                         name="group1"
                         type={type}
                         id={`inline-${type}-1`}
                       />
-                      <Form.Check
+                      <Form.Check className="a-b-c" style={{width:"100%",textAlign:"left"}}
                         inline
                         label="Cost on Freight"
                         name="group1"
                         type={type}
                         id={`inline-${type}-2`}
                       />
-                      <Form.Check
+                      <Form.Check className="a-b-c" style={{width:"100%",textAlign:"left"}}
                         inline
                         label="Cost Net Insured"
                         name="group1"
                         type={type}
                         id={`inline-${type}-3`}
                       />
-                      <Form.Check
+                      <Form.Check className="a-b-c" style={{width:"100%",textAlign:"left"}}
                         inline
                         label="Cash Against Delivery "
                         name="group1"
@@ -462,7 +463,7 @@ const SellerfreightQuotes = () => {
             </Col>
           </Row>
 
-          <Row style={{
+          <Row className="freight-quotes-aiming-transit" style={{
               display: "flex",
               flexWrap: "wrap",
               border:"1px solid transparent"
@@ -516,6 +517,9 @@ const SellerfreightQuotes = () => {
                     </Form.Group>
                   </div>
             </Col>
+          </Row>
+          <Row>
+            <Button className="my-2 " style={{width:"auto", margin:"auto"}} type="submit">Get Freights</Button>
           </Row>
         </Container>
       </div>

@@ -1,3 +1,32 @@
+/* FREIGHT QUOTES */
+@media (max-width:831px){
+  .a-b-c{
+    width: 120% !important;
+  }
+  
+}
+@media (max-width:768px){
+  .seller-freight-quotes-mq{
+    display: flex; 
+    flex-direction: column;
+  }
+  
+}
+
+@media (max-width:520px){
+  .freight-quotes-location-details, 
+  .freight-quotes-other-details, 
+  .freight-quotes-aiming-transit{
+    width: 100% !important;
+    display: flex; 
+    flex-direction: column;
+  }
+  .a-b-c{
+    width: 100% !important;
+  }
+}
+
+
 
 /* Sub Category Page */
 .category-page {

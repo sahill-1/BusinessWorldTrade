@@ -1,5 +1,6 @@
 import React from 'react';
 import "./FooterMain.css";
+import SearchBuyLeads from './SearchBuyLeads';
 import SellerFrieghtQuotes from './SellerFrieghtQuotes';
 // import AboutUS from './AboutUS';
 // import PrivacyPolicy from './PrivacyPolicy';
@@ -20,6 +21,7 @@ const FooterMain = () => {
       {/* <ContactUs /> */}
       {/* <AdvertiseWithUs /> */}
       <SellerFrieghtQuotes/>
+      {/* <SearchBuyLeads/> */}
     </div>
   )
 }
