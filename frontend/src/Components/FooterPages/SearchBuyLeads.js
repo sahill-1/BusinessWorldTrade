@@ -1,13 +1,13 @@
 import React from "react";
-import { AiOutlineRise } from "react-icons/ai";
-import { GiReceiveMoney } from "react-icons/gi";
-import {FaRegHandshake} from "react-icons/fa";
-import { Button } from "react-bootstrap";
+// import { AiOutlineRise } from "react-icons/ai";
+// import { GiReceiveMoney } from "react-icons/gi";
+// import {FaRegHandshake} from "react-icons/fa";
+// import { Button } from "react-bootstrap";
 
 const SearchBuyLeads = () => {
   return (
     <>
-      <div
+      {/* <div
         style={{
           width: "82%",
           borderRadius: "8px",
@@ -37,6 +37,10 @@ const SearchBuyLeads = () => {
         <div style={{ width: "20%", border: "1px solid transparent" }}>
         <Button className="my-2 " style={{width:"auto", margin:"auto"}} type="submit">Start Selling</Button>
         </div>
+      </div> */}
+
+      <div>
+
       </div>
     </>
   );
