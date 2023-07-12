@@ -2,6 +2,8 @@ import React from "react";
 import Navbar from "../Homepage/Navbar";
 import Footer from "../Homepage/Footer";
 import { Container, Row, Col } from "react-bootstrap";
+import "./SubSubCategory.css";
+
 const SubSubCategory = () => {
   const relatedCategory = [
     {
@@ -33,49 +35,36 @@ const SubSubCategory = () => {
       name: "Seven",
     },
   ];
+
+  const containerStyle = {
+    scrollbarGutter: "stable both-edges",
+  };
   return (
     <>
       <Navbar />
       <div className="sub-sub-category">
-        <h3 style={{ fontFamily: "Poppins" }}>Sub Sub Category</h3>
+        <h3 className="category-heading">Sub Sub Category</h3>
       </div>
       <Container>
         <Row className="px-4 border border-secondary">
-          <Col xs={6} md={2} className=" mx-2 border border-secondary">
-            <h5
-              className="m-auto"
-              style={{ fontFamily: "Poppins", fontSize: "16px" }}
-            >
-              Related Category
-            </h5>
-            {relatedCategory.map((relatedCat) => {
-              return (
-                <>
-                  <div className="my-2 d-flex border border-primary ">
-                    <img
-                      className="mx-1 m-auto"
-                      style={{ width: "40px", height: "40px" }}
-                      src={relatedCat.img}
-                      alt={relatedCat.name}
-                    />
-                    <p className="mx-1 my-2">{relatedCat.name}</p>
-                  </div>
-                </>
-              );
-            })}
+          <Col xs={6} md={2} className="mx-2 rounded shadow">
+            <h5 className="category-heading">Related Category</h5>
+            <div className="category-list" style={containerStyle}>
+              {relatedCategory.map((relatedCat) => (
+                <div key={relatedCat.name} className="category-item">
+                  <img
+                    className="category-img"
+                    src={relatedCat.img}
+                    alt={relatedCat.name}
+                  />
+                  <p className="category-name">{relatedCat.name}</p>
+                </div>
+              ))}
+            </div>
           </Col>
 
           <Col xs={12} md={9} className="border border-primary">
-            <p
-              style={{
-                fontWeight: "500",
-                fontSize: "20px",
-                color: "#303030",
-                fontFamily: "Poppins",
-              }}
-            >
-              Top Sub Sub Categories
-            </p>
+            <p className="sub-category-heading">Top Sub Sub Categories</p>
           </Col>
         </Row>
       </Container>
