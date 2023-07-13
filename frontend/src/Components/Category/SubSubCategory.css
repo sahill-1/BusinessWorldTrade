@@ -1,43 +1,79 @@
-/* SubSubCategory.css */
+.sub-sub-category {
+  width: 98% !important;
+  color: #2b5c77;
+  text-align: left;
+  padding: 18px 100px 12px 30px;
+  margin: 10px auto;
+  cursor: pointer;
+}
 .category-heading {
-    font-family: "Poppins", sans-serif;
-  }
-  
-  .category-list {
-    max-height: 300px; /* Set the desired maximum height */
-    overflow-y: auto; /* Enable vertical scrollbar */
-  }
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-  /* Track */
-  .category-list::-webkit-scrollbar-track {
-    background-color: #f0f0f0;
-  }
-  
-  /* Thumb */
-  .category-list::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    background-color: #c0c0c0;
-  }
-  
-  /* Handle on hover */
-  .category-list::-webkit-scrollbar-thumb:hover {
-    background-color: #a0a0a0;
-  }
-  .category-item {
+  font-family: "Poppins", sans-serif;
+}
+
+.category-list {
+  max-height: 300px; /* Set the desired maximum height */
+  overflow-y: auto; /* Enable vertical scrollbar */
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+/* Track */
+.category-list::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}
+
+/* Thumb */
+.category-list::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #c0c0c0;
+}
+
+/* Handle on hover */
+.category-list::-webkit-scrollbar-thumb:hover {
+  background-color: #a0a0a0;
+}
+.category-item {
+  display: flex;
+  align-items: center;
+  margin: 2px 0;
+  background-image: linear-gradient(to right, #ffefba, #ffffff);
+  width: 100%;
+}
+
+.category-img {
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+}
+
+.category-name {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+}
+.sub-category-heading {
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: 500;
+}
+@media (max-width: 848px) {
+  .container-row {
     display: flex;
-    align-items: center;
-    margin: 4px 0;
+    flex-direction: row;
+    /* border: 1px solid black; */
   }
-  
-  .category-img {
-    width: 40px;
-    height: 40px;
-    margin-right: 8px;
+  .container-row-column-one {
+    width: 40% !important;
+    /* border: 1px solid red; */
   }
-  
-  .category-name {
-    font-family: "Poppins", sans-serif;
+  .container-row-column-two {
+    width: 56% !important;
+    /* border: 1px solid red; */
   }
-  
+  /* .container-row-column-two-div {
+    width: 100% !important;
+    border: 1px solid red;
+    margin: 10px 30px;
+    padding: 0px 20px;
+  } */
+}
