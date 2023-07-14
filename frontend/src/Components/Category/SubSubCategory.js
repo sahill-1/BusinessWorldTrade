@@ -1,4 +1,5 @@
-import React from "react";
+import axios from "axios";
+import React, { useState, useEffect } from "react";
 import Navbar from "../Homepage/Navbar";
 import Footer from "../Homepage/Footer";
 import Carousel from "react-multi-carousel";
@@ -21,8 +22,12 @@ const SubSubCategory = () => {
       items: 2,
     },
     mobile: {
-      breakpoint: { max: 600, min: 0 },
-      items: 1,
+      breakpoint: { max: 600, min: 542 },
+      items: 2,
+    },
+    mobilexs: {
+      breakpoint: { max: 542, min: 0 },
+      items: 3,
     },
   };
 
@@ -57,6 +62,22 @@ const SubSubCategory = () => {
     },
   ];
 
+  const [subCategory, setSubCategory] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          `http://localhost:5000/api/getCategory/${subCategory._id}`
+        );
+        setSubCategory(response.data);
+        console.log("fetchiiiiiiiiiiiiiiiiiing data", response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchData();
+  }, [subCategory]);
   return (
     <>
       <Navbar />
@@ -86,14 +107,12 @@ const SubSubCategory = () => {
             </div>
           </Col>
 
-          <Col
-            xs={12}
-            md={9}
-            className="shadow container-row-column-two"
-            style={{ width: "74%" }}
-          >
+          <Col xs={12} md={9} className="shadow container-row-column-two">
             <p className="sub-category-heading my-2">Top Sub Sub Categories</p>
-            <Carousel responsive={responsive}>
+            <Carousel
+              responsive={responsive}
+              style={{ border: "1px solid red" }}
+            >
               {relatedCategory.map((category) => (
                 <div
                   key={category.index}
