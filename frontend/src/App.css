@@ -25,9 +25,6 @@
     width: 100% !important;
   }
 }
-
-
-
 /* Sub Category Page */
 .category-page {
   padding: 20px;
@@ -557,3 +554,20 @@ button.menu-button {
   .ctg-agriculture-main-div-card{
     width: 40%;
   }}
+
+
+/* LOGIN PAGE */
+img.homepage-login-page-image.css-0 {
+  height: 100vh;
+  width: -webkit-fill-available;
+}
+@media (max-width: 920px) {
+  .homepage-login-page {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .homepage-login-page-image {
+    width: 100%;
+    margin: auto;
+  }
+}
