@@ -18,17 +18,44 @@ import { useNavigate } from "react-router-dom";
 import { addUser } from "../../reducers/FormSlice";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { BsFillMicFill } from "react-icons/bs";
+import { FiHeadphones } from "react-icons/fi";
 
 import loginImage from "../images/login.jpg";
 
-export default function LogIn() {
+const LogIn = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);
 
   const [formData, setFormData] = useState({});
+  const [loggedIn, setLoggedIn] = useState(false); // Track login status
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const yourTokenCheckingFunction = () => {
+    const token = localStorage.getItem("accessToken"); // Replace "accessToken" with the key you used to store the token
+
+    // Check if the token exists and is not expired (you may use JWT or other token expiration logic)
+    // In this example, we assume that if a token exists, the user is logged in.
+    return !!token;
+  };
+
+  useEffect(() => {
+    // Check if the user is already logged in (using any logic or stored token)
+    const userLoggedIn = checkIfUserLoggedIn();
+    setLoggedIn(userLoggedIn);
+  }, []);
+
+  const checkIfUserLoggedIn = () => {
+    // You can add your logic here to check if the user is logged in or not,
+    // e.g., using tokens, session storage, local storage, or an authentication API.
+    // For demonstration purposes, I'll assume you have a function that checks the token and returns a boolean value.
+    // Replace 'yourTokenCheckingFunction' with your actual token checking logic.
+
+    const userLoggedIn = yourTokenCheckingFunction();
+    return userLoggedIn;
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -36,6 +63,24 @@ export default function LogIn() {
       ...prevData,
       [name]: value,
     }));
+  };
+
+  const handleLogin = () => {
+    // Simulating successful login
+    setLoggedIn(true);
+    toast.success("Successfully logged in!", {
+      position: toast.POSITION.TOP_CENTER,
+    });
+    navigate("/web");
+  };
+
+  const handleLogout = () => {
+    // Simulating successful logout
+    setLoggedIn(false);
+    toast.success("Successfully logged out!", {
+      position: toast.POSITION.TOP_CENTER,
+    });
+    navigate("/login"); // Redirect to login page after logout
   };
 
   const handleClick = (e) => {
@@ -57,14 +102,8 @@ export default function LogIn() {
         dispatch(addUser(res.data));
         console.log(res);
         if (res) {
-          toast.success("Successfully login!", {
-            position: toast.POSITION.TOP_CENTER,
-            autoClose: 5000, // 5 seconds
-          });
+          handleLogin(); // Call the login function after successful login
         }
-
-        console.log("Success toast triggered");
-        navigate("/web");
       })
       .catch((err) => {
         console.log(err);
@@ -131,14 +170,24 @@ export default function LogIn() {
                 <Checkbox>Remember me</Checkbox>
                 <Link color={"blue.500"}>Forgot password?</Link>
               </Stack>
-              <Button
-                colorScheme={"blue"}
-                variant={"solid"}
-                type="submit"
-                onClick={handleClick}
-              >
-                Sign in
-              </Button>
+              {loggedIn ? (
+                <Button
+                  colorScheme={"blue"}
+                  variant={"solid"}
+                  onClick={handleLogout}
+                >
+                  Logout
+                </Button>
+              ) : (
+                <Button
+                  colorScheme={"blue"}
+                  variant={"solid"}
+                  type="submit"
+                  onClick={handleClick}
+                >
+                  Sign in
+                </Button>
+              )}
             </Stack>
           </Stack>
         </Flex>
@@ -153,4 +202,6 @@ export default function LogIn() {
       </Stack>
     </ChakraProvider>
   );
-}
+};
+
+export default LogIn;
