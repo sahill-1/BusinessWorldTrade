@@ -25,7 +25,7 @@ const ProductUploadForm = () => {
             <Form.Group controlId="formFile" className="mb-3">
               <Form.Label>Select Category Image</Form.Label>
               <Form.Control type="file" />
-            </Form.Group>
+             </Form.Group>
           </Col>
         </Row>
 

@@ -492,7 +492,6 @@ button.menu-button {
 .paragraph-slider {
   overflow: hidden;
   height: 100px;
- 
   width: 100%;
 }
 
@@ -518,7 +517,7 @@ button.menu-button {
   50% {
     transform: translateY(-150%);
   }
-  75% {
+  75% { 
     transform: translateY(-190%);
   }
   100% {
