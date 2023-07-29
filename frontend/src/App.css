@@ -1,3 +1,42 @@
+/* LOGIN MODAL */
+.fade.modal.show {
+  border: none;
+  display: block;
+  margin: auto !important;
+  padding-right: 24%;
+}
+.modal-content {
+  width: max-content !important;
+  border: none !important;
+}
+.css-bt3lm1 {
+  width: 100%;
+}
+@media (max-width: 921px) {
+  .fade.modal.show {
+    padding-right: 0% !important;
+  }
+}
+@media (max-width: 507px) {
+  .homepage-login-page {
+    width: 70%;
+    margin: auto;
+    margin-right: 17%;
+  }
+  .homepage-login-page-image {
+    margin-top: -50px;
+  }
+}
+@media (max-width: 420px) {
+  .homepage-login-page {
+    width: 60%;
+    margin-right: 40%;
+  }
+  .homepage-login-page-image {
+    margin-top: -80px;
+  }
+}
+
 /* FREIGHT QUOTES */
 @media (max-width:831px){
   .a-b-c{
