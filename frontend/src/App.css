@@ -1,3 +1,127 @@
+/* CATALOGUE.JS */
+.catalog-about-heading {
+  font-family: "Poppins", sans-serif;
+  color: #0e5176;
+  text-decoration: underline;
+}
+
+.scroll-container {
+  max-height: 320px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  scrollbar-color: #888 #f4f4f4;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 5px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background-color: #f4f4f4;
+  border-radius: 5px;
+}
+
+.contact-us-container-catalogue {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f1f1f1;
+}
+
+.form-container-catalogue {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  width: 400px;
+}
+
+.form-container-catalogue h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #007bff;
+}
+
+.form-group-catalogue {
+  margin-bottom: 20px;
+}
+
+.form-group-catalogue label {
+  display: block;
+  font-weight: bold;
+  color: #555555;
+}
+
+.form-group-catalogue input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+}
+
+.form-group-catalogue textarea {
+  resize: vertical;
+}
+
+.form-group-catalogue button {
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  transition: background-color 0.2s ease;
+}
+
+.form-group-catalogue button:hover {
+  background-color: #0056b3;
+}
+.catalogue-div-about-us-div {
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+}
+.catalogue-div-about-us-div-video {
+  width: 70%;
+}
+.catalogue-div-about-us-div-profile {
+  width: 30%;
+}
+@media (max-width: 1044px) {
+  .catalogue-div-about-us-div {
+    flex-direction: column !important;
+  }
+  .catalogue-div-about-us-div-video {
+    width: 100%;
+    margin: auto;
+  }
+  .catalogue-div-about-us-div-profile {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+  }
+  .contact-us-map {
+    margin: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-us-container-catalogue {
+    flex-direction: column;
+  }
+
+  .form-container-catalogue {
+    width: 100%;
+  }
+}
+
 /* LOGIN MODAL */
 .fade.modal.show {
   border: none;
