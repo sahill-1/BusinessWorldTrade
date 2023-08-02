@@ -7,9 +7,23 @@ import ListGroup from "react-bootstrap/ListGroup";
 import logo from "../Components/images/bwt-dark.png";
 import Carousel from "react-bootstrap/Carousel";
 import BWT2 from "../Components/images/BWT2.jpeg";
-import "leaflet/dist/leaflet.css";
+import { FiPhoneCall } from "react-icons/fi";
+import { BiHelpCircle } from "react-icons/bi";
+import { FiMail } from "react-icons/fi";
 
 const Catalogue = () => {
+  const pstyle = {
+    textAlign: "center",
+    color: "black",
+    fontWeight: "light",
+    fontSize: "17px",
+  };
+  const spanstyle = {
+    fontSize: "18px",
+    fontWeight: "500",
+    color: "rgb(65, 65, 65)",
+  };
+
   const data = [
     {
       name: "aaaaaaaaaaaaaaa",
@@ -45,9 +59,12 @@ const Catalogue = () => {
   return (
     <>
       <Navbar />
-      <div className="d-flex justify-content-around align-items-center border">
-        <h6>Company Name</h6>
-        <h6>Silver Member since 2020</h6>
+      <div
+        className="d-flex p-2 justify-content-around align-items-center"
+        style={{ boxShadow: "rgba(33, 35, 38, 0.1) 0px 10px 10px -10px" }}
+      >
+        <h6 className="my-0">Company Name</h6>
+        <h6 className="my-0">Silver Member since 2020</h6>
         <Button variant="secondary">Contact Now</Button>
       </div>
 
@@ -204,14 +221,14 @@ const Catalogue = () => {
             </div>
           </Col>
 
-          <Col className="border d-flex align-items-center">
+          <Col className="d-flex align-items-center">
             <iframe
               className="contact-us-map"
               title="Map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7017.587495097762!2d77.32073398885588!3d28.42547973848462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cdda23d188a31%3A0x9ed9bf2084d105b6!2sBasilva%20Colony%2C%20Old%20Faridabad%2C%20Faridabad%2C%20Haryana%20121002!5e0!3m2!1sen!2sin!4v1690889790453!5m2!1sen!2sin"
               width="500"
               height="450"
-              style={{ margin: "auto", border: "1px solid red" }}
+              style={{ margin: "auto" }}
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
@@ -220,6 +237,78 @@ const Catalogue = () => {
         </Row>
       </Container>
 
+      {/* CONTACT DETAILS */}
+      <Container className="my-4 px-5">
+        <div
+          className="row"
+          style={{
+            boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
+          }}
+        >
+          <h4 className="text-center my-2 ">Connect With Us</h4>
+          <div className="col-md-4 col-sm-12 my-2">
+            <p style={pstyle}>
+              <FiPhoneCall style={{ margin: "auto", color: "orange" }} />
+              Customer Care No.
+              <span style={spanstyle}>
+                <br />
+                +91-7042177777
+              </span>
+            </p>
+          </div>
+          <div className="col-md-4 col-sm-12 my-2">
+            <p style={pstyle}>
+              <BiHelpCircle style={{ margin: "auto", color: "orange" }} />
+              Help
+              <span style={spanstyle}>
+                <br />
+                +91-7042177777
+              </span>
+            </p>
+          </div>
+          <div className="col-md-4 col-sm-12 my-2">
+            <p style={pstyle}>
+              <FiMail style={{ margin: "auto", color: "orange" }} />
+              Write To Us
+              <span style={spanstyle}>
+                <br />
+                info@businessworldtrade.com
+              </span>
+            </p>
+          </div>
+        </div>
+      </Container>
+
+      {/* ADDRESS DETAILS */}
+      <Container className="my-4 px-5">
+        <Row
+          style={{
+            boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px",
+          }}
+        >
+          <Col
+            md={6}
+            className="border-right px-5 text-center my-3 address-details-column"
+          >
+            <h5 className="text-center text-decoration-underline">
+              Office Address
+            </h5>
+            <p>Adress Line</p>
+            <p>Landmark Location</p>
+            <p>District, City</p>
+            <h6>Pincode, State</h6>
+          </Col>
+          <Col md={6} className="px-5 text-center my-3">
+            <h5 className="text-center text-decoration-underline">
+              Authentication
+            </h5>
+            <p>BusinessType since "year"</p>
+            <p>Our "Member" since "year"</p>
+            <p>Main Products listed here</p>
+            <p>ISO certification (if any)</p>
+          </Col>
+        </Row>
+      </Container>
       <Footer />
     </>
   );
