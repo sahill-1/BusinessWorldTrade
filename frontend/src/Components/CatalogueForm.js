@@ -177,6 +177,4 @@ const CatalogueForm = () => {
     </>
   );
 };
-
 export default CatalogueForm;
-
