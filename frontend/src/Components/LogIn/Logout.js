@@ -1,31 +1,28 @@
-import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import React from "react";
 
-const Logout = () => {
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    // Perform the logout logic by making an API request to the logout endpoint.
-    // Replace 'localhost:5000/api/logout' with your actual API endpoint URL.
-
-    axios
-      .post("http://localhost:5000/api/logout")
-      .then((response) => {
-        // Assuming your logout endpoint returns a success message
-        console.log(response.data);
-        navigate("/login");
+const Logout = ({ onLogout }) => {
+  const handleLogout = () => {
+    fetch("http://localhost:5000/api/logout", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        onLogout(); // Call the onLogout function to update the isLoggedIn state
       })
       .catch((error) => {
         // Handle any errors that may occur during logout
         console.error("Logout failed:", error);
-        navigate("/login");
       });
-  }, [navigate]);
+  };
 
   return (
     <div style={{ textAlign: "center", marginTop: "100px" }}>
       <h1>Logging out...</h1>
+      <button onClick={handleLogout}>Logout</button>
     </div>
   );
 };

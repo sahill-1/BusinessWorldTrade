@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux"; // Import useDispatch from react-redux
 import {
-  Button,
   Flex,
   Checkbox,
   FormControl,
@@ -11,51 +11,20 @@ import {
   Image,
   ChakraProvider,
   FormLabel,
+  Button,
 } from "@chakra-ui/react";
-import { useDispatch } from "react-redux";
-import axios from "axios";
-import { useNavigate } from "react-router-dom";
-import { addUser } from "../../reducers/FormSlice";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { BsFillMicFill } from "react-icons/bs";
-import { FiHeadphones } from "react-icons/fi";
-
+import axios from "axios";
+import { signinSuccess } from "../../reducers/authSlice"; // Import the action creator
 import loginImage from "../images/login.jpg";
+import { useNavigate } from "react-router-dom";
 
-const LogIn = () => {
-  useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-  }, []);
-
-  const [formData, setFormData] = useState({});
-  const [loggedIn, setLoggedIn] = useState(false); // Track login status
-  const dispatch = useDispatch();
+export default function LogIn() {
+  const dispatch = useDispatch(); // Initialize dispatch
   const navigate = useNavigate();
-
-  const yourTokenCheckingFunction = () => {
-    const token = localStorage.getItem("accessToken"); // Replace "accessToken" with the key you used to store the token
-
-    // Check if the token exists and is not expired (you may use JWT or other token expiration logic)
-    // In this example, we assume that if a token exists, the user is logged in.
-    return !!token;
-  };
-
-  useEffect(() => {
-    // Check if the user is already logged in (using any logic or stored token)
-    const userLoggedIn = checkIfUserLoggedIn();
-    setLoggedIn(userLoggedIn);
-  }, []);
-
-  const checkIfUserLoggedIn = () => {
-    // You can add your logic here to check if the user is logged in or not,
-    // e.g., using tokens, session storage, local storage, or an authentication API.
-    // For demonstration purposes, I'll assume you have a function that checks the token and returns a boolean value.
-    // Replace 'yourTokenCheckingFunction' with your actual token checking logic.
-
-    const userLoggedIn = yourTokenCheckingFunction();
-    return userLoggedIn;
-  };
+  const [formData, setFormData] = useState({});
+  const [loading, setLoading] = useState(false); // Add a loading state
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -66,21 +35,27 @@ const LogIn = () => {
   };
 
   const handleLogin = () => {
-    // Simulating successful login
-    setLoggedIn(true);
-    toast.success("Successfully logged in!", {
-      position: toast.POSITION.TOP_CENTER,
-    });
-    navigate("/web");
-  };
+    setLoading(true); // Set loading to true
+    axios
+      .post("http://localhost:5000/api/signin", formData)
+      .then((response) => {
+        const { message, user, token } = response.data;
+        toast.success(message);
+        localStorage.setItem("token", token);
 
-  const handleLogout = () => {
-    // Simulating successful logout
-    setLoggedIn(false);
-    toast.success("Successfully logged out!", {
-      position: toast.POSITION.TOP_CENTER,
-    });
-    navigate("/login"); // Redirect to login page after logout
+        // Dispatch the signinSuccess action to update Redux store
+        dispatch(signinSuccess({ user, token }));
+        setLoading(false); // Reset loading to false
+
+        // Log successful login information
+        console.log("Login successful:", user, token);
+        navigate("/");
+      })
+      .catch((error) => {
+        console.error("Login error:", error);
+        toast.error("Invalid email or password.");
+        setLoading(false); // Reset loading to false
+      });
   };
 
   const handleClick = (e) => {
@@ -90,44 +65,15 @@ const LogIn = () => {
     const isValidEmail = /\S+@\S+\.\S+/.test(formData.email);
 
     if (!isValidEmail) {
-      toast.error("Please enter a valid email!", {
-        position: toast.POSITION.TOP_CENTER,
-      });
+      toast.error("Please enter a valid email!");
       return;
     }
 
-    axios
-      .post("http://localhost:5000/api/signin", formData)
-      .then((res) => {
-        dispatch(addUser(res.data));
-        console.log(res);
-        if (res) {
-          handleLogin(); // Call the login function after successful login
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-        if (err.response && err.response.status === 401) {
-          toast.error("Invalid email or password!", {
-            position: toast.POSITION.TOP_CENTER,
-          });
-        } else if (
-          err.response &&
-          err.response.data &&
-          err.response.data.message
-        ) {
-          toast.error(err.response.data.message, {
-            position: toast.POSITION.TOP_CENTER,
-          });
-        } else {
-          toast.error("An error occurred. Please try again later.", {
-            position: toast.POSITION.TOP_CENTER,
-          });
-        }
-      });
+    // Simulate login button click
+    handleLogin();
 
-    // Reset the form after submission if needed
-    setFormData({});
+    // Log form data
+    console.log("Form data:", formData);
   };
 
   return (
@@ -170,24 +116,16 @@ const LogIn = () => {
                 <Checkbox>Remember me</Checkbox>
                 <Link color={"blue.500"}>Forgot password?</Link>
               </Stack>
-              {loggedIn ? (
-                <Button
-                  colorScheme={"blue"}
-                  variant={"solid"}
-                  onClick={handleLogout}
-                >
-                  Logout
-                </Button>
-              ) : (
-                <Button
-                  colorScheme={"blue"}
-                  variant={"solid"}
-                  type="submit"
-                  onClick={handleClick}
-                >
-                  Sign in
-                </Button>
-              )}
+              <Button
+                colorScheme={"blue"}
+                variant={"solid"}
+                type="submit"
+                onClick={handleClick}
+                isLoading={loading} // Use the isLoading prop to show loading state
+                loadingText="Signing in..."
+              >
+                Sign in
+              </Button>
             </Stack>
           </Stack>
         </Flex>
@@ -202,6 +140,4 @@ const LogIn = () => {
       </Stack>
     </ChakraProvider>
   );
-};
-
-export default LogIn;
+}
