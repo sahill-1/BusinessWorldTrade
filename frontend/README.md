@@ -68,3 +68,17 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+Subject: Request for Vacation Leave
+
+Respected Ma'am,
+
+I hope this email finds you well. I am writing to formally request a vacation leave for a period of 8-10 days starting from 25th September, 2023 and ending on 3rd October, 2023. During my absence, I will ensure that all my assigned tasks are completed and handed over to my fellow colleagues.
+I believe that taking this vacation will not only allow me to freshen-up but recharge too. And also, I will be available on phone and via email in case of any urgent matters that require my attention. 
+I hope you consider my request and appreciate your understanding and support in granting me this opportunity to take a vacation.
+
+Yours sincerely,
+Sahil Vishwakarma
+Employee Code: INFO-9314
+Department: I.T
