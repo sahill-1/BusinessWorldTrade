@@ -70,15 +70,26 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
-Subject: Request for Vacation Leave
+Subject: Request for Bereavement Leave
 
-Respected Ma'am,
+Dear [Manager's Name],
 
-I hope this email finds you well. I am writing to formally request a vacation leave for a period of 8-10 days starting from 25th September, 2023 and ending on 3rd October, 2023. During my absence, I will ensure that all my assigned tasks are completed and handed over to my fellow colleagues.
-I believe that taking this vacation will not only allow me to freshen-up but recharge too. And also, I will be available on phone and via email in case of any urgent matters that require my attention. 
-I hope you consider my request and appreciate your understanding and support in granting me this opportunity to take a vacation.
+I hope this email finds you well. I am writing to inform you about a personal matter that requires my immediate attention and ask for your understanding and support.
 
-Yours sincerely,
-Sahil Vishwakarma
-Employee Code: INFO-9314
-Department: I.T
+Unfortunately, I have received the devastating news that a close family member has passed away. This unforeseen circumstance has deeply affected me and my family, and I would like to request a leave of absence for [number of days] starting from [start date] to [end date].
+
+During this difficult period, I will need time to make necessary arrangements, attend the funeral and be with my family to provide support and care. I assure you that I will use this time off responsibly and will make all the efforts necessary to minimize any disruption to my colleagues and work schedules.
+
+I understand that my absence may cause temporary inconvenience and I apologize for any inconvenience caused. If there is anything urgent that needs my attention during my absence, please let me know, and I will try my best to address it remotely or facilitate a smooth handover before my departure.
+
+I have attached the official documentation regarding the unfortunate incident for your reference, and I am ready to provide any additional information or documentation, if required.
+
+I am grateful for the support and understanding that [Company Name] has always extended in times of personal matters, and I am confident that the understanding and empathy will continue.
+
+Thank you for considering my request, and I appreciate your assistance in this matter. I will be in touch with you if there are any changes or updates regarding my leave.
+
+Best regards,
+
+[Your Name]
+[Your Employee ID or Department]
+[Your Contact Information]
