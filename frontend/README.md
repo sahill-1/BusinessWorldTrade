@@ -70,26 +70,16 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
-Subject: Request for Bereavement Leave
+Subject: Request for Leave
 
-Dear [Manager's Name],
+Respected Ma'am,
 
-I hope this email finds you well. I am writing to inform you about a personal matter that requires my immediate attention and ask for your understanding and support.
+I, Sumit Priyanshu,  wants to inform you that that my uncle has passed away unfortunately, I would request a leave of absence from 31.08.2023 - 03.09.2023 as I will have to attend the funeral and be physically present for the rituals 
 
-Unfortunately, I have received the devastating news that a close family member has passed away. This unforeseen circumstance has deeply affected me and my family, and I would like to request a leave of absence for [number of days] starting from [start date] to [end date].
+I hope you understand the importance and necessity for the unfortunate mishappening
 
-During this difficult period, I will need time to make necessary arrangements, attend the funeral and be with my family to provide support and care. I assure you that I will use this time off responsibly and will make all the efforts necessary to minimize any disruption to my colleagues and work schedules.
-
-I understand that my absence may cause temporary inconvenience and I apologize for any inconvenience caused. If there is anything urgent that needs my attention during my absence, please let me know, and I will try my best to address it remotely or facilitate a smooth handover before my departure.
-
-I have attached the official documentation regarding the unfortunate incident for your reference, and I am ready to provide any additional information or documentation, if required.
-
-I am grateful for the support and understanding that [Company Name] has always extended in times of personal matters, and I am confident that the understanding and empathy will continue.
-
-Thank you for considering my request, and I appreciate your assistance in this matter. I will be in touch with you if there are any changes or updates regarding my leave.
+Thank you for considering my request I will be in touch with you if there are any changes or updates regarding my leave.
 
 Best regards,
 
-[Your Name]
-[Your Employee ID or Department]
-[Your Contact Information]
+Sumit Priyanshu
