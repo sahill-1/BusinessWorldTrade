@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { useFormik } from "formik";
 import { signupSchema } from "./signupSchema";
-// import BackGround from "../images/download.jpg";
+import BackGround from "../images/background.jpg";
 import "bootstrap";
 
 const initialValues = {
@@ -58,41 +58,39 @@ const states = [
 ];
 
 const RegistrationForm = () => {
-  const [isSignUp, setIsSignUp] = useState(false);
-  const navigate = useNavigate();
+  
+  const [isSignUp, setIsSignUp] = useState(true)
+  // const [isSignUp, setIsSignUp] = useState(false);
+  // const navigate = useNavigate();
+  // const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
+  //   useFormik({
+  //     initialValues,
+  //     validationSchema: signupSchema,
+  //     onSubmit: async (values, action) => {
+  //       try {
+  //         const response = await fetch("http://localhost:5000/api/signup", {
+  //           method: "POST",
+  //           headers: {
+  //             "Content-Type": "application/json",
+  //           },
+  //           body: JSON.stringify(values),
+  //         });
 
-  const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
-    useFormik({
-      initialValues,
-      validationSchema: signupSchema,
-      onSubmit: async (values, action) => {
-        try {
-          const response = await fetch("http://localhost:5000/api/signup", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(values),
-          });
+  //         if (!response.ok) {
+  //         Handle error response here if needed
+  //           console.log("Error response:", response);
+  //         } else {
+  //           console.log("Data created successfully!");
+  //           setIsSignUp(true);
+  //           navigate("/");
+  //         }
 
-          if (!response.ok) {
-            // Handle error response here if needed
-            console.log("Error response:", response);
-          } else {
-            console.log("Data created successfully!");
-            setIsSignUp(true);
-            navigate("/");
-          }
-
-          action.resetForm();
-        } catch (error) {
-          console.error("Error:", error);
-        }
-      },
-    });
-  // console.log(
-  //   errors
-  // );
+  //         action.resetForm();
+  //       } catch (error) {
+  //         console.error("Error:", error);
+  //       }
+  //     },
+  //   });
 
   return (
     <>
@@ -112,8 +110,17 @@ const RegistrationForm = () => {
             <li></li>
           </ul>
         </div>
-        {/* style={{ backgroundImage: `url(${BackGround})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', opacity: "0.8" }} */}
-        <div className="container">
+
+        <div
+          className="container"
+          style={{
+            backgroundImage: `url(${BackGround})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            //zIndex:"99",
+            opacity:"1.0",
+          }}
+        >
           <div className="modal">
             <div
               className="modal-container"
@@ -127,7 +134,7 @@ const RegistrationForm = () => {
                     Business World Trade
                   </span>
                 </p>
-                <form onSubmit={handleSubmit}>
+                <form>
                   <div className="input-block">
                     <input
                       type="text"
@@ -135,13 +142,10 @@ const RegistrationForm = () => {
                       name="name"
                       id="name"
                       placeholder="Name"
-                      value={values.name}
-                      onChange={handleChange}
-                      onBlur={handleBlur}
+                      // value={values.name}
+                      // onChange={handleChange}
+                      // onBlur={handleBlur}
                     />
-                    {errors.name && touched.name && (
-                      <p className="form-error">{errors.name}</p>
-                    )}
                   </div>
                   <div className="input-block">
                     <input
@@ -150,13 +154,8 @@ const RegistrationForm = () => {
                       name="phone"
                       id="phone"
                       placeholder="Phone"
-                      value={values.phone}
-                      onChange={handleChange}
-                      onBlur={handleBlur}
+                       
                     />
-                    {errors.phone && touched.phone && (
-                      <p className="form-error">{errors.phone}</p>
-                    )}
                   </div>
                   <div className="input-block">
                     <input
@@ -165,13 +164,7 @@ const RegistrationForm = () => {
                       name="email"
                       id="email"
                       placeholder="Email"
-                      value={values.email}
-                      onChange={handleChange}
-                      onBlur={handleBlur}
                     />
-                    {errors.email && touched.email && (
-                      <p className="form-error">{errors.email}</p>
-                    )}
                   </div>
                   <div className="input-block">
                     <input
@@ -180,15 +173,11 @@ const RegistrationForm = () => {
                       name="password"
                       id="password"
                       placeholder="Password"
-                      value={values.password}
-                      onChange={handleChange}
-                      onBlur={handleBlur}
+                      // value={values.password}
+                      // onChange={handleChange}
+                      // onBlur={handleBlur}
                     />
-                    {errors.password && touched.password && (
-                      <p className="form-error">{errors.password}</p>
-                    )}
                   </div>
-
                   <div className="input-block">
                     <label htmlFor="role" className="input-label">
                       Role
@@ -196,18 +185,13 @@ const RegistrationForm = () => {
                     <select
                       name="role"
                       id="role"
-                      value={values.role}
-                      onBlur={handleBlur}
-                      onChange={handleChange}
+                      value="role"
                     >
-                      <option value="Admin">admin</option>
-                      <option value="buyer">buyer</option>
-                      <option value="seller">seller</option>
-                      <option value="other">other</option>
+                      <option value="Admin">Admin</option>
+                      <option value="buyer">Buyer</option>
+                      <option value="seller">Seller</option>
+                      <option value="other">Other</option>
                     </select>
-                    {errors.role && touched.role && (
-                      <p className="form-error">{errors.role}</p>
-                    )}
                   </div>
                   <div
                     className="input-block"
@@ -222,24 +206,24 @@ const RegistrationForm = () => {
                       <label htmlFor="states" className="input-label">
                         State
                       </label>
-
                       <select
                         name="states"
-                        value={values.states}
-                        onBlur={handleBlur}
+                        // value={values.states}
+                        // onBlur={handleBlur}
                       >
-                        {states.map((state, index, key) => (
-                          <>
-                            <option name={state} value={state}>
-                              {state}
-                            </option>
-                          </>
-                        ))}
+                        <option name="name" value="state">
+                          State One
+                        </option>
+                        <option name="name" value="state">
+                          State Two
+                        </option>
+                        <option name="name" value="state">
+                          State Three
+                        </option>
+                        <option name="name" value="state">
+                          State Four
+                        </option>
                       </select>
-
-                      {errors.state && touched.state ? (
-                        <p className="form-error">{errors.state}</p>
-                      ) : null}
                     </div>
                     {/* FOR CITIES */}
                     <div className="input-block" style={{ width: "44%" }}>
@@ -249,34 +233,20 @@ const RegistrationForm = () => {
                       <select
                         name="cities"
                         id="citie"
-                        value={values.cities}
-                        onBlur={handleBlur}
+                        // value={values.cities}
+                        // onBlur={handleBlur}
                       >
-                        <option value="">Select a city</option>
-                        <option value="">A</option>
-                        <option value="">B</option>
+                        <option value="">City A</option>
+                        <option value="">City B</option>
+                        <option value="">City C</option>
                       </select>
-                      {errors.state && touched.city ? (
-                        <p className="form-error">{errors.city}</p>
-                      ) : null}
                     </div>
                   </div>
 
-                  {/* <div className="modal-buttons">
-                    <a href="/" className="">
-                      Want to register using Gmail?
-                    </a>
-                    <button className="input-button" type="submit">
-                      Registration
-                    </button>
-                  </div> */}
                   <button className="input-button" type="submit">
                     Registration
                   </button>
                 </form>
-                {/* <p className="sign-up">
-                  Already have an account? <a href="/">Sign In now</a>
-                </p> */}
               </div>
               <div className="modal-right">
                 <img

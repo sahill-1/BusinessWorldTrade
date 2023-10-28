@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
-const Sahil = () => {
+const GetAllUser = () => {
   const [user, setUser] = useState([]);
   useEffect(() => {
     fetch("http://localhost:5000/api/Getalluser")
@@ -26,8 +26,8 @@ const Sahil = () => {
           </div>
         );
       })} */}
-    </>m
+    </>
   );
 };
 
-export default Sahil;
+export default GetAllUser;
