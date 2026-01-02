@@ -60,37 +60,37 @@ const states = [
 const RegistrationForm = () => {
   
   const [isSignUp, setIsSignUp] = useState(true)
-  // const [isSignUp, setIsSignUp] = useState(false);
-  // const navigate = useNavigate();
-  // const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
-  //   useFormik({
-  //     initialValues,
-  //     validationSchema: signupSchema,
-  //     onSubmit: async (values, action) => {
-  //       try {
-  //         const response = await fetch("http://localhost:5000/api/signup", {
-  //           method: "POST",
-  //           headers: {
-  //             "Content-Type": "application/json",
-  //           },
-  //           body: JSON.stringify(values),
-  //         });
+   const [isSignUp, setIsSignUp] = useState(false);
+   const navigate = useNavigate();
+   const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
+     useFormik({
+       initialValues,
+       validationSchema: signupSchema,
+       onSubmit: async (values, action) => {
+        try {
+           const response = await fetch("http://localhost:5000/api/signup", {
+             method: "POST",
+             headers: {
+               "Content-Type": "application/json",
+             },
+             body: JSON.stringify(values),
+           });
 
-  //         if (!response.ok) {
-  //         Handle error response here if needed
-  //           console.log("Error response:", response);
-  //         } else {
-  //           console.log("Data created successfully!");
-  //           setIsSignUp(true);
-  //           navigate("/");
-  //         }
+           if (!response.ok) {
+           Handle error response here if needed
+             console.log("Error response:", response);
+           } else {
+             console.log("Data created successfully!");
+             setIsSignUp(true);
+             navigate("/");
+           }
 
-  //         action.resetForm();
-  //       } catch (error) {
-  //         console.error("Error:", error);
-  //       }
-  //     },
-  //   });
+           action.resetForm();
+         } catch (error) {
+           console.error("Error:", error);
+         }
+       },
+     });
 
   return (
     <>
@@ -142,9 +142,9 @@ const RegistrationForm = () => {
                       name="name"
                       id="name"
                       placeholder="Name"
-                      // value={values.name}
-                      // onChange={handleChange}
-                      // onBlur={handleBlur}
+                      value={values.name}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
                     />
                   </div>
                   <div className="input-block">
@@ -173,9 +173,9 @@ const RegistrationForm = () => {
                       name="password"
                       id="password"
                       placeholder="Password"
-                      // value={values.password}
-                      // onChange={handleChange}
-                      // onBlur={handleBlur}
+                      value={values.password}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
                     />
                   </div>
                   <div className="input-block">
@@ -208,8 +208,8 @@ const RegistrationForm = () => {
                       </label>
                       <select
                         name="states"
-                        // value={values.states}
-                        // onBlur={handleBlur}
+                        value={values.states}
+                        onBlur={handleBlur}
                       >
                         <option name="name" value="state">
                           State One
@@ -233,8 +233,8 @@ const RegistrationForm = () => {
                       <select
                         name="cities"
                         id="citie"
-                        // value={values.cities}
-                        // onBlur={handleBlur}
+                        value={values.cities}
+                        onBlur={handleBlur}
                       >
                         <option value="">City A</option>
                         <option value="">City B</option>
